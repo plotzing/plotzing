@@ -1,11 +1,23 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=NULL,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,seterrorbars=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=NULL,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
 
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
   if(!is.null(setdata)){
     data<-setdata
+  }
+  if(setlegendpositionabove==TRUE){
+    showlegendabove<-TRUE
+  }
+  if(setlegendpositionbelow==TRUE){
+    showlegendbelow<-TRUE
+  }
+  if(setlegendpositionleft==TRUE){
+    showlegendleft<-TRUE
+  }
+  if(!is.null(setgrouplevels)){
+    setlegendlevels<-c(setgrouplevels)
   }
   if(showblankplot==TRUE){
     showviolin<-FALSE
@@ -230,10 +242,6 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     setdottransparency<-setdottransparency/10
   }
 
-  if(!is.null(seterrorbars)){
-    errorbars<-seterrorbars
-  }
-
   if(split1==TRUE){
     splitx<-TRUE
   }
@@ -250,23 +258,6 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     panelvariable<-iv2
     iv2<-NULL
   }
-
-  if(!is.null(setpanellevels)){
-    if(!is.null(setpanellevelorder)){
-      message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
-      stop()
-    }
-    data[,panelvariable]<-as.factor(data[,panelvariable])
-    originallevels<-levels(data[,panelvariable])
-    levels(data[,panelvariable])<- c(setpanellevels)
-    newlevels<-levels(data[,panelvariable])
-    message("Levels of paneling variable have been converted:")
-    if(showoutput==TRUE){
-      print(originallevels)
-      print(newlevels)
-    }
-  }
-
   if(rotatexaxislabels==TRUE){
     showrotatedxlabels=TRUE
   }
@@ -406,6 +397,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       if(is.null(panelvariable)){
         frequencytable<-table(summarydata$xvariable)
         frequencytable<-as.data.frame(frequencytable)
+        frequencytable<-subset(frequencytable,frequencytable$Freq>0)
         if(min(frequencytable$Freq)<4){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable))
@@ -418,6 +410,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       if(!is.null(panelvariable)){
         frequencytable<-table(summarydata$xvariable,summarydata$facetvariable)
         frequencytable<-as.data.frame(frequencytable)
+        frequencytable<-subset(frequencytable,frequencytable$Freq>0)
         if(min(frequencytable$Freq)<4){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$facetvariable))
@@ -425,6 +418,22 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
           message("ERROR: A minimum of four subjects is needed across all levels of your independent variable. For details, check for cells with fewer than 4 subjects in the table printed above.")
           stop()
         }
+      }
+    }
+    if(!is.null(setpanellevels)){
+      if(!is.null(setpanellevelorder)){
+        message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+        stop()
+      }
+      summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+      summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+      originallevels<-levels(summarydata$facetvariable)
+      levels(summarydata$facetvariable)<- c(setpanellevels)
+      newlevels<-levels(summarydata$facetvariable)
+      message("Levels of paneling variable have been converted:")
+      if(showoutput==TRUE){
+        print(originallevels)
+        print(newlevels)
       }
     }
     if(showoutput==TRUE){
@@ -689,6 +698,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       if(is.null(panelvariable)){
         frequencytable<-table(summarydata$xvariable,summarydata$groupvariable)
         frequencytable<-as.data.frame(frequencytable)
+        frequencytable<-subset(frequencytable,frequencytable$Freq>0)
         if(min(frequencytable$Freq)<4){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$groupvariable))
@@ -701,6 +711,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       if(!is.null(panelvariable)){
         frequencytable<-table(summarydata$xvariable,summarydata$groupvariable,summarydata$facetvariable)
         frequencytable<-as.data.frame(frequencytable)
+        frequencytable<-subset(frequencytable,frequencytable$Freq>0)
         if(min(frequencytable$Freq)<4){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$groupvariable,summarydata$facetvariable))
@@ -708,6 +719,22 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
           message("ERROR: A minimum of four subjects is needed across all combinations of the levels of your independent variables. For details, check for cells with fewer than 4 subjects in the table printed above.")
           stop()
         }
+      }
+    }
+    if(!is.null(setpanellevels)){
+      if(!is.null(setpanellevelorder)){
+        message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+        stop()
+      }
+      summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+      summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+      originallevels<-levels(summarydata$facetvariable)
+      levels(summarydata$facetvariable)<- c(setpanellevels)
+      newlevels<-levels(summarydata$facetvariable)
+      message("Levels of paneling variable have been converted:")
+      if(showoutput==TRUE){
+        print(originallevels)
+        print(newlevels)
       }
     }
     if(showoutput==TRUE){
@@ -820,6 +847,15 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
 
     if(is.null(legendtitle)){
       graph<-graph + labs(fill = colnames(graphvariables)[[3]])
+    }
+    if(showlegendleft==TRUE){
+      graph<-graph+theme(legend.position="left")
+    }
+    if(showlegendbelow==TRUE){
+      graph<-graph+theme(legend.position="bottom")
+    }
+    if(showlegendabove==TRUE){
+      graph<-graph+theme(legend.position="top")
     }
   }
 

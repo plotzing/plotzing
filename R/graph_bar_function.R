@@ -1,5 +1,5 @@
 #### BAR GRAPH ####
-graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=.4,jitterwidth=.3,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setcolor=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=NULL,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE){
+graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=.4,jitterwidth=.3,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=NULL,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
 
   require(Rmisc)
   require(ggplot2)
@@ -9,6 +9,18 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
     if(!is.null(setdata)){
       data<-setdata
     }
+  if(setlegendpositionabove==TRUE){
+    showlegendabove<-TRUE
+  }
+  if(setlegendpositionbelow==TRUE){
+    showlegendbelow<-TRUE
+  }
+  if(setlegendpositionleft==TRUE){
+    showlegendleft<-TRUE
+  }
+  if(!is.null(setgrouplevels)){
+    setgrouplevels<-c(setlegendlevels)
+  }
     if(showdarkgraph==FALSE){
       setdotoutlinecolor<-"black"
     }
@@ -288,23 +300,6 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
   if(rotatexaxislabels==TRUE){
     showrotatedxlabels=TRUE
   }
-
-  if(!is.null(setpanellevels)){
-    if(!is.null(setpanellevelorder)){
-      message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
-      stop()
-    }
-    data[,panelvariable]<-as.factor(data[,panelvariable])
-    originallevels<-levels(data[,panelvariable])
-    levels(data[,panelvariable])<- c(setpanellevels)
-    newlevels<-levels(data[,panelvariable])
-    message("Levels of paneling variable have been converted:")
-    if(showoutput==TRUE){
-      print(originallevels)
-      print(newlevels)
-    }
-  }
-
   if(!is.null(dottransparency)&&is.null(transparency)){
     transparency<-dottransparency
   }
@@ -454,7 +449,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
 
       summarydata$xvariable<-as.factor(summarydata$xvariable)
 
-      if(errorbars=="ci95"||errorbars=="ci_95"||errorbars=="95ci"||errorbars=="95_ci"||errorbars=="95_CI"||errorbars=="95CI"||errorbars=="CI_95"||errorbars=="CI95"||errorbars=="se"||errorbars=="SE"||errorbars=="none"||errorbars=="None"){
+      if(errorbars=="ci95"||errorbars=="ci_95"||errorbars=="95ci"||errorbars=="95_ci"||errorbars=="95_CI"||errorbars=="95CI"||errorbars=="CI_95"||errorbars=="CI95"){
         setconfidencelevel<-0.95
         errorbars<-"ci"
       }
@@ -480,7 +475,10 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summary$errors<-summary$ci
         message(sprintf("Error bars reflect %s percent confidence intervals.",setconfidencelevel))
       }
-
+      if(errorbars=="sd"||errorbars=="SD"){
+        summary$errors<-summary$sd
+        message("Error bars reflect one standard deviation above or below each mean.")
+      }
       if(errorbars=="none"||errorbars=="None" || showerrorbars==FALSE){
         summary$errors<-rep(0,NROW(summary))
         seterrorbartransparency<-0
@@ -545,7 +543,25 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         colnames(graphvariables)[3]<-"facetvariable"
       }
     }
-
+    if(!is.null(setpanellevels)){
+      if(!is.null(setpanellevelorder)){
+        message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+        stop()
+      }
+      summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+      summary$facetvariable<-as.factor(summary$facetvariable)
+      summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+      summary$facetvariable<-droplevels(summary$facetvariable)
+      originallevels<-levels(summarydata$facetvariable)
+      levels(summarydata$facetvariable)<- c(setpanellevels)
+      levels(summary$facetvariable)<- c(setpanellevels)
+      newlevels<-levels(summarydata$facetvariable)
+      message("Levels of paneling variable have been converted:")
+      if(showoutput==TRUE){
+        print(originallevels)
+        print(newlevels)
+      }
+    }
     if(showoutput==TRUE){
       print(summarydata)
     }
@@ -808,7 +824,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       summarydata$xvariable<-as.factor(summarydata$xvariable)
       summarydata$groupvariable<-as.factor(summarydata$groupvariable)
 
-      if(errorbars=="ci95"||errorbars=="ci_95"||errorbars=="95ci"||errorbars=="95_ci"||errorbars=="95_CI"||errorbars=="95CI"||errorbars=="CI_95"||errorbars=="CI95"||errorbars=="se"||errorbars=="SE"||errorbars=="none"||errorbars=="None"){
+      if(errorbars=="ci95"||errorbars=="ci_95"||errorbars=="95ci"||errorbars=="95_ci"||errorbars=="95_CI"||errorbars=="95CI"||errorbars=="CI_95"||errorbars=="CI95"){
         setconfidencelevel<-0.95
         errorbars<-"ci"
       }
@@ -834,7 +850,10 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summary$errors<-summary$ci
         message(sprintf("Error bars reflect %s percent confidence intervals.",setconfidencelevel))
       }
-
+      if(errorbars=="sd"||errorbars=="SD"){
+        summary$errors<-summary$sd
+        message("Error bars reflect one standard deviation above or below each mean.")
+      }
       if(errorbars=="none"||errorbars=="None" || showerrorbars==FALSE){
         summary$errors<-rep(0,NROW(summary))
         seterrorbartransparency<-0
@@ -902,7 +921,25 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         colnames(graphvariables)[4]<-"facetvariable"
       }
     }
-
+    if(!is.null(setpanellevels)){
+      if(!is.null(setpanellevelorder)){
+        message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+        stop()
+      }
+      summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+      summary$facetvariable<-as.factor(summary$facetvariable)
+      summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+      summary$facetvariable<-droplevels(summary$facetvariable)
+      originallevels<-levels(summarydata$facetvariable)
+      levels(summarydata$facetvariable)<- c(setpanellevels)
+      levels(summary$facetvariable)<- c(setpanellevels)
+      newlevels<-levels(summarydata$facetvariable)
+      message("Levels of paneling variable have been converted:")
+      if(showoutput==TRUE){
+        print(originallevels)
+        print(newlevels)
+      }
+    }
     if(showoutput==TRUE){
       print(summarydata)
     }
@@ -1018,6 +1055,15 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
 
     if(is.null(legendtitle)){
       graph<-graph + labs(fill = colnames(graphvariables)[[3]])
+    }
+    if(showlegendleft==TRUE){
+      graph<-graph+theme(legend.position="left")
+    }
+    if(showlegendbelow==TRUE){
+      graph<-graph+theme(legend.position="bottom")
+    }
+    if(showlegendabove==TRUE){
+      graph<-graph+theme(legend.position="top")
     }
   }
 

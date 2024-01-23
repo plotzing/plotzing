@@ -1,5 +1,5 @@
 #### SCATTERPLOT ####
-graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,bold=FALSE,jitterheight=0.4,jitterwidth=0.4,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",shading=TRUE,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorbars="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=TRUE,showgridlines=TRUE){
+graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,bold=FALSE,jitterheight=0.4,jitterwidth=0.4,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",shading=TRUE,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorbars="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
 
   require(ggplot2)
 
@@ -7,9 +7,21 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   if(!is.null(setdata)){
     data<-setdata
   }
+  if(setlegendpositionabove==TRUE){
+    showlegendabove<-TRUE
+  }
+  if(setlegendpositionbelow==TRUE){
+    showlegendbelow<-TRUE
+  }
+  if(setlegendpositionleft==TRUE){
+    showlegendleft<-TRUE
+  }
   if(showblankplot==TRUE){
     setdottransparency<-0
     showline<-FALSE
+  }
+  if(!is.null(setgrouplevels)){
+    setlegendlevels<-c(setgrouplevels)
   }
   if(showdata==FALSE&&showline==FALSE){
     setdottransparency<-0
@@ -273,22 +285,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     iv2<-NULL
   }
 
-  if(!is.null(setpanellevels)){
-    if(!is.null(setpanellevelorder)){
-      message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
-      stop()
-    }
-    data[,panelvariable]<-as.factor(data[,panelvariable])
-    originallevels<-levels(data[,panelvariable])
-    levels(data[,panelvariable])<- c(setpanellevels)
-    newlevels<-levels(data[,panelvariable])
-    message("Levels of paneling variable have been converted:")
-    if(showoutput==TRUE){
-      print(originallevels)
-      print(newlevels)
-    }
-  }
-
   if(rotatexaxislabels==TRUE){
     showrotatedxlabels=TRUE
   }
@@ -512,6 +508,22 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
         if(showdarkgraph==TRUE){
           showcoloredshading<-TRUE
+        }
+      }
+      if(!is.null(setpanellevels)){
+        if(!is.null(setpanellevelorder)){
+          message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+          stop()
+        }
+        summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+        summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+        originallevels<-levels(summarydata$facetvariable)
+        levels(summarydata$facetvariable)<- c(setpanellevels)
+        newlevels<-levels(summarydata$facetvariable)
+        message("Levels of paneling variable have been converted:")
+        if(showoutput==TRUE){
+          print(originallevels)
+          print(newlevels)
         }
       }
       if(showoutput==TRUE){
@@ -844,7 +856,22 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       summarydata$xvariable<-as.numeric(summarydata$xvariable)
       summarydata$yvariable<-as.numeric(summarydata$yvariable)
       summarydata$groupvariable<-as.factor(summarydata$groupvariable)
-
+      if(!is.null(setpanellevels)){
+        if(!is.null(setpanellevelorder)){
+          message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
+          stop()
+        }
+        summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+        summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+        originallevels<-levels(summarydata$facetvariable)
+        levels(summarydata$facetvariable)<- c(setpanellevels)
+        newlevels<-levels(summarydata$facetvariable)
+        message("Levels of paneling variable have been converted:")
+        if(showoutput==TRUE){
+          print(originallevels)
+          print(newlevels)
+        }
+      }
       if(showoutput==TRUE){
         print(summarydata)
       }
@@ -1000,6 +1027,16 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
 
       if(is.null(legendtitle)){
         graph<-graph + labs(linetype=colnames(graphvariables)[[3]],color=colnames(graphvariables)[[3]],fill=colnames(graphvariables)[[3]])
+      }
+
+      if(showlegendleft==TRUE){
+        graph<-graph+theme(legend.position="left")
+      }
+      if(showlegendbelow==TRUE){
+        graph<-graph+theme(legend.position="bottom")
+      }
+      if(showlegendabove==TRUE){
+        graph<-graph+theme(legend.position="top")
       }
 
       if (!is.null(title)) {
