@@ -1,5 +1,5 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=NULL,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
 
   require(ggplot2)
 
@@ -440,17 +440,17 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       print(summarydata)
     }
 
-    if(is.null(showrotatedxlabels)){
-      if(sum(nchar(levels(summarydata$xvariable)))>80){
-        showrotatedxlabels<-TRUE
-        internalfunctionautorotation<-TRUE
-      }
-    }
-    if(is.null(showrotatedxlabels)){
-      if(sum(nchar(levels(summarydata$xvariable)))<=80){
-        showrotatedxlabels<-FALSE
-      }
-    }
+    # if(is.null(showrotatedxlabels)){
+    #   if(sum(nchar(levels(summarydata$xvariable)))>80){
+    #     showrotatedxlabels<-TRUE
+    #     internalfunctionautorotation<-TRUE
+    #   }
+    # }
+    # if(is.null(showrotatedxlabels)){
+    #   if(sum(nchar(levels(summarydata$xvariable)))<=80){
+    #     showrotatedxlabels<-FALSE
+    #   }
+    # }
 
     if(showviolin==TRUE){
       graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
@@ -488,6 +488,10 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       graph<-graph+geom_point(aes(fill=xvariable),shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=setdottransparency,position=position_jitterdodge(jitter.width=jitterwidth,jitter.height=jitterheight,dodge.width=.9))
     }
     graph<-graph+scale_fill_brewer(palette="Dark2")+scale_color_brewer(palette="Dark2")+theme(legend.position="none")
+
+    if(showgridlines==FALSE){
+      graph<-graph+theme_classic()+theme(legend.position="none")
+    }
 
     if(showanimation==TRUE){
       message("You must add a grouping variable to use animations.")
@@ -741,17 +745,17 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       print(summarydata)
     }
 
-    if(is.null(showrotatedxlabels)){
-      if(sum(nchar(levels(summarydata$xvariable)))>80){
-        showrotatedxlabels<-TRUE
-        internalfunctionautorotation<-TRUE
-      }
-    }
-    if(is.null(showrotatedxlabels)){
-      if(sum(nchar(levels(summarydata$xvariable)))<=80){
-        showrotatedxlabels<-FALSE
-      }
-    }
+    # if(is.null(showrotatedxlabels)){
+    #   if(sum(nchar(levels(summarydata$xvariable)))>80){
+    #     showrotatedxlabels<-TRUE
+    #     internalfunctionautorotation<-TRUE
+    #   }
+    # }
+    # if(is.null(showrotatedxlabels)){
+    #   if(sum(nchar(levels(summarydata$xvariable)))<=80){
+    #     showrotatedxlabels<-FALSE
+    #   }
+    # }
 
     if(showanimation==TRUE){
       if(showviolin==TRUE){
@@ -836,6 +840,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     }
     if(showviolin==FALSE&&showboxplot==TRUE){
       message("Because you have hidden violins, the default boxplot transparency and width have been changed. To adjust boxplot transparency, use setboxplottransparency = . To adjust boxplot width, use setboxplotwidth = .")
+    }
+    if(showgridlines==FALSE){
+      graph<-graph+theme_classic()
     }
 
     if(!is.null(legendtitle)){
@@ -1015,9 +1022,6 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(dottransparency>1&&dottransparency<10.1){
       message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
     }
-  }
-  if(showgridlines==FALSE){
-    graph<-graph+theme_classic()
   }
   if(showanimation==FALSE){
     return(graph)
