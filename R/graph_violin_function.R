@@ -1,11 +1,17 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE){
 
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
   if(!is.null(setdata)){
     data<-setdata
+  }
+  if(!is.null(showcoloredwhiskers)){
+    showcoloredboxplotoutline<-showcoloredwhiskers
+  }
+  if(!is.null(showoutliers)){
+    showboxplotoutliers<-showoutliers
   }
   if(setlegendpositionabove==TRUE){
     showlegendabove<-TRUE
@@ -15,6 +21,18 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   }
   if(setlegendpositionleft==TRUE){
     showlegendleft<-TRUE
+  }
+  if(!is.null(setxaxislabel)){
+    setxaxistitle<-setxaxislabel
+  }
+  if(!is.null(setyaxislabel)){
+    setyaxistitle<-setyaxislabel
+  }
+  if(!is.null(setwhiskercolor)){
+    setboxplotoutlinecolor<-setwhiskercolor
+  }
+  if(!is.null(setwhiskerthickness)){
+    setboxplotthickness<-setwhiskerthickness
   }
   if(!is.null(setgrouplevels)){
     setlegendlevels<-c(setgrouplevels)
@@ -454,7 +472,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
 
     if(showviolin==TRUE){
       graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
-        geom_violin(aes(color=xvariable,fill=xvariable),size=.4,trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
+        geom_violin(aes(color=xvariable,fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
         theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
         theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface))+
         ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
@@ -467,20 +485,32 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     }
     if(showboxplot==TRUE){
       if(showboxplotoutliers==FALSE){
-        if(setboxplotcolor[[1]]=="default"){
-          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+        if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=setboxplotoutlinecolor,linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
         }
-        if(setboxplotcolor[[1]]!="default"){
-          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+        if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==TRUE){
+          graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+        }
+        if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=setboxplotoutlinecolor,fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+        }
+        if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+          graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
         }
         message("NOTE: Outliers in boxplots are hidden by default. To display them, add showboxplotoutliers=TRUE")
       }
       if(showboxplotoutliers==TRUE){
-        if(setboxplotcolor[[1]]=="default"){
-          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,alpha=setboxplottransparency)
+        if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=setboxplotoutlinecolor,linewidth=setboxplotthickness,alpha=setboxplottransparency)
         }
-        if(setboxplotcolor[[1]]!="default"){
-          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+        if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==TRUE){
+          graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+        }
+        if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+          graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=setboxplotoutlinecolor,fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+        }
+        if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+          graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
         }
       }
     }
@@ -760,7 +790,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(showanimation==TRUE){
       if(showviolin==TRUE){
         graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
-          geom_violin(aes(color=xvariable,fill=xvariable),size=.4,trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
+          geom_violin(aes(color=xvariable,fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
           theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface))+
           ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
@@ -773,20 +803,32 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       }
       if(showboxplot==TRUE){
         if(showboxplotoutliers==FALSE){
-          if(setboxplotcolor[[1]]=="default"){
-            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
           }
-          if(setboxplotcolor[[1]]!="default"){
-            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
           }
           message("NOTE: Outliers in boxplots are hidden by default. To display them, add showboxplotoutliers=TRUE")
         }
         if(showboxplotoutliers==TRUE){
-          if(setboxplotcolor[[1]]=="default"){
-            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
           }
-          if(setboxplotcolor[[1]]!="default"){
-            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=xvariable,color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
           }
         }
       }
@@ -799,7 +841,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(showanimation==FALSE){
       if(showviolin==TRUE){
         graph<-ggplot(data=summarydata, aes(x=xvariable,y=yvariable,fill=groupvariable,color=groupvariable))+
-          geom_violin(aes(group=interaction(xvariable,groupvariable)),size=.4,trim=TRUE,linewidth=setviolinthickness,alpha=.5)+
+          geom_violin(aes(group=interaction(xvariable,groupvariable)),trim=TRUE,linewidth=setviolinthickness,alpha=.5)+
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
           guides(color="none")+ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])+
           scale_fill_discrete(name = colnames(graphvariables)[3])
@@ -812,20 +854,32 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       }
       if(showboxplot==TRUE){
         if(showboxplotoutliers==FALSE){
-          if(setboxplotcolor[[1]]=="default"){
-            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
           }
-          if(setboxplotcolor[[1]]!="default"){
-            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable),color=groupvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable),color=groupvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,outlier.shape=NA,alpha=setboxplottransparency)
           }
           message("NOTE: Outliers in boxplots are hidden by default. To display them, add showboxplotoutliers=TRUE")
         }
         if(showboxplotoutliers==TRUE){
-          if(setboxplotcolor[[1]]=="default"){
-            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color="black",linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
           }
-          if(setboxplotcolor[[1]]!="default"){
-            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color="black",fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          if(setboxplotcolor[[1]]=="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable),color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==FALSE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable)),width=setboxplotwidth,position=position_dodge(width=.9),color=c(setboxplotoutlinecolor),fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
+          }
+          if(setboxplotcolor[[1]]!="default"&&showcoloredboxplotoutline==TRUE){
+            graph<-graph+geom_boxplot(aes(group=interaction(xvariable,groupvariable),color=xvariable),width=setboxplotwidth,position=position_dodge(width=.9),fill=c(setboxplotcolor),linewidth=setboxplotthickness,alpha=setboxplottransparency)
           }
         }
       }
@@ -1022,6 +1076,12 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(dottransparency>1&&dottransparency<10.1){
       message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
     }
+  }
+  if(showlegend==FALSE){
+    graph<-graph+theme(legend.position="none")
+  }
+  if(setboxplotoutlinecolor[[1]]!="black"){
+    message("NOTE: If you would like the outline color and whiskers of your boxplots to match the color of your violins, use showcoloredwhiskers=TRUE or showcoloredboxplotoutlines=TRUE")
   }
     return(graph)
 }
