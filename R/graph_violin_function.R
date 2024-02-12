@@ -1,5 +1,5 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,bold=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,settitleface="bold",setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL){
 
   require(ggplot2)
 
@@ -21,6 +21,12 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   }
   if(setlegendpositionleft==TRUE){
     showlegendleft<-TRUE
+  }
+  if(!is.null(setreverseorderlegend)){
+    setreverseordergroup<-setreverseorderlegend
+  }
+  if(!is.null(reverseorderlegend)){
+    setreverseordergroup<-reverseorderlegend
   }
   if(!is.null(setxaxislabel)){
     setxaxistitle<-setxaxislabel
@@ -69,6 +75,52 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   }
   if(!is.null(reverseorderpanel)){
     setreverseorderpanel<-reverseorderpanel
+  }
+  if(!is.null(showboldedtitle)){
+    if(showboldedtitle==TRUE){
+      settitleface<-"bold"
+    }
+    if(showboldedtitle==FALSE){
+      settitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedlegendtitle)){
+    if(showboldedlegendtitle==TRUE){
+      setlegendtitleface<-"bold"
+    }
+    if(showboldedlegendtitle==FALSE){
+      setlegendtitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedaxistitles)){
+    if(showboldedaxistitles==TRUE){
+      showboldedxaxistitle<-TRUE
+      showboldedyaxistitle<-TRUE
+    }
+  }
+  if(!is.null(showboldedxaxistitle)){
+    if(showboldedxaxistitle==TRUE){
+      setxaxistitleface<-"bold"
+    }
+    if(showboldedxaxistitle==FALSE){
+      setxaxistitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedyaxistitle)){
+    if(showboldedyaxistitle==TRUE){
+      setyaxistitleface<-"bold"
+    }
+    if(showboldedyaxistitle==FALSE){
+      setyaxistitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedpaneltitle)){
+    if(showboldedpaneltitle==TRUE){
+      setpaneltitleface<-"bold"
+    }
+    if(showboldedpaneltitle==FALSE){
+      setpaneltitleface<-"plain"
+    }
   }
   if(!is.null(groupvariable)){
     iv2<-groupvariable
@@ -521,6 +573,15 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
 
     if(showgridlines==FALSE){
       graph<-graph+theme_classic()+theme(legend.position="none")
+    }
+    if(!is.null(setyaxistitleface)){
+      graph<-graph+theme(axis.title.y=element_text(face=setyaxistitleface))
+    }
+    if(!is.null(setxaxistitleface)){
+      graph<-graph+theme(axis.title.x=element_text(face=setxaxistitleface))
+    }
+    if(!is.null(setpaneltitleface)){
+      graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
     }
 
     if(showanimation==TRUE){
@@ -1077,8 +1138,28 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
     }
   }
+  if(!is.null(setyaxistitleface)){
+    graph<-graph+theme(axis.title.y=element_text(face=setyaxistitleface))
+  }
+  if(!is.null(setxaxistitleface)){
+    graph<-graph+theme(axis.title.x=element_text(face=setxaxistitleface))
+  }
+  if(!is.null(setpaneltitleface)){
+    graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
+  }
+
+  if(showlegend==TRUE){
+    graph<-graph+theme(legend.title=element_text(face=setlegendtitleface))
+  }
   if(showlegend==FALSE){
     graph<-graph+theme(legend.position="none")
+  }
+  if(!is.null(showboldedaxistitles)){
+    if(showboldedaxistitles==TRUE){
+      if(is.null(showboldedlegendtitle)||showboldedlegendtitle==FALSE){
+        message("NOTE: You are bolding your axis titles. To also bold the legend title, use showboldedlegendtitle = TRUE")
+      }
+    }
   }
   if(setboxplotoutlinecolor[[1]]!="black"){
     message("NOTE: If you would like the outline color and whiskers of your boxplots to match the color of your violins, use showcoloredwhiskers=TRUE or showcoloredboxplotoutlines=TRUE")

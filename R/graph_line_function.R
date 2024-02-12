@@ -1,12 +1,23 @@
 #### LINE PLOT ####
-graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=FALSE,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE){
+graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=TRUE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL){
 
   require(Rmisc)
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
+
+  if(is.null(showdarkgraph)){
+    showdarkgraph<-FALSE
+  }
+
   if(!is.null(setdata)){
     data<-setdata
+  }
+  if(!is.null(setreverseorderlegend)){
+    setreverseordergroup<-setreverseorderlegend
+  }
+  if(!is.null(reverseorderlegend)){
+    setreverseordergroup<-reverseorderlegend
   }
   if(setlegendpositionabove==TRUE){
     showlegendabove<-TRUE
@@ -56,6 +67,53 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   if(!is.null(reverseorderpanel)){
     setreverseorderpanel<-reverseorderpanel
   }
+  if(!is.null(showboldedtitle)){
+    if(showboldedtitle==TRUE){
+      settitleface<-"bold"
+    }
+    if(showboldedtitle==FALSE){
+      settitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedlegendtitle)){
+    if(showboldedlegendtitle==TRUE){
+      setlegendtitleface<-"bold"
+    }
+    if(showboldedlegendtitle==FALSE){
+      setlegendtitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedaxistitles)){
+    if(showboldedaxistitles==TRUE){
+      showboldedxaxistitle<-TRUE
+      showboldedyaxistitle<-TRUE
+    }
+  }
+  if(!is.null(showboldedxaxistitle)){
+    if(showboldedxaxistitle==TRUE){
+      setxaxistitleface<-"bold"
+    }
+    if(showboldedxaxistitle==FALSE){
+      setxaxistitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedyaxistitle)){
+    if(showboldedyaxistitle==TRUE){
+      setyaxistitleface<-"bold"
+    }
+    if(showboldedyaxistitle==FALSE){
+      setyaxistitleface<-"plain"
+    }
+  }
+  if(!is.null(showboldedpaneltitle)){
+    if(showboldedpaneltitle==TRUE){
+      setpaneltitleface<-"bold"
+    }
+    if(showboldedpaneltitle==FALSE){
+      setpaneltitleface<-"plain"
+    }
+  }
+
   if(showdarkgraph==TRUE){
     if(setdotcolor=="#3BA0BF"&&is.null(linecolor)){
       setdotcolor<-"yellow"
@@ -93,16 +151,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   if(!is.null(showcolorederrorbars)){
     if(showcolorederrorbars==FALSE){
       overrideerrorbarcolor<-TRUE
-    }
-  }
-  #By default, if not manually specified, set showcolorederrorbars to FALSE.
-  #This default will change for interval plots.
-  if(is.null(showcolorederrorbars)){
-    if(showintervalplot==FALSE){
-      showcolorederrorbars<-FALSE
-    }
-    if(showintervalplot==TRUE){
-      showcolorederrorbars<-TRUE
     }
   }
 
@@ -143,6 +191,17 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
 
   if(showline==FALSE){
     showintervalplot<-TRUE
+  }
+
+  #By default, if not manually specified, set showcolorederrorbars to FALSE.
+  #This default will change for interval plots.
+  if(is.null(showcolorederrorbars)){
+    if(showintervalplot==FALSE){
+      showcolorederrorbars<-FALSE
+    }
+    if(showintervalplot==TRUE){
+      showcolorederrorbars<-TRUE
+    }
   }
 
   if(showintervalplot==TRUE){
@@ -787,6 +846,15 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
         message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
       }
     }
+    if(!is.null(setyaxistitleface)){
+      graph<-graph+theme(axis.title.y=element_text(face=setyaxistitleface))
+    }
+    if(!is.null(setxaxistitleface)){
+      graph<-graph+theme(axis.title.x=element_text(face=setxaxistitleface))
+    }
+    if(!is.null(setpaneltitleface)){
+      graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
+    }
     if(showgridlines==FALSE){
       graph<-graph+theme_classic()+theme(legend.position="none")
     }
@@ -1200,7 +1268,7 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   }
 
   if(!is.null(setlegendlevels)){
-    graph <- graph + scale_color_discrete(labels=c(setlegendlevels))
+    graph <- graph + scale_color_discrete(labels=c(setlegendlevels))+scale_fill_discrete(labels=c(setlegendlevels))
   }
 
   if(!is.null(level1)&!is.null(level2)&is.null(level3)&is.null(level4)&is.null(level5)&is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
@@ -1321,13 +1389,33 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
     }
   }
-  if(showgridlines==FALSE){
-    graph<-graph+theme_classic()
+  if(!is.null(setyaxistitleface)){
+    graph<-graph+theme(axis.title.y=element_text(face=setyaxistitleface))
+  }
+  if(!is.null(setxaxistitleface)){
+    graph<-graph+theme(axis.title.x=element_text(face=setxaxistitleface))
+  }
+  if(!is.null(setpaneltitleface)){
+    graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
+  }
+
+  if(showlegend==TRUE){
+    graph<-graph+theme(legend.title=element_text(face=setlegendtitleface))
   }
   if(showlegend==FALSE){
     graph<-graph+theme(legend.position = "none")
   }
-  if(showrotatedxlabels==TRUE){
+  if(showgridlines==FALSE){
+    graph<-graph+theme_classic()
+  }
+  if(!is.null(showboldedaxistitles)){
+    if(showboldedaxistitles==TRUE){
+      if(is.null(showboldedlegendtitle)||showboldedlegendtitle==FALSE){
+        message("NOTE: You are bolding your axis titles. To also bold the legend title, use showboldedlegendtitle = TRUE")
+      }
+    }
+  }
+    if(showrotatedxlabels==TRUE){
     if(internalfunctionautorotation==TRUE){
       message("NOTE: X-axis labels have been rotated by default to avoid overlapping labels. To override this, add showrotatedxlabels=FALSE")
     }
@@ -1337,3 +1425,4 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     return(graph)
   }
 }
+
