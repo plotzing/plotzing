@@ -575,7 +575,14 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(showdata==TRUE){
       graph<-graph+geom_point(aes(fill=xvariable),shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=setdottransparency,position=position_jitterdodge(jitter.width=jitterwidth,jitter.height=jitterheight,dodge.width=.9))
     }
-    graph<-graph+scale_fill_brewer(palette="Dark2")+scale_color_brewer(palette="Dark2")+theme(legend.position="none")
+    if(length(levels(as.factor(summarydata$xvariable)))<=9){
+      graph<-graph+scale_fill_brewer(palette="Dark2")+scale_color_brewer(palette="Dark2")+theme(legend.position="none")
+    }
+
+    if(length(levels(as.factor(summarydata$xvariable)))>9){
+      graph<-graph+theme(legend.position="none")
+      message("\nNOTE: Given the number of levels in your x-variable, the default color palette has changed. To adjust colors manually, use setcolors=c() (e.g., setcolors=c('red','green','blue'))\n")
+    }
 
     if(showgridlines==FALSE){
       graph<-graph+theme_classic()+theme(legend.position="none")

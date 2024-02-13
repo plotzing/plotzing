@@ -666,7 +666,14 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           theme_bw()+theme(plot.title=element_text(hjust=0.5))+
           geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
-        graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
+
+        if(length(levels(as.factor(summarydata$xvariable)))<=9){
+          graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
+        }
+
+        if(length(levels(as.factor(summarydata$xvariable)))>9){
+          graph<-graph+theme(legend.position="none")
+        }
 
       }
 
@@ -685,8 +692,14 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+theme(plot.title=element_text(hjust=0.5))+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
-        graph<-graph+scale_fill_brewer(palette=1)+theme(legend.position="none")
 
+        if(length(levels(as.factor(summarydata$xvariable)))<=9){
+          graph<-graph+scale_fill_brewer(palette=1)+theme(legend.position="none")
+        }
+
+        if(length(levels(as.factor(summarydata$xvariable)))>9){
+          graph<-graph+theme(legend.position="none")
+        }
       }
     }
     if(showcolorederrorbars==TRUE){
@@ -706,8 +719,14 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           theme_bw()+theme(plot.title=element_text(hjust=0.5))+
           geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
-        graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
 
+          if(length(levels(as.factor(summarydata$xvariable)))<=9){
+          graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
+          }
+
+          if(length(levels(as.factor(summarydata$xvariable)))>9){
+          graph<-graph+theme(legend.position="none")
+        }
       }
 
       if(showdata==FALSE){
@@ -725,12 +744,21 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+theme(plot.title=element_text(hjust=0.5))+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
-        graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
 
+        if(length(levels(as.factor(summarydata$xvariable)))<=9){
+          graph<-graph+scale_fill_brewer(palette=1)+theme(legend.position="none")
+        }
+
+        if(length(levels(as.factor(summarydata$xvariable)))>9){
+          graph<-graph+theme(legend.position="none")
+        }
       }
     }
     if(showgridlines==FALSE){
       graph<-graph+theme_classic()+theme(legend.position = "none")
+    }
+    if(length(levels(as.factor(summarydata$xvariable)))>9){
+      message("\n NOTE: Because your x-variable contains more than 9 levels, the default color palette has changed. To adjust colors manually, use setcolors=c() (e.g., setcolors=c('red','blue','green'))\n")
     }
   }
 
