@@ -8,7 +8,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     showdarkgraph<-FALSE
   }
   if(is.null(showoutput)){
-    showoutput<-FALSE
+    showoutput<-TRUE
   }
   if(!is.null(setdata)){
     data<-setdata

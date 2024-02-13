@@ -8,7 +8,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     showdarkgraph<-FALSE
   }
   if(is.null(showoutput)){
-    showoutput<-FALSE
+    showoutput<-TRUE
   }
 
   if(!is.null(setdata)){
