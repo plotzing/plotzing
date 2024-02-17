@@ -1,5 +1,5 @@
 #### LINE PLOT ####
-graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,...){
+graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setbackgroundcolor=NULL,setaxisbackgroundcolor=NULL,settextcolor=NULL,...){
 
   require(Rmisc)
   require(ggplot2)
@@ -9,6 +9,24 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   if(is.null(showdarkgraph)){
     showdarkgraph<-FALSE
   }
+  if(!is.null(setlegendlevelorder)){
+    setgrouplevelorder<-setlegendlevelorder
+  }
+  if(!is.null(setaxisbackgroundcolor)&&is.null(setbackgroundcolor)){
+    setbackgroundcolor<-"White"
+  }
+  if(is.null(setbackgroundcolor)&&!is.null(settextcolor)){
+    setbackgroundcolor<-"White"
+  }
+  if(!is.null(setbackgroundcolor)&&is.null(settextcolor)){
+    settextcolor<-"black"
+  }
+  if(!is.null(setbackgroundcolor)||!is.null(settextcolor)){
+    if(is.null(setaxisbackgroundcolor)){
+      setaxisbackgroundcolor<-setbackgroundcolor
+    }
+  }
+
   if(is.null(showoutput)){
     showoutput<-TRUE
   }
@@ -303,10 +321,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       jitterheight<-setjitter
       jitterwidth<-setjitter
     }
-  }
-
-  if(!is.null(setdodgewidth)){
-    dodgewidth<-setdodgewidth
   }
 
   if(!is.null(settitlesize)){
@@ -647,9 +661,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
           summarydata$facetvariable<-summary$panelvariable
         }
       }
-      if(is.null(datapoints)){
-        showdata<-FALSE
-      }
       if(!is.null(summary)&&"errors"%!in%colnames(summary)){
         if("errorbars" %in% colnames(summary)){
           summary$errors<-summary$errorbars
@@ -703,14 +714,17 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
         message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
         stop()
       }
+
       summarydata$facetvariable<-as.factor(summarydata$facetvariable)
-      summary$facetvariable<-as.factor(summary$facetvariable)
       summarydata$facetvariable<-droplevels(summarydata$facetvariable)
-      summary$facetvariable<-droplevels(summary$facetvariable)
       originallevels<-levels(summarydata$facetvariable)
       levels(summarydata$facetvariable)<- c(setpanellevels)
-      levels(summary$facetvariable)<- c(setpanellevels)
       newlevels<-levels(summarydata$facetvariable)
+
+      summary$facetvariable<-as.factor(summary$facetvariable)
+      summary$facetvariable<-droplevels(summary$facetvariable)
+      levels(summary$facetvariable)<- c(setpanellevels)
+
       message("Levels of paneling variable have been converted:")
       if(showoutput==TRUE){
         print(originallevels)
@@ -718,7 +732,9 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       }
     }
     if(showoutput==TRUE){
-      print(summarydata)
+      if(customdata==FALSE){
+        print(summarydata)
+      }
     }
     summary2<-summary
     summary2$errorbars<-summary2$errors
@@ -842,6 +858,13 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     if(showdarkgraph==TRUE){
       graph<-graph+theme(
         plot.background = element_rect(fill = "black"),panel.background=element_rect(fill="black"),legend.background=element_rect(fill="black"), legend.key=element_rect(fill="black"),axis.text=element_text(color="white"),legend.text=element_text(color="white"),axis.title=element_text(color="white"),legend.title=element_text(color="white"))
+    }
+    if(!is.null(setbackgroundcolor)||!is.null(settextcolor)){
+      graph<-graph+theme(
+        plot.background = element_rect(fill = setaxisbackgroundcolor),panel.background=element_rect(fill=setbackgroundcolor),legend.background=element_rect(fill=setbackgroundcolor), legend.key=element_rect(fill=setbackgroundcolor),axis.text=element_text(color=settextcolor),legend.text=element_text(color=settextcolor),axis.title=element_text(color=settextcolor),legend.title=element_text(color=settextcolor))
+      if(setaxisbackgroundcolor!=setaxisbackgroundcolor){
+        message("NOTE: To adjust the axis background color, use the command setaxisbackgroundcolor=")
+      }
     }
     if(!is.null(setdottransparency)){
       if(setdottransparency>1&&setdottransparency<10.1){
@@ -1079,18 +1102,15 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       summary$groupvariable<-as.factor(summary$groupvariable)
       summary$yvariable<-as.numeric(summary$yvariable)
 
-      if(!is.null(datapoints)){
-        summarydata<-datapoints
-        summarydata$xvariable<-as.factor(summarydata$xvariable)
-        summarydata$groupvariable<-as.factor(summarydata$groupvariable)
-        summarydata$yvariable<-as.numeric(summarydata$yvariable)
-        if("panelvariable" %in% colnames(summarydata)){
-          summarydata$facetvariable<-summary$panelvariable
-        }
+
+      summarydata<-datapoints
+      summarydata$xvariable<-as.factor(summarydata$xvariable)
+      summarydata$groupvariable<-as.factor(summarydata$groupvariable)
+      summarydata$yvariable<-as.numeric(summarydata$yvariable)
+      if("panelvariable" %in% colnames(summarydata)){
+        summarydata$facetvariable<-summary$panelvariable
       }
-      if(is.null(datapoints)){
-        showdata<-FALSE
-      }
+
       if(!is.null(summary)){
         if("errors"%!in%colnames(summary)){
           if("errorbars" %in% colnames(summary)&&"errors"%!in%colnames(summary)){
@@ -1134,14 +1154,18 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
         message("ERROR: Unfortunately, you cannot set the panel level order and specify custom panel labels in the present version. However, you may reverse the order of your panels using setreverseorderpanel=TRUE.")
         stop()
       }
-      summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+      if(!is.null(datapoints)){
+        summarydata$facetvariable<-as.factor(summarydata$facetvariable)
+        summarydata$facetvariable<-droplevels(summarydata$facetvariable)
+        originallevels<-levels(summarydata$facetvariable)
+        levels(summarydata$facetvariable)<- c(setpanellevels)
+        newlevels<-levels(summarydata$facetvariable)
+      }
+
       summary$facetvariable<-as.factor(summary$facetvariable)
-      summarydata$facetvariable<-droplevels(summarydata$facetvariable)
       summary$facetvariable<-droplevels(summary$facetvariable)
-      originallevels<-levels(summarydata$facetvariable)
-      levels(summarydata$facetvariable)<- c(setpanellevels)
       levels(summary$facetvariable)<- c(setpanellevels)
-      newlevels<-levels(summarydata$facetvariable)
+
       message("Levels of paneling variable have been converted:")
       if(showoutput==TRUE){
         print(originallevels)
@@ -1149,7 +1173,9 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       }
     }
     if(showoutput==TRUE){
-      print(summarydata)
+      if(customdata==FALSE){
+        print(summarydata)
+      }
     }
     summary2<-summary
     summary2$errorbars<-summary2$errors
@@ -1386,6 +1412,13 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     graph<-graph+theme(
       plot.background = element_rect(fill = "black"),panel.background=element_rect(fill="black"),legend.background=element_rect(fill="black"), legend.key=element_rect(fill="black"),axis.text=element_text(color="white"),legend.text=element_text(color="white"),axis.title=element_text(color="white"),legend.title=element_text(color="white"))
   }
+  if(!is.null(setbackgroundcolor)||!is.null(settextcolor)){
+    graph<-graph+theme(
+      plot.background = element_rect(fill = setaxisbackgroundcolor),panel.background=element_rect(fill=setbackgroundcolor),legend.background=element_rect(fill=setaxisbackgroundcolor), legend.key=element_rect(fill=setaxisbackgroundcolor),axis.text=element_text(color=settextcolor),legend.text=element_text(color=settextcolor),axis.title=element_text(color=settextcolor),legend.title=element_text(color=settextcolor))
+      if(setaxisbackgroundcolor!=setaxisbackgroundcolor){
+        message("NOTE: To adjust the axis background color, use the command setaxisbackgroundcolor=")
+      }
+    }
   if(!is.null(setdottransparency)){
     if(setdottransparency>1&&setdottransparency<10.1){
       message("NOTE: Transparency is typically set on a scale from 0 (completely invisible) - 1 (not at all transparent). Because you specified a transparency value greater than 1, we divided this value by 10, effectively making a scale from 1.1 - 10. However, specifying a transparency of 1 will trigger the default 0 - 1 scale and remove all transparency. To avoid confusion, we recommend using the default 0 - 1 scale in the future.")
