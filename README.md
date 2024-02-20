@@ -1,14 +1,4 @@
----
-title: "README"
-output: html_document
-date: "2024-02-20"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# **Plotzing: Customizable, Publication-Quality Plots in 1 Line of Code**
+# **Plotzing: Customizable, Publication-Quality Plots in a Single Line of Code**
 
 ## **Introduction**
 
@@ -18,7 +8,7 @@ Plotzing takes a different approach to plotting by by applying three guiding pri
 
 I begin by explaining how to install Plotzing. I then discuss the basics of graphing in Plotzing and discuss some commonly used features. I conclude with some more advanced commands and additional information about how to offer feedback or get help regarding the Plotzing package.
 
-## **Installing and Updating Plotzing**
+## **Installing and Updating the Plotzing Package**
 
 AT present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R. The following code installs devtools and installs and loads Plotzing:
 
