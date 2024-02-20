@@ -2565,4 +2565,4 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
     return(graph)
   }
 }
->>>>>>> 71983c1f2976df36e4be1e47d839f057c4fa641e
+
