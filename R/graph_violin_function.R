@@ -2199,5 +2199,3 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   }
     return(graph)
 }
-
->>>>>>> 71983c1f2976df36e4be1e47d839f057c4fa641e
