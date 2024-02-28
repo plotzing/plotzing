@@ -876,10 +876,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   }
   #### LINE GRAPH PART 2 ####
   if((!is.null(iv2) && customdata==FALSE) || ((!is.null(iv1) && length(dv)>1) && customdata==FALSE)||(customdata==TRUE&&"groupvariable" %in% colnames(dv))||(customdata==TRUE&&"groupvariable" %in% colnames(means))){
-    if(setlinecolor!="#1D4E5D"|setdotcolor!="#3BA0BF"){
-      message("For graphs with multiple independent variables, set the line and dot color using color1 = , color2 =, and so on.")
-    }
-
     if(customdata==FALSE){
       if(is.null(panelvariable)){
         if(length(dv)==1){
@@ -1418,6 +1414,15 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       }
     }
   }
+
+    if(setlinecolor!="#1D4E5D"||setdotcolor!="#3BA0BF"){
+    message("NOTE: For graphs with multiple independent variables, set the line and dot color using setcolors=c(). For example: setcolors=c('purple','turquoise')")
+    }
+
+    if(length(levels(as.factor(summarydata$xvariable)))>20){
+      message("NOTE: You seem to have more than levels of your x-axis variable. If your x-axis variable is continuous, you may produce a scatterplot instead using the graph_scatterplot() function.")
+    }
+
     if(showrotatedxlabels==TRUE){
     if(internalfunctionautorotation==TRUE){
       message("NOTE: X-axis labels have been rotated by default to avoid overlapping labels. To override this, add showrotatedxlabels=FALSE")

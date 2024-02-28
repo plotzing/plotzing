@@ -1076,6 +1076,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           xlab(colnames(graphvariables)[2])
       }
 
+      if(linecolor[[1]]!=c("#1e7388")){
+        message("NOTE: To set the color of your lines when showing multiple regression lines, use the command setcolors=c(). For example: setcolors=c('turquoise','purple'). When using this command, you may show colored shading using showcoloredshading=TRUE or use the default gray shading using showcoloredshading=FALSE")
+      }
       if(!is.null(legendtitle)){
         graph<-graph + labs(linetype=legendtitle,color=legendtitle,fill=legendtitle)
       }
