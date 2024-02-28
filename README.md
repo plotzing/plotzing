@@ -2,15 +2,15 @@
 
 ## **Introduction**
 
-Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing is different from other graphing in packages in several key ways. First, other plotting packages, in most cases, are syntactically complex--requiring many lines of code to produce each graph. Second, other packages commonly require each component of a plot to be specified separately (e.g., separately specifying datapoints; error bars; bars, lines, or other geoms; etc.). Finally (and, perhaps, most importantly), other plotting packages require data to have already been cleaned; data must already have been reshaped if appropriate, coded correctly, standardized, etc. 
+Plotzing is an R package for generating publication-quality plots in a single line of code which differs from other graphing in packages in several key ways. First, other plotting packages, in most cases, are syntactically complex--requiring many lines of code to produce each graph. Second, other packages commonly require each component of a plot to be specified separately (e.g., separately specifying datapoints; error bars; bars, lines, or other geoms; etc.). Finally (and, perhaps, most importantly), other plotting packages require data to have already been cleaned; data must already have been reshaped if appropriate, coded correctly, standardized, etc. 
 
-Plotzing takes a different approach to plotting by by applying three guiding principles. First, Plotzing syntax is simple; plots can be generated using a single line of code, and nearly commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
+Plotzing takes a different approach to plotting by applying three guiding principles. First, Plotzing syntax is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
-I begin by explaining how to install Plotzing. I then discuss the basics of graphing in Plotzing and discuss some commonly used features. I conclude with some more advanced commands and additional information about how to offer feedback or get help regarding the Plotzing package.
+Here, I begin by explaining how to install Plotzing. I then discuss the basics of graphing in Plotzing and discuss some commonly used features. I conclude with some advanced commands and additional information about how to offer feedback or get help regarding the Plotzing package.
 
 ## **Installing and Updating the Plotzing Package**
 
-AT present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R. The following code installs devtools and installs and loads Plotzing:
+At present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R. The following code installs devtools and installs and loads Plotzing:
 
 ```{r, echo=TRUE, eval=FALSE}
 # Install devtools if not already installed
@@ -47,14 +47,19 @@ To start graphing with Plotzing, begin by loading your dataframe into R. If you 
 Once you have loaded your data, you can use the functions graph_line, graph_bar, graph_violin, or graph_scatterplot to create your graph, as in the following example:
 
 ```{r, echo=TRUE, eval=FALSE}
+#Load Plotzing
+library(plotzing)
+
 # Load your data
 df <- read.csv("your_data_file.csv")
 
 # Create a line graph
-graph_line("y_variable", "x_variable", "color_variable", "panel_variable")
+graph_line("y_variable", "x_variable", "color_variable", "panel_variable") #Quotation marks are needed around variable names
 ```
 
-Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"panel_variable"`** with the relevant column names of those variables you wish to use. The order of variables specified moves from left-to-right on the graph (the y-axis is specified first, followed by the x-axis, the legend, and the panels). If you don't wish to follow this order, however, you can specify your dependent variable, your independent variables, and your panel variable using the commands dv=, iv1=, iv2=, and panelvariable=. Additionally, you can create simpler plots (e.g., just using an x and y-variable) by leaving out relevant variables as desired. 
+Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"panel_variable"`** with the relevant column names of those variables you wish to use. Make sure to keep quotes surrounding the names of variables. Note that the order of variables specified moves from left-to-right on the graph (the y-axis is specified first, followed by the x-axis, the legend, and the panels). If you don't wish to follow this order, however, you can specify your dependent variable, your independent variables, and your panel variable using the commands dv=, iv1=, iv2=, and panelvariable=. Additionally, you can create simpler plots (e.g., just using an x and y-variable) by leaving out relevant variables as desired. For instance, the following code would create a bar plot depicting "jealousy" on the y-axis, "condition" on the x-axis, and "gender" in the legend (as a color variable) from a dataframe called df:
+
+graph_bar("jealousy","condition","gender") #Again, remember to keep quotation marks around variable names
 
 ## **Customizing Plots**
 
