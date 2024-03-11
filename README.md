@@ -2,7 +2,7 @@
 
 ## **Introduction**
 
-NOTE: Plotzing is still in beta.
+*NOTE: Plotzing is still in beta.*
 
 Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing differs from other graphing in packages in several key ways. First, other plotting packages, in most cases, are syntactically complex--requiring many lines of code to produce each graph. Second, other packages commonly require each component of a plot to be specified separately (e.g., separately specifying datapoints; error bars; bars, lines, or other geoms; etc.). Finally (and, perhaps, most importantly), other plotting packages require data to have already been cleaned; data must already have been reshaped if appropriate, coded correctly, standardized, etc. 
 
