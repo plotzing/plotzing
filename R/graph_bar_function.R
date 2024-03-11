@@ -1,5 +1,5 @@
 #### BAR GRAPH ####
-graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=.4,jitterwidth=.3,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=FALSE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,...){
+graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=.4,jitterwidth=.3,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=FALSE,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,...){
 
   require(Rmisc)
   require(ggplot2)
@@ -11,8 +11,30 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
   if(is.null(showoutput)){
     showoutput<-TRUE
   }
+  if(!is.null(setyupperbound)||!is.null(setylowerbound)){
+    if(is.null(setylowerbound)){
+      message("ERROR: To adjust the bounds of your y-axis, you must also specify a lower bound using setylowerbound=")
+      stop()
+    }
+    if(is.null(setyupperbound)){
+      message("ERROR: To adjust the bounds of your y-axis, you must also specify a lower bound using setyupperbound=")
+      stop()
+    }
+  }
   if(!is.null(setdata)){
     data<-setdata
+  }
+  if(!is.null(setxaxistitlesize)){
+    setxtitlesize<-setxaxistitlesize
+  }
+  if(!is.null(setyaxistitlesize)){
+    setytitlesize<-setyaxistitlesize
+  }
+  if(!is.null(setxaxislevels)){
+    setxlevels<-setxaxislevels
+  }
+  if(!is.null(setlegendlevelorder)){
+    setgrouplevelorder<-setlegendlevelorder
   }
   if(setlegendpositionabove==TRUE){
     showlegendabove<-TRUE
@@ -440,7 +462,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       if(setreversecodex==TRUE){
         summarydata$xvariable<-(max(summarydata$xvariable,na.rm=T)+min(summarydata$xvariable,na.rm=T))-summarydata$xvariable
       }
-      if(setreverseorderx==TRUE){
+      if(setreverseorderx==TRUE&&splitx==FALSE){
         summarydata$xvariable<-as.factor(summarydata$xvariable)
         summarydata$xvariable<-factor(summarydata$xvariable,levels=c(rev(levels(summarydata$xvariable))))
       }
@@ -450,7 +472,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       if(setreversecodepanel==TRUE){
         summarydata$facetvariable<-(max(summarydata$facetvariable,na.rm=T)+min(summarydata$facetvariable,na.rm=T))-summarydata$facetvariable
       }
-      if(setreverseorderpanel==TRUE){
+      if(setreverseorderpanel==TRUE&&splitpanel==FALSE){
         summarydata$facetvariable<-as.factor(summarydata$facetvariable)
         summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c(rev(levels(summarydata$facetvariable))))
       }
@@ -479,7 +501,9 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summarydata$xvariable<-as.numeric(summarydata$xvariable)
         recordedmedianx<-median(summarydata$xvariable,na.rm=T)
         summarydata$xvariable<-ifelse(summarydata$xvariable>median(summarydata$xvariable,na.rm=T),"High",ifelse(summarydata$xvariable<=median(summarydata$xvariable,na.rm=T),"Low",NA))
-        summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+        if(setreverseorderx==FALSE){
+          summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+        }
         if(showoutput==TRUE){
           print(table(summarydata$facetvariable))
         }
@@ -490,7 +514,9 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summarydata$facetvariable<-as.numeric(summarydata$facetvariable)
         recordedmedianfacet<-median(summarydata$facetvariable,na.rm=T)
         summarydata$facetvariable<-ifelse(summarydata$facetvariable<=median(summarydata$facetvariable,na.rm=T),"Low",ifelse(summarydata$facetvariable>median(summarydata$facetvariable,na.rm=T),"High",NA))
-        summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+        if(setreverseorderpanel==FALSE){
+          summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+        }
         if(showoutput==TRUE){
           print(table(summarydata$facetvariable))
         }
@@ -820,7 +846,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       if(setreversecodex==TRUE){
         summarydata$xvariable<-(max(summarydata$xvariable,na.rm=T)+min(summarydata$xvariable,na.rm=T))-summarydata$xvariable
       }
-      if(setreverseorderx==TRUE){
+      if(setreverseorderx==TRUE&&splitx==FALSE){
         summarydata$xvariable<-as.factor(summarydata$xvariable)
         summarydata$xvariable<-factor(summarydata$xvariable,levels=c(rev(levels(summarydata$xvariable))))
       }
@@ -830,14 +856,14 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       if(setreversecodegroup==TRUE){
         summarydata$groupvariable<-(max(summarydata$groupvariable,na.rm=T)+min(summarydata$groupvariable,na.rm=T))-summarydata$groupvariable
       }
-      if(setreverseordergroup==TRUE){
+      if(setreverseordergroup==TRUE&&splitgroup==FALSE){
         summarydata$groupvariable<-as.factor(summarydata$groupvariable)
         summarydata$groupvariable<-factor(summarydata$groupvariable,levels=c(rev(levels(summarydata$groupvariable))))
       }
       if(setreversecodepanel==TRUE){
         summarydata$facetvariable<-(max(summarydata$facetvariable,na.rm=T)+min(summarydata$facetvariable,na.rm=T))-summarydata$facetvariable
       }
-      if(setreverseorderpanel==TRUE){
+      if(setreverseorderpanel==TRUE&&splitpanel==FALSE){
         summarydata$facetvariable<-as.factor(summarydata$facetvariable)
         summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c(rev(levels(summarydata$facetvariable))))
       }
@@ -873,7 +899,9 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summarydata$xvariable<-as.numeric(summarydata$xvariable)
         recordedmedianx<-median(summarydata$xvariable,na.rm=T)
         summarydata$xvariable<-ifelse(summarydata$xvariable>median(summarydata$xvariable,na.rm=T),"High",ifelse(summarydata$xvariable<=median(summarydata$xvariable,na.rm=T),"Low",NA))
-        summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+        if(setreverseorderx==FALSE){
+          summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+        }
         if(showoutput==TRUE){
           print(table(summarydata$facetvariable))
         }
@@ -884,7 +912,10 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summarydata$facetvariable<-as.numeric(summarydata$facetvariable)
         recordedmedianfacet<-median(summarydata$facetvariable,na.rm=T)
         summarydata$facetvariable<-ifelse(summarydata$facetvariable<=median(summarydata$facetvariable,na.rm=T),"Low",ifelse(summarydata$facetvariable>median(summarydata$facetvariable,na.rm=T),"High",NA))
-        summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+        if(setreverseorderpanel==TRUE){
+          summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+
+        }
         if(showoutput==TRUE){
           print(table(summarydata$facetvariable))
         }
@@ -895,7 +926,9 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         summarydata$groupvariable<-as.numeric(summarydata$groupvariable)
         recordedmediangroup<-median(summarydata$groupvariable,na.rm=T)
         summarydata$groupvariable<-ifelse(summarydata$groupvariable<=median(summarydata$groupvariable,na.rm=T),"Low",ifelse(summarydata$groupvariable>median(summarydata$groupvariable,na.rm=T),"High",NA))
+        if(setreverseordergroup==FALSE){
         summarydata$groupvariable<-factor(summarydata$groupvariable,levels=c("Low","High"))
+        }
         if(showoutput==TRUE){
           print(table(summarydata$facetvariable))
         }
@@ -1324,6 +1357,15 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
   }
   if(!is.null(setpaneltitleface)){
     graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
+  }
+  if(!is.null(setpaneltitlesize)){
+    graph<-graph+theme(strip.text=element_text(size=setpaneltitlesize))
+  }
+  if(!is.null(setyupperbound)){
+    graph<-graph+ylim(setylowerbound,setyupperbound)
+    if(setylowerbound>0){
+      message("WARNING: To display the bars in a bar graph, the lower bound of your y-axis may need to be set to 0.")
+    }
   }
   if(!is.null(showboldedaxistitles)){
     if(showboldedaxistitles==TRUE){

@@ -1,5 +1,5 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,setpanellevels=NULL,setxlevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,...){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color1=-1,color2=-1,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,...){
 
   require(ggplot2)
 
@@ -10,8 +10,30 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   if(is.null(showoutput)){
     showoutput<-TRUE
   }
+  if(!is.null(setyupperbound)||!is.null(setylowerbound)){
+    if(is.null(setylowerbound)){
+      message("ERROR: To adjust the bounds of your y-axis, you must also specify a lower bound using setylowerbound=")
+      stop()
+    }
+    if(is.null(setyupperbound)){
+      message("ERROR: To adjust the bounds of your y-axis, you must also specify a lower bound using setyupperbound=")
+      stop()
+    }
+  }
   if(!is.null(setdata)){
     data<-setdata
+  }
+  if(!is.null(setxaxistitlesize)){
+    setxtitlesize<-setxaxistitlesize
+  }
+  if(!is.null(setyaxistitlesize)){
+    setytitlesize<-setyaxistitlesize
+  }
+  if(!is.null(setxaxislevels)){
+    setxlevels<-setxaxislevels
+  }
+  if(!is.null(setlegendlevelorder)){
+    setgrouplevelorder<-setlegendlevelorder
   }
   if(!is.null(showcoloredwhiskers)){
     showcoloredboxplotoutline<-showcoloredwhiskers
@@ -398,7 +420,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(setreversecodex==TRUE){
       summarydata$xvariable<-(max(summarydata$xvariable,na.rm=T)+min(summarydata$xvariable,na.rm=T))-summarydata$xvariable
     }
-    if(setreverseorderx==TRUE){
+    if(setreverseorderx==TRUE&&splitx==FALSE){
       summarydata$xvariable<-as.factor(summarydata$xvariable)
       summarydata$xvariable<-factor(summarydata$xvariable,levels=c(rev(levels(summarydata$xvariable))))
     }
@@ -408,7 +430,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(setreversecodepanel==TRUE){
       summarydata$facetvariable<-(max(summarydata$facetvariable,na.rm=T)+min(summarydata$facetvariable,na.rm=T))-summarydata$facetvariable
     }
-    if(setreverseorderpanel==TRUE){
+    if(setreverseorderpanel==TRUE&&splitpanel==FALSE){
       summarydata$facetvariable<-as.factor(summarydata$facetvariable)
       summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c(rev(levels(summarydata$facetvariable))))
     }
@@ -436,7 +458,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       summarydata$xvariable<-as.numeric(summarydata$xvariable)
       recordedmedianx<-median(summarydata$xvariable,na.rm=T)
       summarydata$xvariable<-ifelse(summarydata$xvariable<=median(summarydata$xvariable,na.rm=T),"Low",ifelse(summarydata$xvariable>median(summarydata$xvariable,na.rm=T),"High",NA))
-      summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+      if(setreverseorderx==FALSE){
+        summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+      }
       if(showoutput==TRUE){
         print(table(summarydata$xvariable))
       }
@@ -447,7 +471,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       summarydata$facetvariable<-as.numeric(summarydata$facetvariable)
       recordedmedianfacet<-median(summarydata$facetvariable,na.rm=T)
       summarydata$facetvariable<-ifelse(summarydata$facetvariable<=median(summarydata$facetvariable,na.rm=T),"Low",ifelse(summarydata$facetvariable>median(summarydata$facetvariable,na.rm=T),"High",NA))
+      if(setreverseorderpanel==FALSE){
       summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+      }
       if(showoutput==TRUE){
         print(table(summarydata$facetvariable))
       }
@@ -596,6 +622,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(!is.null(setpaneltitleface)){
       graph<-graph+theme(strip.text=element_text(face=setpaneltitleface))
     }
+    if(!is.null(setpaneltitlesize)){
+      graph<-graph+theme(strip.text=element_text(size=setpaneltitlesize))
+    }
 
     if(showanimation==TRUE){
       message("You must add a grouping variable to use animations.")
@@ -703,7 +732,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(setreversecodex==TRUE){
       summarydata$xvariable<-(max(summarydata$xvariable,na.rm=T)+min(summarydata$xvariable,na.rm=T))-summarydata$xvariable
     }
-    if(setreverseorderx==TRUE){
+    if(setreverseorderx==TRUE&&splitx==FALSE){
       summarydata$xvariable<-as.factor(summarydata$xvariable)
       summarydata$xvariable<-factor(summarydata$xvariable,levels=c(rev(levels(summarydata$xvariable))))
     }
@@ -713,14 +742,14 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(setreversecodegroup==TRUE){
       summarydata$groupvariable<-(max(summarydata$groupvariable,na.rm=T)+min(summarydata$groupvariable,na.rm=T))-summarydata$groupvariable
     }
-    if(setreverseordergroup==TRUE){
+    if(setreverseordergroup==TRUE&&splitgroup==FALSE){
       summarydata$groupvariable<-as.factor(summarydata$groupvariable)
       summarydata$groupvariable<-factor(summarydata$groupvariable,levels=c(rev(levels(summarydata$groupvariable))))
     }
     if(setreversecodepanel==TRUE){
       summarydata$facetvariable<-(max(summarydata$facetvariable,na.rm=T)+min(summarydata$facetvariable,na.rm=T))-summarydata$facetvariable
     }
-    if(setreverseorderpanel==TRUE){
+    if(setreverseorderpanel==TRUE&&splitpanel==FALSE){
       summarydata$facetvariable<-as.factor(summarydata$facetvariable)
       summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c(rev(levels(summarydata$facetvariable))))
     }
@@ -756,7 +785,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       summarydata$groupvariable<-as.numeric(summarydata$groupvariable)
       recordedmediangroup<-median(summarydata$groupvariable,na.rm=T)
       summarydata$groupvariable<-ifelse(summarydata$groupvariable>median(summarydata$groupvariable,na.rm=T),"High",ifelse(summarydata$groupvariable<=median(summarydata$groupvariable,na.rm=T),"Low",NA))
+      if(setreverseordergroup==FALSE){
       summarydata$groupvariable<-factor(summarydata$groupvariable,levels=c("Low","High"))
+      }
       if(showoutput==TRUE){
         print(table(summarydata$groupvariable))
       }
@@ -767,7 +798,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       summarydata$xvariable<-as.numeric(summarydata$xvariable)
       recordedmedianx<-median(summarydata$xvariable,na.rm=T)
       summarydata$xvariable<-ifelse(summarydata$xvariable<=median(summarydata$xvariable,na.rm=T),"Low",ifelse(summarydata$xvariable>median(summarydata$xvariable,na.rm=T),"High",NA))
-      summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+      if(setreverseorderx==FALSE){
+        summarydata$xvariable<-factor(summarydata$xvariable,levels=c("Low","High"))
+      }
       if(showoutput==TRUE){
         print(table(summarydata$xvariable))
       }
@@ -778,7 +811,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       summarydata$facetvariable<-as.numeric(summarydata$facetvariable)
       recordedmedianfacet<-median(summarydata$facetvariable,na.rm=T)
       summarydata$facetvariable<-ifelse(summarydata$facetvariable<=median(summarydata$facetvariable,na.rm=T),"Low",ifelse(summarydata$facetvariable>median(summarydata$facetvariable,na.rm=T),"High",NA))
-      summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+      if(setreverseorderpanel==FALSE){
+        summarydata$facetvariable<-factor(summarydata$facetvariable,levels=c("Low","High"))
+      }
       if(showoutput==TRUE){
         print(table(summarydata$facetvariable))
       }
@@ -1166,6 +1201,9 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
   }
   if(showlegend==FALSE){
     graph<-graph+theme(legend.position="none")
+  }
+  if(!is.null(setyupperbound)){
+    graph<-graph+ylim(setylowerbound,setyupperbound)
   }
   if(!is.null(showboldedaxistitles)){
     if(showboldedaxistitles==TRUE){
