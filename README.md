@@ -3,7 +3,7 @@
 ## **Introduction**
 *NOTE: Plotzing is still in beta.*
 
-Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
+Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
 ## **Installing and Updating the Plotzing Package**
 
@@ -24,7 +24,7 @@ install_github("plotzing/plotzing") #If prompted to update other packages, just 
 library(plotzing) #Note the lowercase "p"
 ```
 
-Plotzing only needs to be installed once. Afterward, you can load Plotzing whenever you open R using the command **`library(plotzing)`** If you are prompted to update other packages during the installation process, such as ggplot2, feel free to press enter to skip these updates. Additionally, it's important to note that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
+Plotzing only needs to be installed once. Afterward, you can load Plotzing whenever you open R using the command **`library(plotzing)`** If you are prompted to update other packages during the installation process, such as ggplot2, feel free to press the enter key to skip these updates. Additionally, it's important to note that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
 
 If you wish to update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
 
@@ -39,7 +39,7 @@ library(plotzing) #Reload the package
 
 ## **Basic Plots**
 
-To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify data= when generating your graph, as Plotzing uses the dataframe df by default when no alternative dataframe is specified. 
+To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify **`data=`** when generating your graph, as Plotzing uses the dataframe df by default when no alternative dataframe is specified. 
 
 Once you have loaded your data, you can use the functions graph_line, graph_bar, graph_violin, or graph_scatterplot to create your graph, as in the following example:
 
@@ -62,11 +62,11 @@ graph_bar("jealousy","condition","gender") #Again, remember to keep quotation ma
 
 *Specifying Custom Dataframes*
 
-As mentioned previously, you do not need to specify the name of your dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **'data =**'
+As mentioned previously, you do not need to specify the name of your dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **`data =`**.
 
 ## **Customizing Plots**
 
-Nearly all commands in Plotzing can be accessed using the verbs *set* and *show*. Thus, typing these verbs in RStudio will bring up a list of available commands. For example, the code below generates a plot with the datapoints hidden (showdata=FALSE) and sets custom labels for the legend, title, and axes (using the commands setlegendtitle=, settitle=, etc.):
+Nearly all commands in Plotzing can be accessed using the verbs *set* and *show*. Thus, typing these verbs in RStudio will bring up a list of available commands. For example, the code below generates a plot with the datapoints hidden (**`showdata=FALSE`**) and sets custom labels for the legend, title, and axes (using the commands **`setlegendtitle=`**, **`settitle=`**, etc.):
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("y_variable", "x_variable", "color_variable", panelvariable="panel_variable", showdata=FALSE, settitle="Customized Bar Plot", setxaxistitle="X-Axis Title", setyaxistitle="Y-Axis Title", setlegendtitle="Legend Title")
@@ -89,7 +89,7 @@ relationship_status<-c(1, 1, 2, 2, 2, 1, 2, 1)
 df<-data.frame(jealousy_attractive,jealousy_wealthy,income,gender,relationship_status)
 ```
 
-With this newly generated dataset, we can graph gender and relationship status and specify custom titles, custom level labels, and so on:
+With this newly generated dataset, we can graph jealousy, gender and relationship status while also specifying custom titles, custom level labels, and so on:
  
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="Relationship Status",setlegendlevels=c("Single","Partnered"),setxlevels=c("Male","Female"),setxaxistitle="Gender",settitle="Jealousy as a Function fo Gender and Relationship Status",
@@ -105,7 +105,7 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setdotsize=3, set
 
 *Showing or hiding components of graphs*
 
-Many other customizations are possible, some of which are dependent on the graph type. For example, when graphing violin plots, the commands **'showviolin=FALSE**' and **'showboxplot=FALSE**' may be used to show or hide the violins and show or hide the boxplots associated with these violins. When generating a scatterplot, the command **'showline=FALSE**' may be used to hide the regression line. When generating bar and line plots, the command **'showerrorbars=FALSE**' may be used to hide error bars. And across all graph types, **'showdata=FALSE'** may be used to hide datapoints.
+Many other customizations are possible, some of which are dependent on the graph type. For example, when graphing violin plots, the commands **`showviolin=FALSE`** and **`showboxplot=FALSE`** may be used to show or hide the violins and show or hide the boxplots associated with these violins. When generating a scatterplot, the command **`showline=FALSE`** may be used to hide the regression line. When generating bar and line plots, the command **`showerrorbars=FALSE`** may be used to hide error bars. And across all graph types, **`showdata=FALSE`** may be used to hide datapoints.
 
 *Viewing other available commands*
 
@@ -122,7 +122,7 @@ Suppose we want to reshape the data to create a graph depicting jealousy on the 
 ```{r, echo=TRUE, eval=FALSE}
 # Reshaping data
 graph_violin(c("jealousy_attractive", "jealousy_wealthy"), setxaxistitle="Rival Type", setyaxistitle="Jealousy", setxaxislevels=c("Attractive Rival", "Wealthy Rival"))
-#The code above will change the dataset from wide-to-long.
+#The code above will change the dataset from wide-to-long and graph jealousy as a function of rival type.
 ```
 
 *Median Splits*
@@ -135,12 +135,7 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"),"income", setxaxistitl
 
 *Reverse-coding variables*
 
-We can also reverse-code variables if desired. For example, the code below reverse-codes our x and y-variables and creates a scatterplot of the relationship between jealousy in response to attractive rivals and jealousy in response to wealthy rivals:
-
-```{r, echo=TRUE, eval=FALSE}
-# Reverse-coding data
-graph_scatterplot("jealousy_attractive", "jealousy_wealthy", setreversecodex=TRUE,setreversecodey=TRUE)
-```
+We can also reverse-code our x-variable, y-variable, and so on using the commands **`setreversecodex=TRUE`**, **`setreversecodey=TRUE`**, etc.
 
 ## **Using Plotzing in Quarto and RMarkdown**
 
@@ -148,13 +143,13 @@ Because Plotzing allows changes to your dataframe, such as reshaping, the update
 
 ## **Generating Multiple Graphs Simultaneously**
 
-For more advanced users, the graph_master() function may be used with the **'list()**' command to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
+For more advanced users, the graph_master() function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
 ```
 
-In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**'). Alternatively, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
+In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**'). Alternatively, when omitting the **`list`** argument, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_master("jealousy_attractive","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
@@ -169,7 +164,7 @@ Violin plots and scatterplots may be animated using the argument **'showanimatio
 graph_violin("jealousy_attractive","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
 ```
 
-If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. Note, however, that animated graphs are still under development, and, at present, customization options are limited. 
+If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. It's important to note that animated graphs are still under development, and, at present, customization options are limited. 
 
 ## **Saving Graphs and Animations**
 
