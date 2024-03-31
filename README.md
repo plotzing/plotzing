@@ -80,19 +80,22 @@ graph_line("y_variable", "x_variable", "color_variable", panelvariable="panel_va
 ```
 
 
-## **Data Cleaning and Data Visualization**
+## **Data Cleaning Within Plotzing**
 
 Plotzing allows users to call certain data cleaning arguments when specifying their graph. For example, suppose you have a dataset with three columns: jealousy_attractive, referring to jealousy in response to attractive rivals, jealousy_wealthy, referring to jealousy in response to financially prosperous rivals, and income, referring to one's own yearly income. We can make a sample dataset to represent this using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
 jealousy_attractive<-c(5,5,6,7,4,5,6,7)
 jealousy_wealthy<-c(3,3,6,5,4,5,5,4)
-income<-c(40000, 25000, 75000,95000,20000,35000,60000,30000)
+income<-c(40000, 25000, 75000, 95000, 20000, 35000, 60000, 30000)
+gender<-c("male", "female", "female", "male", "male", "male", "female", "female")
+relationship_status<-c("single", "single", "married", "married", "married", "single", "married", "single")
 
-df<-data.frame(jealousy_attractive,jealousy_wealthy,income)
+df<-data.frame(jealousy_attractive,jealousy_wealthy,income,gender,relationship_status)
 
 ```
 
+*Reshaping data*
 Suppose we want to reshape the data to create a graph depicting jealousy on the y-axis and rival type (attractive or wealthy) on the x-axis. To do this, we can simply specify multiple dependent variables surrounded by c(), as in the following example:
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -101,23 +104,24 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"), setxaxistitle="Rival 
 #The code above will change the dataset from wide-to-long.
 ```
 
+*Median Splits*
 Other cleaning options are also available. For instance, we can add income as a color variable and perform a median split on this variable, dividing subjects into those with high and low incomes: 
 ```{r, echo=TRUE, eval=FALSE}
-# Reshaping data
+# Performing median splits on data
 graph_violin(c("jealousy_attractive", "jealousy_wealthy"),"income", setxaxistitle="Rival Type", setyaxistitle="Jealousy", setxaxislevels=c("Attractive Rival", "Wealthy Rival"), splitgroup=TRUE)
-#The code above will change the dataset from wide-to-long.
 ```
 
-Other plot types and cleaning options are also available. For example, the code below reverse-scores our x and y-variables and creates a scatterplot of the relationship between jealousy in response to attractive rivals and jealousy in response to wealthy rivals:
+*Reverse-coding variables*
+We can also reverse-code variables if desired. For example, the code below reverse-codes our x and y-variables and creates a scatterplot of the relationship between jealousy in response to attractive rivals and jealousy in response to wealthy rivals:
 
 ```{r, echo=TRUE, eval=FALSE}
-# Reshaping data
+# Reverse-coding data
 graph_scatterplot("jealousy_attractive", "jealousy_wealthy", setreversecodex=TRUE,setreversecodey=TRUE)
-#The code above will change the dataset from wide-to-long.
 ```
+
 ## **Using Plotzing in Quarto and RMarkdown**
 
-Because Plotzing allows changes to your dataframe, such as reshaping, the updated dataframe is printed by default. This may cause problems when attempting to use Plotzing with file formats such as Quarto or RMarkdown. To remedy this, use the command **'showoutput==FALSE'** to hide all output other than the graph itself.
+Because Plotzing allows changes to your dataframe, such as reshaping, the updated dataframe is printed by default. This may cause problems when attempting to use Plotzing with file formats such as Quarto or RMarkdown. To remedy this, use the command **'showoutput=FALSE'** to hide all output other than the graph itself.
 
 ## **Generating Multiple Graphs Simultaneously**
 
@@ -127,6 +131,54 @@ For more advanced users, the graph_master() function may be used with the list()
 # Using the graph_master() function
 graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
 ```
+
+In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list. In the code below, the user generates a scatterplot with income on the x-axis and a violin plot with gender on the x-axis. In both plots, jealousy is on the y-axis, and relationship status is used as a color variable in the legend.
+
+```{r, echo=TRUE, eval=FALSE}
+# Using the graph_master() function
+graph_master("jealousy_attractive",list("income","gender"), "relationship_status",graphtype=c("scatter","violin")) #Generate a scatterplot with income on the x-axis and a violin plot with gender on the x-axis. 
+```
+
+Alternatively, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
+
+```{r, echo=TRUE, eval=FALSE}
+# Using the graph_master() function
+graph_master("jealousy","gender", "relationship_status",graphtype=c("bar","violin")) #Generate a bar plot and a violin plot of the same graph 
+```
+
+## **Animated Graphs**
+
+Violin plots and scatterplots may be animated using the argument showanimation=TRUE. The inclusion of this argument will change the second independent variable from a color variable to an animation variable. For example, the code below will generate an animated violin plot that transitions between single and partered subjects: 
+
+```{r, echo=TRUE, eval=FALSE}
+# Animated violin plot
+graph_violin("jealousy","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
+```
+
+If you are using repeated-measures data, you may also specify an ID variable using the the command setanimationid= and specifying the name of the ID variable in your dataframe. This ensures that the datapoints' movement correctly reflects the changes associated with each individual subject.
+
+Note that animated graphs are still under development, and, at present, customization options are limited. 
+
+## **Saving Graphs and Animations**
+
+To save high-quality graphs, users may use ggsave() functions built into ggplot2 or use the save_graph() built into Plotzing.
+The save_graph() function automatically saves the last graph or animation generated by the user to their working directory and sets the default dpi to 500 (for high-quality images). Users only need to specify the filename, and, if desired, the height and width of the graph in inches. For example, the following code saves the last generated graph to the user's working directory and sets the height to be 6 inches and the width to be 9 inches:
+
+```{r, echo=TRUE, eval=FALSE}
+# Saving graphs
+save_graph("mygraph.png",height=6,width=9)
+```
+
+Alternatively, users can simply just save the graph and have the height and width generated by default, as in the example below:
+
+```{r, echo=TRUE, eval=FALSE}
+# Saving graphs
+save_graph("mygraph.png")
+```
+
+Although users may also use the saving functions built into RStudio, the resulting files saved through this method will be lower in quality (as the save_graph() function automatically sets the DPI to 500).
+
+Note that, to save animations, users may use the anim_sav() command built into gganimate or the save_animation() command built into Plotzing. However, this latter command is still under development and does not yet support height and width commands.
 
 ## **Contact Me**
 
