@@ -1,4 +1,4 @@
-# **Plotzing: Customizable, Publication-Quality Plots in a Single Line of Code**
+# **Plotzing: Customizable, Publishable Plots in a Single Line of Code**
 
 ## **Introduction**
 *NOTE: Plotzing is still in beta.*
