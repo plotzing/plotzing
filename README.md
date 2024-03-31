@@ -186,22 +186,6 @@ Alternatively, users may plot the same variables across multiple graph types to 
 graph_master("jealousy","gender", "relationship_status",graphtype=c("bar","violin")) #Generate a bar plot and a violin plot of the same graph 
 ```
 
-## **Other Helpful Commands**
-
-Plotzing includes a wide array of additional commands to streamline the process of creating high-quality graphs as much as possible. 
-
-*Graphs with a black background and white text*
-
-For generating plots with a black background and white text--which may be useful for presentations or posters with black backgrounds--users may add the command **'showdarkgraph=TRUE.**'
-
-*Changing the outline color of datapoints*
-
-The outline color of datapoints can be specified using **'setdotoutlinecolor=**'.  To hide these outlines entirely, add the command **'showdotoutline=FALSE**'.
-
-*Adding a horizontal line*
-
-To add a horizontal line at a given location, use the command **'setpositionhorizontalline =**' or **'setpositiondottedhorizontalline =**' to create a solid or dotted horizontal line at the specified location (e.g., to indicate chance). 
-
 ## **Generating Animated Graphs**
 
 Violin plots and scatterplots may be animated using the argument **'showanimation=TRUE**'. The inclusion of this argument will change the second independent variable from a color variable to an animation variable. For example, the code below will generate an animated violin plot that transitions between single and partered subjects: 
