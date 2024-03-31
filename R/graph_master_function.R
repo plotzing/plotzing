@@ -2,6 +2,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
 
   require(ggplot2)
 
+#Initialize settings specified by user
   settings_list <- list(setbaroutlinecolor=setbaroutlinecolor, setbarshorizontal=setbarshorizontal, jitterheight=jitterheight, jitterwidth=jitterwidth,
                setjitterheight=setjitterheight, setjitterwidth=setjitterwidth, setjitter=setjitter, internalfunctionautorotation=internalfunctionautorotation, errorbars=errorbars, seterrorbarthickness=seterrorbarthickness,
                splitx=splitx, splitgroup=splitgroup, splitlegend=splitlegend, splitpanel=splitpanel, showdata=showdata, showdatainback=showdatainback, data=data, setdata=setdata, transparency=transparency, dottransparency=dottransparency, dotsize=dotsize, title=title,
@@ -26,6 +27,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
                setshadingtransparency=setshadingtransparency,setexclusionright=setexclusionright,setexclusionabove=setexclusionabove,showshading=showshading,showloessline=showloessline,setcustomintercept=setcustomintercept,setcustomslope=setcustomslope,setlinetype=setlinetype,
                showdashedlines=showdashedlines,showblankplot=showblankplot,setyupperbound=setyupperbound,setylowerbound=setylowerbound,setxlowerbound=setxlowerbound,setxupperbound=setxupperbound,setxaxistitlesize=setxaxistitlesize,setyaxistitlesize=setyaxistitlesize,setlegendlevelorder=setlegendlevelorder)
 
+  #Block the commands for reversing the order of variables or reverse-coding variables
   if(!is.null(setreverseordergroup)||!is.null(setreverseorderlegend)||!is.null(setreverseorderx)||!is.null(setreverseorderpanel)){
     message("ERROR: You cannot use the reverse-order commands when using the graph_master() function")
     stop()
@@ -35,19 +37,21 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     stop()
   }
 
-  #Remove null entries
+  #Remove null entries from the settings_list vector
   settings_list <- Filter(function(x) !is.null(x), settings_list)
 
+  #setgraphtype is an alternative command for graphtype. This sets the graphtype
+  #variable if the user used setgraphtype instead.
   if(!is.null(setgraphtype)){
     graphtype<-setgraphtype
   }
 
-  # Initialize lists
+  # Initialize lists that will be used later
   results <- list()
   variables <- list()
   combined_settings <- list()
 
-  #Potential errors
+  #Error messages
   if(is.null(dv)){
     message("ERROR: You must specify one or more dependent variables using dv=")
     stop()
@@ -63,6 +67,29 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     stop()
   }
 
+  #Initalize a counter to ensure users don't specify multiple graph types using showlinegraph, showbargraph, etc.
+  graphcounter<-0
+
+  if(!is.null(showlineplot)){
+    graphcounter<-graphcounter+1
+  }
+  if(!is.null(showbarplot)){
+    graphcounter<-graphcounter+1
+  }
+  if(!is.null(showviolinplot)){
+    graphcounter<-graphcounter+1
+  }
+  if(!is.null(showscatterplot)){
+    graphcounter<-graphcounter+1
+  }
+
+  #If two showgraph commands, elicit an error
+  if(graphcounter>1){
+    message("ERROR: To specify multiple graph types, use the command setgraphtype=c()")
+    stop()
+  }
+
+  #Initialize a counter to ensure the user only specifies a maximum of one list.
   counter<-0
 
   if(is.list(dv)==TRUE){
@@ -81,11 +108,13 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     counter<-counter+1
   }
 
+  #If two lists, elicit an error.
   if(counter>=2){
     message("ERROR: You may specify a list of multiple dependent variables, multiple x-axis variables, multiple group (color) variables, or multiple panel variables. However, you cannot specify multiple lists. For instance, you cannot specify a list of color variables AND a list of panel variables simultaneously (as you must pick one or the other). If you wish to use a list of variables and also reshape your dependent variable, use dv=c() rather than dv=list().")
     stop()
   }
 
+  #Set graph type when users set the showlineplot, showbarplot, etc. commands
   if(!is.null(showlineplot)){
     if(showlineplot==TRUE){
       graphtype<-"line"
@@ -110,20 +139,25 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     }
   }
 
-  if(is.null(showlineplot)&&is.null(showscatterplot)&&is.null(showbarplot)&&is.null(showviolinplot)&&is.null(graphtype)&&!is.null(showviolin)){
-    message("ERROR: The command showviolin is used to show or hide the violins produced when generating violin plots (to show only the boxplots, for example). Did you mean to use showviolinplot=TRUE instead?")
-    stop()
-  }
-
+  #Errors for the commands showline and showviolin, which are commands within certain plot types
+  #(e.g., showlineplot=TRUE would show a line plot, whereas showline=FALSE would hide the line within a scatterplot)
   if(is.null(showlineplot)&&is.null(showscatterplot)&&is.null(showbarplot)&&is.null(showviolinplot)&&is.null(graphtype)&&!is.null(showline)){
     message("ERROR: The command showline is used to show or hide lines when using scatterplots and line graphs. Did you mean to use showlineplot=TRUE instead?")
     stop()
   }
 
+  if(is.null(showlineplot)&&is.null(showscatterplot)&&is.null(showbarplot)&&is.null(showviolinplot)&&is.null(graphtype)&&!is.null(showviolin)){
+    message("ERROR: The command showviolin is used to show or hide the violins produced when generating violin plots (to show only the boxplots, for example). Did you mean to use showviolinplot=TRUE instead?")
+    stop()
+  }
+
+  #Ensuring users have specified at least one graphtype
   if(is.null(graphtype)){
     message("ERROR: You must specify a graphtype using graphtype=. For example, graphtype='violin'")
     stop()
   }
+
+  #Preventing users from generating animated graphs
   if(!is.null(showanimation)){
     if(showanimation==TRUE){
       message("ERROR: You cannot set showanimation to TRUE when using this function.")
@@ -131,40 +165,74 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     }
   }
 
+#End of error messages
+
+#### MAIN CODE ####
   if(!is.null(dv)){
+
+  #If there are no lists specified by the user
   if(is.list(dv)==FALSE&&is.list(iv1)==FALSE&&is.list(iv2)==FALSE&&is.list(panelvariable)==FALSE&&is.list(dv)==FALSE) {
-    # Get the graphing variables if specified by the user
+
+    # Create a vector that includes the variables and the settings specified by the user
     variables <- list(dv = dv, iv1 = iv1, iv2 = iv2, panelvariable = panelvariable)
     combined_settings <- modifyList(variables, settings_list)
 
+    #Set the graph type based on what the user specifies
     if(!is.null(graphtype)){
-      if(graphtype=="line"||graphtype=="l"||graphtype=="lineplot"||graphtype=="line_plot"||graphtype=="Lineplot"||graphtype=="Line_plot"||graphtype=="L"||current_graphtype=="Line"){
-        showlineplot<-TRUE
-      }
-      if(graphtype=="bar"||graphtype=="b"||graphtype=="barplot"||graphtype=="bar_plot"||graphtype=="Barplot"||graphtype=="Bar"||graphtype=="B"||graphtype=="Bar_plot"){
-        showbarplot<-TRUE
-      }
-      if(graphtype=="scatter"||graphtype=="s"||graphtype=="scatterplot"||graphtype=="scatter_plot"||graphtype=="Scatterplot"||graphtype=="Scatter"||current_graphtype=="S"||current_graphtype=="Scatter_plot"){
-        showscatterplot<-TRUE
-      }
-      if(graphtype=="violin"||graphtype=="v"||graphtype=="violinplot"||graphtype=="violin_plot"||graphtype=="Violin"||graphtype=="Violin_plot"||graphtype=="V"||graphtype=="Violinplot"){
-        showviolinplot<-TRUE
-      }
-    }
 
-    if (!is.null(showlineplot) && showlineplot==TRUE) {
-      results <- do.call("graph_line", combined_settings)
+      #If the user is specifying only one graphtype and not specifying any lists
+      if(length(graphtype)==1){
+        if(graphtype=="line"||graphtype=="l"||graphtype=="lineplot"||graphtype=="line_plot"||graphtype=="Lineplot"||graphtype=="Line_plot"||graphtype=="L"){
+          showlineplot<-TRUE
+        }
+        if(graphtype=="bar"||graphtype=="b"||graphtype=="barplot"||graphtype=="bar_plot"||graphtype=="Barplot"||graphtype=="Bar"||graphtype=="B"||graphtype=="Bar_plot"){
+          showbarplot<-TRUE
+        }
+        if(graphtype=="scatter"||graphtype=="s"||graphtype=="scatterplot"||graphtype=="scatter_plot"||graphtype=="Scatterplot"||graphtype=="Scatter"){
+          showscatterplot<-TRUE
+        }
+        if(graphtype=="violin"||graphtype=="v"||graphtype=="violinplot"||graphtype=="violin_plot"||graphtype=="Violin"||graphtype=="Violin_plot"||graphtype=="V"||graphtype=="Violinplot"){
+          showviolinplot<-TRUE
+        }
+
+        #Generate a graph as usual with the settings specified by the user
+        if (!is.null(showlineplot) && showlineplot==TRUE) {
+          results <- do.call("graph_line", combined_settings)
+        }
+        if (!is.null(showbarplot) && showbarplot==TRUE) {
+          results <- do.call("graph_bar", combined_settings)
+        }
+        if (!is.null(showviolinplot) && showviolinplot==TRUE) {
+          results <- do.call("graph_violin", combined_settings)
+        }
+        if (!is.null(showscatterplot) && showscatterplot==TRUE) {
+          results <- do.call("graph_scatterplot", combined_settings)
+        }
+      }
+
+      #If the user is specifying no lists but multiple graphtypes, generate a graph of each type
+      if(length(graphtype)>1){
+        for(i in 1:length(graphtype)){
+          current_graphtype<-graphtype[i]
+
+          if(current_graphtype=="line"||current_graphtype=="l"||current_graphtype=="lineplot"||current_graphtype=="line_plot"||current_graphtype=="Lineplot"||current_graphtype=="Line_plot"||current_graphtype=="L"||current_graphtype=="Line"){
+            results[[i]]<-do.call("graph_line",combined_settings)
+          }
+          if(current_graphtype=="bar"||current_graphtype=="b"||current_graphtype=="barplot"||current_graphtype=="bar_plot"||current_graphtype=="Barplot"||current_graphtype=="Bar"||current_graphtype=="B"||current_graphtype=="Bar_plot"){
+            results[[i]]<-do.call("graph_bar",combined_settings)
+          }
+          if(current_graphtype=="scatter"||current_graphtype=="s"||current_graphtype=="scatterplot"||current_graphtype=="scatter_plot"||current_graphtype=="Scatterplot"||current_graphtype=="Scatter"||current_graphtype=="S"||current_graphtype=="Scatter_plot"){
+            results[[i]]<-do.call("graph_scatterplot",combined_settings)
+          }
+          if(current_graphtype=="violin"||current_graphtype=="v"||current_graphtype=="violinplot"||current_graphtype=="violin_plot"||current_graphtype=="Violin"||current_graphtype=="Violin_plot"||current_graphtype=="V"||current_graphtype=="Violinplot"){
+            results[[i]]<-do.call("graph_violin",combined_settings)
+          }
+        }
+      }
     }
-    if (!is.null(showbarplot) && showbarplot==TRUE) {
-      results <- do.call("graph_bar", combined_settings)
-    }
-    if (!is.null(showviolinplot) && showviolinplot==TRUE) {
-      results <- do.call("graph_violin", combined_settings)
-    }
-    if (!is.null(showscatterplot) && showscatterplot==TRUE) {
-      results <- do.call("graph_scatterplot", combined_settings)
-    }
-  }
+  } #End of if-statement if there are no lists
+
+    #If the first iv is a list
     if(is.list(iv1)==TRUE&&is.list(iv2)==FALSE&&is.list(panelvariable)==FALSE&&is.list(panelvariable)==FALSE){
       iv1<-unlist(iv1)
       iv1<-as.vector(iv1)
@@ -193,7 +261,8 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
             results[[i]]<-do.call("graph_violin",combined_settings[[i]])
           }
         }
-        # Run the appropriate graphing function with the combined settings
+
+        # If using the commands showlineplot, showbarplot, etc.
         if (!is.null(showlineplot) && showlineplot==TRUE) {
           results[[i]] <- do.call("graph_line", combined_settings[[i]])
         }
@@ -207,8 +276,9 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
           results[[i]] <- do.call("graph_scatterplot", combined_settings[[i]])
         }
       }
-    }
+    } #End of if-statement if the first IV is a list
 
+    #If the second IV is a list
     if(is.list(iv2)==TRUE&&is.list(iv1)==FALSE&&is.list(panelvariable)==FALSE&&is.list(dv)==FALSE){
       iv2<-unlist(iv2)
       iv2<-as.vector(iv2)
@@ -237,7 +307,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
             results[[i]]<-do.call("graph_violin",combined_settings[[i]])
           }
         }
-        # Run the appropriate graphing function with the combined settings
+        # If using the commands showlineplot, showbarplot, etc.
         if (!is.null(showlineplot) && showlineplot==TRUE) {
           results[[i]] <- do.call("graph_line", combined_settings[[i]])
         }
@@ -251,8 +321,9 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
           results[[i]] <- do.call("graph_scatterplot", combined_settings[[i]])
         }
       }
-    }
+    } #End of if-statement if the second IV is a list
 
+    #If the panel variable is a list
     if(is.list(panelvariable)==TRUE&&is.list(iv1)==FALSE&&is.list(iv2)==FALSE&&is.list(dv)==FALSE){
       panelvariable<-unlist(panelvariable)
       panelvariable<-as.vector(panelvariable)
@@ -281,7 +352,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
             results[[i]]<-do.call("graph_violin",combined_settings[[i]])
           }
         }
-        # Run the appropriate graphing function with the combined settings
+        # If using the commands showlineplot, showbarplot, etc.
         if (!is.null(showlineplot) && showlineplot==TRUE) {
           results[[i]] <- do.call("graph_line", combined_settings[[i]])
         }
@@ -295,8 +366,9 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
           results[[i]] <- do.call("graph_scatterplot", combined_settings[[i]])
         }
       }
-    }
+    } #End of if-statement if the panel variable is a list
 
+  #If the dependent variable is a list
   if(is.list(dv)==TRUE){
     dv<-unlist(dv)
     dv<-as.vector(dv)
@@ -339,7 +411,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
         results[[i]] <- do.call("graph_scatterplot", combined_settings[[i]])
       }
     }
-  }
+  } #End of if-statement if the DV is a list
     message("\n NOTE: Click through the arrows in the plotting panel (typically located on the right-hand side) to see all your graphs.")
     return(results)
   }
