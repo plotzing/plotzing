@@ -1,4 +1,4 @@
-# **Plotzing: Customizable, Publishable Plots in a Single Line of Code**
+# **Plotzing: Customizable, Publication-Quality Plots in a Single Line of Code**
 
 ## **Introduction**
 *NOTE: Plotzing is still in beta.*
@@ -26,7 +26,7 @@ library(plotzing) #Note the lowercase "p"
 
 Plotzing only needs to be installed once. Afterward, you can load Plotzing whenever you open R using the command **`library(plotzing)`** If you are prompted to update other packages during the installation process, such as ggplot2, feel free to press enter to skip these updates. Additionally, it's important to note that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
 
-If you wish to update Plotzing, simply unload Plotzing if it's already loaded, reinstall the package, and reload Plotzing using the following code:
+If you wish to update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
 #If Plotizng is currently loaded, unload it:
@@ -46,7 +46,6 @@ Once you have loaded your data, you can use the functions graph_line, graph_bar,
 ```{r, echo=TRUE, eval=FALSE}
 #Load Plotzing
 library(plotzing)
-
 # Load your data
 df <- read.csv("your_data_file.csv")
 
@@ -69,18 +68,16 @@ As mentioned previously, you do not need to specify the name of your dataframe i
 Nearly all commands in Plotzing can be accessed using the verbs *set* and *show*. Thus, typing these verbs in RStudio will bring up a list of available commands. For example, the code below generates a plot with the datapoints hidden (showdata=FALSE) and sets custom labels for the legend, title, and axes (using the commands setlegendtitle=, settitle=, etc.):
 
 ```{r, echo=TRUE, eval=FALSE}
-# Customizing a bar plot
 graph_bar("y_variable", "x_variable", "color_variable", panelvariable="panel_variable", showdata=FALSE, settitle="Customized Bar Plot", setxaxistitle="X-Axis Title", setyaxistitle="Y-Axis Title", setlegendtitle="Legend Title")
 ```
 
 You can also set the labels for each level of your x-variable, each level of your legend, and so on, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
-# Customizing a bar plot
 graph_bar("y_variable", "x_variable", "color_variable", showdata=FALSE, setlegendtitle="Legend Title",setlegendlevels=c("legendlevel1","legendlevel2"),setxlevels=c("xaxislevel1","xaxislevel2")
 ```
 
-To understand these commands more clearly, we can also generate a real-world example. Suppose you have a dataset with five columns: jealousy_attractive, referring to jealousy in response to attractive rivals, jealousy_wealthy, referring to jealousy in response to financially prosperous rivals, as well as income, gender, and relationship status. Let's make this sample dataset using the following code:
+To understand these commands more clearly, we can also generate a real-world example. Let's make a sample dataset using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
 jealousy_attractive<-c(5,5,6,7,4,5,6,7)
@@ -94,7 +91,6 @@ df<-data.frame(jealousy_attractive,jealousy_wealthy,income,gender,relationship_s
 With this newly generated dataset, we can graph gender and relationship status and specify custom titles, custom level labels, and so on:
  
 ```{r, echo=TRUE, eval=FALSE}
-# Customizing a bar plot
 graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="Relationship Status",setlegendlevels=c("Single","Partnered"),setxlevels=c("Male","Female"),setxaxistitle="Gender",settitle="Jealousy as a Function fo Gender and Relationship Status",
 ```
 
@@ -103,7 +99,6 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="R
 In addition to changing the labels and hiding or showing components of our graph, such as the datapoints, we can also improve the aesthetics of our graph. For example, let's increase the thickness of our error bars, increase the size of our datapoints, and set the colors of our graph to blue and turquoise: 
 
 ```{r, echo=TRUE, eval=FALSE}
-# Customizing a bar plot
 graph_bar("jealousy_wealthy", "gender", "relationship_status", setdotsize=3, seterrorbarthickness=2, setcolors=c("blue","turquoise")
 ```
 
@@ -155,15 +150,13 @@ Because Plotzing allows changes to your dataframe, such as reshaping, the update
 For more advanced users, the graph_master() function may be used with the **'list()**' command to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
 
 ```{r, echo=TRUE, eval=FALSE}
-# Using the graph_master() function
 graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
 ```
 
 In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**'). Alternatively, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
-# Using the graph_master() function
-graph_master("jealousy","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
+graph_master("jealousy_attractive","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
 ```
 
 ## **Generating Animated Graphs**
@@ -172,7 +165,7 @@ Violin plots and scatterplots may be animated using the argument **'showanimatio
 
 ```{r, echo=TRUE, eval=FALSE}
 # Animated violin plot
-graph_violin("jealousy","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
+graph_violin("jealousy_attractive","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
 ```
 
 If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. Note, however, that animated graphs are still under development, and, at present, customization options are limited. 
@@ -186,7 +179,7 @@ To save high-quality graphs, users may use the **'ggsave()**' function built int
 save_graph("mygraph.png",height=6,width=9)
 ```
 
-Alternatively, users can simply save the graph and have the height and width generated by default (e.g., **'save_graph("mygraph.png")**' would also work). Although users may also use the saving functions built into RStudio, the resulting files saved through this method will be lower in quality (as the save_graph() function automatically sets the DPI to 500). To save animations, users may use the **'anim_sav()**' command built into gganimate or the **'save_animation()**' command built into Plotzing. However, this latter function is still under development and does not yet support height and width commands.
+Alternatively, users can simply save the graph and have the height and width generated by default (e.g., **'save_graph("mygraph.png")**' would also work). Although users may opt instead to use the saving functions built into RStudio, the resulting files saved through this method will be lower in quality. To save animations, users may use the **'anim_sav()**' command built into gganimate or the **'save_animation()**' command built into Plotzing. However, this latter function is still under development and does not yet support height and width commands.
 
 ## **Contact Me**
 
