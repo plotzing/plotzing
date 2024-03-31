@@ -1,11 +1,17 @@
 #### SCATTERPLOT ####
-graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,bold=FALSE,jitterheight=0.4,jitterwidth=0.4,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setpaneltitlesize=NULL,shading=TRUE,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,...){
+graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=FALSE,jitterheight=0.4,jitterwidth=0.4,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setpaneltitlesize=NULL,shading=TRUE,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,...){
 
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
   if(is.null(showdarkgraph)){
     showdarkgraph<-FALSE
+  }
+  if(!is.null(setsplitlegend)){
+    splitgroup<-setsplitlegend
+  }
+  if(!is.null(splitlegend)){
+    splitgroup<-splitlegend
   }
   if(is.null(showoutput)){
     showoutput<-TRUE
@@ -1156,42 +1162,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         graph <- graph + ylab(setyaxistitle)
       }
 
-      if(!is.null(level1)&!is.null(level2)&is.null(level3)&is.null(level4)&is.null(level5)&is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&is.null(level4)&is.null(level5)&is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&is.null(level5)&is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&!is.null(level6)&is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5,level6))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&!is.null(level6)&!is.null(level7)&is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5,level6,level7))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&!is.null(level6)&!is.null(level7)&!is.null(level8)&is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5,level6,level7,level8))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&!is.null(level6)&!is.null(level7)&!is.null(level8)&!is.null(level9)&is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5,level6,level7,level8,level9))
-
-      }
-      if(!is.null(level1)&!is.null(level2)&!is.null(level3)&!is.null(level4)&!is.null(level5)&!is.null(level6)&!is.null(level7)&!is.null(level8)&!is.null(level9)&!is.null(level10)&is.null(setlegendlevels)){
-        graph<-graph+scale_color_discrete(labels=c(level1,level2,level3,level4,level5,level6,level7,level8,level9,level10))
-      }
-
       if(!is.null(setlegendlevels)){
         if(color1!=-1){
           message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
@@ -1204,51 +1174,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         if(is.null(colors)){
           graph <- graph + scale_color_discrete(labels=c(setlegendlevels))+scale_fill_discrete(labels=c(setlegendlevels))
         }
-      }
-
-      if(!is.null(level1)){
-        if(color1!=-1|!is.null(colors)){
-          message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
-        }
-      }
-
-      if(is.null(setlegendlevels)&&is.null(level1)){
-        suppressWarnings({
-          if(color1!=-1&color2!=-1&color3==-1&color4==-1&color5==-1&color6==-1&color7==-1&color8==-1&color9==-1&color10==-1){
-            graph<-graph+scale_color_manual(values=c(color1,color2))+scale_fill_manual(values=c(color1,color2))
-
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4==-1&color5==-1&color6==-1&color7==-1&color8==-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3))+scale_fill_manual(values=c(color1,color2,color3))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5==-1&color6==-1&color7==-1&color8==-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4))+scale_fill_manual(values=c(color1,color2,color3,color4))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6==-1&color7==-1&color8==-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5))+scale_fill_manual(values=c(color1,color2,color3,color4,color5))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6!=-1&color7==-1&color8==-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5,color6))+scale_fill_manual(values=c(color1,color2,color3,color4,color5,color6))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6!=-1&color7!=-1&color8==-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5,color6,color7))+scale_fill_manual(values=c(color1,color2,color4,color4,color5,color6,color7))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6!=-1&color7!=-1&color8!=-1&color9==-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5,color6,color7,color8))+scale_fill_manual(values=c(color1,color2,color4,color4,color5,color6,color7,color8))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6!=-1&color7!=-1&color8!=-1&color9!=-1&color10==-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5,color6,color7,color8,color9))+scale_fill_manual(values=c(color1,color2,color4,color4,color5,color6,color7,color8,color9))
-          }
-          if(color1!=-1&color2!=-1&color3!=-1&color4!=-1&color5!=-1&color6!=-1&color7!=-1&color8!=-1&color9!=-1&color10!=-1&is.null(colors)){
-            graph<-graph+scale_color_manual(values=c(color1,color2,color3,color4,color5,color6,color7,color8,color9,color10))+scale_fill_manual(values=c(color1,color2,color4,color4,color5,color6,color7,color8,color9,color10))
-          }
-        })
-
-        suppressWarnings({
-          if(!is.null(colors)&&is.null(setlegendlevels)){
-            graph<-graph+scale_color_manual(values=colors)+scale_fill_manual(values=colors)
-          }
-        })
       }
 
       if(!is.null(color)){
