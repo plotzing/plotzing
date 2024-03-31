@@ -63,7 +63,8 @@ Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"
 graph_bar("jealousy","condition","gender") #Again, remember to keep quotation marks around variable names
 ```
 
-## ** Specifying Custom Dataframes ** ## 
+## ** Specifying Custom Dataframes **
+
 As mentioned previously, you do not need to specify a dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **'data =**'. The example below graphs variables from a dataframe called my_data:
 
 ```{r, echo=TRUE, eval=FALSE}
