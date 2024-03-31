@@ -1,7 +1,6 @@
 # **Plotzing: Customizable, Publication-Quality Plots in a Single Line of Code**
 
 ## **Introduction**
-
 *NOTE: Plotzing is still in beta.*
 
 Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
@@ -61,13 +60,9 @@ Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"
 graph_bar("jealousy","condition","gender") #Again, remember to keep quotation marks around variable names
 ```
 
-## **Specifying Custom Dataframes**
+*Specifying Custom Dataframes*
 
-As mentioned previously, you do not need to specify the name of your dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **'data =**'. The example below graphs variables from a dataframe called my_data:
-
-```{r, echo=TRUE, eval=FALSE}
-graph_bar("jealousy","condition","gender",data=my_data) #When data = is not specified, Plotzing looks for a dataframe called df in your global environment by default
-```
+As mentioned previously, you do not need to specify the name of your dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **'data =**'
 
 ## **Customizing Plots**
 
@@ -93,7 +88,6 @@ jealousy_wealthy<-c(3,3,6,5,4,5,5,4)
 income<-c(40000, 25000, 75000, 95000, 20000, 35000, 60000, 30000)
 gender<-c(1, 0, 0, 1, 1, 1, 0, 0)
 relationship_status<-c(1, 1, 2, 2, 2, 1, 2, 1)
-
 df<-data.frame(jealousy_attractive,jealousy_wealthy,income,gender,relationship_status)
 ```
 
@@ -106,7 +100,7 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="R
 
 *Improving graph aesthetics*
 
-In addition to changing the labels and hiding or showing components of our graph, such as the datapoints, we can also improve the aesthetics of our graph. For example, let's increase the thickness of our error bars, increase the size of our datapoints, and set the colors of our legend to blue and turquoise: 
+In addition to changing the labels and hiding or showing components of our graph, such as the datapoints, we can also improve the aesthetics of our graph. For example, let's increase the thickness of our error bars, increase the size of our datapoints, and set the colors of our graph to blue and turquoise: 
 
 ```{r, echo=TRUE, eval=FALSE}
 # Customizing a bar plot
@@ -119,7 +113,7 @@ Many other customizations are possible, some of which are dependent on the graph
 
 *Viewing other available commands*
 
-Because all commands use a common set of verbs ("set" and "show"), typing set or show within a graphing function will bring up a complete list of available commands in RStudio (e.g., typing graph_line(set  to see available set commands) 
+Once again, because all commands use a common set of verbs ("set" and "show"), typing set or show within a graphing function will bring up a complete list of available commands in RStudio (e.g., typing graph_line(set  to see available set commands) 
 
 ## **Data Cleaning Within Plotzing**
 
@@ -165,9 +159,7 @@ For more advanced users, the graph_master() function may be used with the **'lis
 graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
 ```
 
-In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**')
-
-Alternatively, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
+In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**'). Alternatively, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
 # Using the graph_master() function
@@ -183,22 +175,19 @@ Violin plots and scatterplots may be animated using the argument **'showanimatio
 graph_violin("jealousy","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
 ```
 
-If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. Note that animated graphs are still under development, and, at present, customization options are limited. 
+If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. Note, however, that animated graphs are still under development, and, at present, customization options are limited. 
 
 ## **Saving Graphs and Animations**
 
-To save high-quality graphs, users may use the **'ggsave()**' function built into ggplot2 or use the **'save_graph()**' function built into Plotzing. The **'save_graph()**' function automatically saves the last graph or animation generated by the user to their working directory and sets the default dpi to 500 (for high-quality images). Users only need to specify the filename, and, if desired, the height and width of the graph in inches. For example, the following code saves the last generated graph to the user's working directory and sets the height to be 6 inches and the width to be 9 inches:
+To save high-quality graphs, users may use the **'ggsave()**' function built into ggplot2 or the **'save_graph()**' function built into Plotzing. The **'save_graph()**' function automatically saves the last graph or animation generated by the user to their working directory and sets the default dpi to 500 (for high-quality images). Users only need to specify the filename, and, if desired, the height and width of the graph in inches. For example, the following code saves the last generated graph to the user's working directory and sets the height to be 6 inches and the width to be 9 inches:
 
 ```{r, echo=TRUE, eval=FALSE}
 # Saving graphs
 save_graph("mygraph.png",height=6,width=9)
 ```
 
-Alternatively, users can simply just save the graph and have the height and width generated by default (e.g., **'save_graph("mygraph.png")**' would also work). Although users may also use the saving functions built into RStudio, the resulting files saved through this method will be lower in quality (as the save_graph() function automatically sets the DPI to 500).
-
-To save animations, users may use the **'anim_sav()**' command built into gganimate or the **'save_animation()**' command built into Plotzing. However, this latter function is still under development and does not yet support height and width commands.
+Alternatively, users can simply save the graph and have the height and width generated by default (e.g., **'save_graph("mygraph.png")**' would also work). Although users may also use the saving functions built into RStudio, the resulting files saved through this method will be lower in quality (as the save_graph() function automatically sets the DPI to 500). To save animations, users may use the **'anim_sav()**' command built into gganimate or the **'save_animation()**' command built into Plotzing. However, this latter function is still under development and does not yet support height and width commands.
 
 ## **Contact Me**
 
 Plotzing was developed by Benjamin Gelbart, a PhD candidate at the University of California, Santa Barbara. The project benefits greatly from the contributions of the R community and users who provide valuable feedback and suggestions. If you're having trouble, notice a glitch, or want to offer feedback, feel free to email me at bgelbart[at]ucsb.edu. I would love to hear from you!
-
