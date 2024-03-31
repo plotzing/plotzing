@@ -413,6 +413,7 @@ graph_master <- function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,graphtype=
     }
   } #End of if-statement if the DV is a list
     message("\n NOTE: Click through the arrows in the plotting panel (typically located on the right-hand side) to see all your graphs.")
+    message("\n WARNING: The graph_master() function is for exploratory data analysis only. Always exercise caution. For scientific publications, always generate each graph individually to ensure graphs and data are formatted correctly.")
     return(results)
   }
 }
