@@ -4,9 +4,7 @@
 
 *NOTE: Plotzing is still in beta.*
 
-Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing differs from other graphing in packages in several key ways. First, other plotting packages, in most cases, are syntactically complex--requiring many lines of code to produce each graph. Second, other packages commonly require each component of a plot to be specified separately (e.g., separately specifying datapoints; error bars; bars, lines, or other geoms; etc.). Finally (and, perhaps, most importantly), other plotting packages require data to have already been cleaned; data must already have been reshaped if appropriate, coded correctly, standardized, etc. 
-
-Plotzing takes a different approach to plotting by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
+Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see commands available to users without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
 Here, I begin by explaining how to install Plotzing. I then discuss the basics of graphing in Plotzing and discuss some commonly used features. I conclude with some advanced commands and additional information about how to offer feedback or get help regarding the Plotzing package.
 
@@ -65,7 +63,8 @@ Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"
 graph_bar("jealousy","condition","gender") #Again, remember to keep quotation marks around variable names
 ```
 
-To use a dataframe other than df, we can add data=
+## ** Specifying Custom Dataframes ** ## 
+As mentioned previously, you do not need to specify a dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **'data =**'. The example below graphs variables from a dataframe called my_data:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("jealousy","condition","gender",data=my_data) #When data = is not specified, Plotzing looks for a dataframe called df in your global environment by default
@@ -107,6 +106,7 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="R
 ```
 
 *Improving graph aesthetics*
+
 In addition to changing the labels and hiding or showing components of our graph, such as the datapoints, we can also improve the aesthetics of our graph. For example, let's increase the thickness of our error bars, increase the size of our datapoints, and set the colors of our legend to blue and turquoise: 
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -115,9 +115,11 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setdotsize=3, set
 ```
 
 *Showing or hiding components of graphs*
+
 Many other customizations are possible, some of which are dependent on the graph type. For example, when graphing violin plots, the commands **'showviolin=FALSE**' and **'showboxplot=FALSE**' may be used to show or hide the violins and show or hide the boxplots associated with these violins. When generating a scatterplot, the command **'showline=FALSE**' may be used to hide the regression line. When generating bar and line plots, the command **'showerrorbars=FALSE**' may be used to hide error bars. And across all graph types, **'showdata=FALSE'** may be used to hide datapoints.
 
 *Viewing other available commands*
+
 Because all commands use a common set of verbs ("set" and "show"), typing set or show within a graphing function will bring up a complete list of available commands in RStudio, as in the example below: 
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -130,6 +132,7 @@ graph_bar(set )
 Plotzing allows users to call certain data cleaning arguments when specifying their graph. 
 
 *Reshaping data*
+
 Suppose we want to reshape the data to create a graph depicting jealousy on the y-axis and rival type (attractive or wealthy) on the x-axis. To do this, we can simply specify multiple dependent variables surrounded by c(), as in the following example:
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -139,6 +142,7 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"), setxaxistitle="Rival 
 ```
 
 *Median Splits*
+
 Other cleaning options are also available. For instance, we can add income as a color variable and perform a median split on this variable, dividing subjects into those with high and low incomes: 
 ```{r, echo=TRUE, eval=FALSE}
 # Performing median splits on data
@@ -146,6 +150,7 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"),"income", setxaxistitl
 ```
 
 *Reverse-coding variables*
+
 We can also reverse-code variables if desired. For example, the code below reverse-codes our x and y-variables and creates a scatterplot of the relationship between jealousy in response to attractive rivals and jealousy in response to wealthy rivals:
 
 ```{r, echo=TRUE, eval=FALSE}
@@ -185,12 +190,15 @@ graph_master("jealousy","gender", "relationship_status",graphtype=c("bar","violi
 Plotzing includes a wide array of additional commands to streamline the process of creating high-quality graphs as much as possible. 
 
 *Graphs with a black background and white text*
+
 For generating plots with a black background and white text--which may be useful for presentations or posters with black backgrounds--users may add the command **'showdarkgraph=TRUE.**'
 
 *Changing the outline color of datapoints*
+
 The outline color of datapoints can be specified using **'setdotoutlinecolor=**'.  To hide these outlines entirely, add the command **'showdotoutline=FALSE**'.
 
 *Adding a horizontal line*
+
 To add a horizontal line at a given location, use the command **'setpositionhorizontalline =**' or **'setpositiondottedhorizontalline =**' to create a solid or dotted horizontal line at the specified location (e.g., to indicate chance). 
 
 ## **Generating Animated Graphs**
