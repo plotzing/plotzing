@@ -155,7 +155,7 @@ Violin plots and scatterplots may be animated using the argument showanimation=T
 graph_violin("jealousy","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
 ```
 
-If you are using repeated-measures data, you may also specify an ID variable using the the command setanimationid= and specifying the name of the ID variable in your dataframe. This ensures that the datapoints' movement correctly reflects the changes associated with each individual subject.
+If you are using repeated-measures data, you may also specify an ID variable using the the command setanimationid= and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject.
 
 Note that animated graphs are still under development, and, at present, customization options are limited. 
 
