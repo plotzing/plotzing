@@ -3,7 +3,7 @@
 ## **Introduction**
 *NOTE: Plotzing is still in beta.*
 
-Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated using a single line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for additional instruction. Second, Plotzing plots include all relevant components at the outset; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed, if desired, through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
+Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated in one line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for memorization. Second, Plotzing plots  are maximally informative by default; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
 ## **Installing and Updating the Plotzing Package**
 
@@ -24,9 +24,9 @@ install_github("plotzing/plotzing") #If prompted to update other packages, just 
 library(plotzing) #Note the lowercase "p"
 ```
 
-Plotzing only needs to be installed once. Afterward, you can load Plotzing whenever you open R using the command **`library(plotzing)`** If you are prompted to update other packages during the installation process, such as ggplot2, feel free to press the enter key to skip these updates. Additionally, it's important to note that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
+When prompted to update other packages during the installation, press the enter key to skip this. Note that Plotzing only needs to be installed once, but it must be reloaded when reopening R using the command **`library(plotzing)`**. Keep in mind that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
 
-If you wish to update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
+To update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
 #If Plotizng is currently loaded, unload it:
@@ -36,12 +36,11 @@ library(devtools) #Load devtools
 install_github("plotzing/plotzing") #Install the package
 library(plotzing) #Reload the package
 ```
-
 ## **Basic Plots**
 
 To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify **`data=`** when generating your graph, as Plotzing uses the dataframe df by default when no alternative dataframe is specified. 
 
-Once you have loaded your data, you can use the functions graph_line, graph_bar, graph_violin, or graph_scatterplot to create your graph, as in the following example:
+After loading your data, you can use the functions *graph_line*, *graph_bar*, *graph_violin*, or *graph_scatterplot* to graph, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
 #Load Plotzing
@@ -54,7 +53,7 @@ df <- read.csv("your_data_file.csv")
 graph_line("y_variable", "x_variable", "color_variable", "panel_variable") #Quotation marks are needed around variable names
 ```
 
-Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"panel_variable"`** with the relevant column names of those variables you wish to use. Make sure to keep quotes surrounding the names of variables. Note that the order of variables specified moves from left-to-right on the graph (the y-axis is specified first, followed by the x-axis, the legend, and the panels). If you don't wish to follow this order, however, you can specify your dependent variable, your independent variables, and your panel variable using the commands dv=, iv1=, iv2=, and panelvariable=. Additionally, you can create simpler plots (e.g., just using an x and y-variable) by leaving out relevant variables as desired. For instance, the following code would create a bar plot depicting "jealousy" on the y-axis, "condition" on the x-axis, and "gender" in the legend (as a color variable) from a dataframe called df:
+Replace **`"y_variable"`**, **`"x_variable"`**, **`"color_variable"`**, and **`"panel_variable"`** with the column names of those variables you wish to use, though make sure to keep quotes surrounding variable names. Note that the order of variables specified moves from left-to-right on the graph; the y-axis is specified first, followed by the x-axis, legend, and panels. If you don't wish to follow this order, you can specify your dependent variable, your independent variables, and your panel variable using the commands *dv=*, *iv1=*, *iv2=*, and *panelvariable=*. Simpler plots can be created (e.g., showing only an x and y-variable) by leaving out variables as desired. For instance, the following code would create a bar plot depicting "jealousy" on the y-axis, "condition" on the x-axis, and "gender" in the legend from a dataframe called df:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("jealousy","condition","gender") #Again, remember to keep quotation marks around variable names
@@ -62,7 +61,7 @@ graph_bar("jealousy","condition","gender") #Again, remember to keep quotation ma
 
 *Specifying Custom Dataframes*
 
-As mentioned previously, you do not need to specify the name of your dataframe if you have a dataframe called df in your global environment, as Plotzing will use this by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **`data =`**.
+As mentioned previously, Plotzing will look for a datraframe called df in your global environment by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **`data =`**.
 
 ## **Customizing Plots**
 
@@ -78,7 +77,7 @@ You can also set the labels for each level of your x-variable, each level of you
 graph_bar("y_variable", "x_variable", "color_variable", showdata=FALSE, setlegendtitle="Legend Title",setlegendlevels=c("legendlevel1","legendlevel2"),setxlevels=c("xaxislevel1","xaxislevel2")
 ```
 
-To understand these commands more clearly, we can also generate a real-world example. Let's make a sample dataset using the following code:
+To understand these commands more clearly, we can also generate a sample dataset using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
 jealousy_attractive<-c(5,5,6,7,4,5,6,7)
@@ -89,7 +88,7 @@ relationship_status<-c(1, 1, 2, 2, 2, 1, 2, 1)
 df<-data.frame(jealousy_attractive,jealousy_wealthy,income,gender,relationship_status)
 ```
 
-With this newly generated dataset, we can graph jealousy, gender and relationship status while also specifying custom titles, custom level labels, and so on:
+With this newly generated dataset, we can graph jealousy, gender and relationship status while also specifying custom titles, custom level labels, and so on in the code that follows:
  
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="Relationship Status",setlegendlevels=c("Single","Partnered"),setxlevels=c("Male","Female"),setxaxistitle="Gender",settitle="Jealousy as a Function fo Gender and Relationship Status",
@@ -97,7 +96,7 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setlegendtitle="R
 
 *Improving graph aesthetics*
 
-In addition to changing the labels and hiding or showing components of our graph, such as the datapoints, we can also improve the aesthetics of our graph. For example, the code below increases the thickness of our error bars, increases the size of our datapoints, and sets the colors of our graph to blue and turquoise: 
+We can also improve the aesthetics of our graph. For example, the code below increases the thickness of our error bars, increases the size of our datapoints, and sets the colors of our graph to blue and turquoise: 
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_bar("jealousy_wealthy", "gender", "relationship_status", setdotsize=3, seterrorbarthickness=2, setcolors=c("blue","turquoise")
@@ -105,7 +104,7 @@ graph_bar("jealousy_wealthy", "gender", "relationship_status", setdotsize=3, set
 
 *Showing or hiding components of graphs*
 
-Many other customizations are possible, some of which are dependent on the graph type. For example, when graphing violin plots, the commands **`showviolin=FALSE`** and **`showboxplot=FALSE`** may be used to show or hide the violins and show or hide the boxplots associated with these violins. When generating a scatterplot, the command **`showline=FALSE`** may be used to hide the regression line. When generating bar and line plots, the command **`showerrorbars=FALSE`** may be used to hide error bars. And across all graph types, **`showdata=FALSE`** may be used to hide datapoints.
+Additional customizations are possible, some of which are dependent on the graph type. For example, when graphing violin plots, the commands **`showviolin=FALSE`** and **`showboxplot=FALSE`** may be used to hide the violins or hide the boxplots associated with these violins; when generating a scatterplot, the command **`showline=FALSE`** may be used to hide the regression line; and when generating bar and line plots, the command **`showerrorbars=FALSE`** may be used to hide error bars. Across all graph types, **`showdata=FALSE`** may be used to hide datapoints.
 
 *Viewing other available commands*
 
@@ -139,44 +138,44 @@ We can also reverse-code our x-variable, y-variable, and so on using the command
 
 ## **Using Plotzing in Quarto and RMarkdown**
 
-Because Plotzing allows changes to your dataframe, such as reshaping, the updated dataframe is printed by default. This may cause problems when attempting to use Plotzing with file formats such as Quarto or RMarkdown. To remedy this, use the command **'showoutput=FALSE'** to hide all output other than the graph itself.
+Because Plotzing may modify the specified dataframe (e.g., through reshaping), the updated dataframe is printed by default. This may cause problems when using Plotzing with Quarto or RMarkdown. To hide all output other than the graph itself, add the code **`showoutput=FALSE`**.
 
 ## **Generating Multiple Graphs Simultaneously**
 
-For more advanced users, the graph_master() function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
+For more advanced users, the *graph_master()* function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
 ```
 
-In the example above, the list() command is used to generate graphs with different dependent variables. However, the list() command may also be used to generate multiple independent variables instead by specifying a single dv and then the IVs in a list (e.g., **'graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))**'). Alternatively, when omitting the **`list`** argument, users may plot the same variables across multiple graph types to see which graph type looks the best, as in the example below:
+In the example above, the **`list()`** command is used to generate graphs with different dependent variables. However, the **`list()`** command may be used to generate multiple independent variables instead by specifying the IVs in a list instead (e.g., **`graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))`**). Alternatively, when omitting the **`list`** argument, users may plot the same variables across multiple graph types, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
 graph_master("jealousy_attractive","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
 ```
 
-## **Generating Animated Graphs**
+## **Generating Animated Graphs (NOTE: Violin Plots and Scatterplots Only)**
 
-Violin plots and scatterplots may be animated using the argument **'showanimation=TRUE**', which will change the second independent variable from a color variable to an animation variable. For example, the code below will generate an animated violin plot that transitions between single and partered subjects: 
+The argument **`showanimation=TRUE`** will change the second independent variable from a color variable to an animation variable. For example, the code below will generate an animated violin plot that transitions between single and partered subjects: 
 
 ```{r, echo=TRUE, eval=FALSE}
 # Animated violin plot
 graph_violin("jealousy_attractive","gender", "relationship_status",showanimation=TRUE #Generate a violin plot which shows an animated transition between the two relationship_status levels 
 ```
 
-If you are using repeated-measures data, you may also specify an ID variable using the the command **'setanimationid=**' and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. It's important to note that animated graphs are still under development, and, at present, customization options are limited. 
+For repeated-measures data, you may also specify an ID variable using the the command **`setanimationid=`** and specifying the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. Note, however, that animated graphs are still under development, and customization options are somewhat limited. 
 
 ## **Saving Graphs and Animations**
 
-Although users may opt instead to use the saving functions built into RStudio, the resulting files saved through this method will be low in quality. To save high-quality graphs, users may use the **'ggsave()**' function built into ggplot2 or the **'save_graph()**' function built into Plotzing. The **'save_graph()**' function automatically saves the last graph generated by the user to their working directory as a high-quality (500 dpi) image. Users only need to specify the filename, and, if desired, the height and width of the graph in inches. For example, the following code saves the last generated graph to the user's working directory and sets the height to be 6 inches and the width to be 9 inches:
+Although users may use the point-and-click save functions in RStudio, the images saved through this method will be low in quality. To save higher quality images, users may use the **`save_graph()`** function. The **`save_graph()`** function saves the last graph generated by the user to their working directory as a high-quality (500 dpi) image. Users only need to specify the filename, and, if desired, the size of the graph in inches. For example, the following code saves the last generated graph to the working directory and specifies the size:
 
 ```{r, echo=TRUE, eval=FALSE}
 # Saving graphs
-save_graph("mygraph.png",height=6,width=9)
+save_graph("mygraph.png",height=6,width=9) #Saves the most recently generated plot to the working directory as a file called mygraph.png with a height of 6 inches and a width of 9 inches
 ```
 
-Alternatively, users can simply save the graph and have the height and width generated by default (e.g., **'save_graph("mygraph.png")**' would also work). To save animations, users may use the **'anim_sav()**' command built into gganimate or the **'save_animation()**' command built into Plotzing. However, animations in Plotzing are still under development, and the save_animation() function does not yet support height and width commands.
+Alternatively, users can have the height and width generated by default (e.g., **`save_graph("mygraph.png")`** would also work). To save animations, users may use the **`anim_sav()`** command built into gganimate or the **`save_animation()`** command built into Plotzing. However, animations in Plotzing are still under development, and the save_animation() function does not yet support height and width commands.
 
 ## **Contact Me**
 
-Plotzing was developed by Benjamin Gelbart, a PhD candidate at the University of California, Santa Barbara. The project benefits greatly from the contributions of the R community and users who provide valuable feedback and suggestions. If you're having trouble, notice a glitch, or want to offer feedback, feel free to email me at bgelbart[at]ucsb.edu. I would love to hear from you!
+Plotzing was developed by Benjamin Gelbart, a PhD candidate at the University of California, Santa Barbara. If you're having trouble, notice a glitch, or want to offer feedback, feel free to email me at bgelbart[at]ucsb.edu. I would love to hear from you!
