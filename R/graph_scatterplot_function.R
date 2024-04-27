@@ -792,14 +792,18 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       if(!is.null(setxupperbound)){
         graph<-graph+xlim(setxlowerbound,setxupperbound)
       }
+      if(showanimation==TRUE){
+        message("ERROR: You must add a grouping variable to use animations.")
+        stop()
+        }
+      if(!is.null(colors)){
+        message("ERROR: To set the colors when not using a grouping (legend) variable, use setlinecolor= and setdotcolor=")
+      }
       if(showrotatedxlabels==TRUE){
         return(graph + theme(axis.text.x = element_text(angle = 90,vjust=0.5)))
       }
       if(showrotatedxlabels==FALSE){
         return(graph)
-      }
-      if(showanimation==TRUE){
-        message("You must add a grouping variable to use animations.")
       }
     }
 
@@ -1162,7 +1166,13 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         graph <- graph + ylab(setyaxistitle)
       }
 
-      if(!is.null(setlegendlevels)){
+        if(is.null(setlegendlevels)){
+        if(!is.null(colors)){
+          graph<-graph+scale_color_manual(values=c(colors))+scale_fill_manual(values=c(colors))
+          }
+        }
+        
+        if(!is.null(setlegendlevels)){
         if(color1!=-1){
           message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
         }
