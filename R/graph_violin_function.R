@@ -1103,6 +1103,12 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     }
   }
 
+  if(is.null(setlegendlevels)){
+    if(!is.null(colors)){
+      graph<-graph+scale_fill_manual(values=c(colors))+scale_color_manual(values=c(colors))
+    }
+  }
+
   if(!is.null(level1)){
     if(color1!=-1||!is.null(colors)){
       message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
