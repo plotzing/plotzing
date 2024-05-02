@@ -1229,6 +1229,11 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       graph<-graph+scale_fill_manual(values=c(colors),labels=c(setlegendlevels))+scale_color_manual(values=c(colors),labels=c(setlegendlevels))
     }
   }
+  if(is.null(setlegendlevels)){
+    if(!is.null(colors)){
+      graph<-graph+scale_fill_manual(values=c(colors))+scale_color_manual(values=c(colors))
+    }
+  }
 
   if(!is.null(color)){
     message("To color bar graphs, use the command setcolors=c()")
