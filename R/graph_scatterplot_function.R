@@ -1,6 +1,6 @@
 #### SCATTERPLOT ####
-graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=FALSE,jitterheight=0.4,jitterwidth=0.4,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setpaneltitlesize=NULL,shading=TRUE,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,...){
-
+graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxissize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,shading=NULL,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,showsimpleslopesplot=FALSE,setreversecodelegend=NULL,showlargerfonts=FALSE,...){
+  
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
@@ -102,11 +102,20 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   if(!is.null(reversecodepanel)){
     setreversecodepanel<-reversecodepanel
   }
+  if(!is.null(setreversecodelegend)){
+    setreversecodegroup<-setreversecodelegend
+  }
   if(!is.null(reverseordergroup)){
     setreverseordergroup<-reverseordergroup
   }
   if(!is.null(reverseorderpanel)){
     setreverseorderpanel<-reverseorderpanel
+  }
+  if(!is.null(setxaxissize)){
+    setxaxistextsize<-setxaxissize
+  }
+  if(!is.null(setyaxissize)){
+    setyaxistextsize<-setyaxissize
   }
   if(!is.null(showboldedtitle)){
     if(showboldedtitle==TRUE){
@@ -154,6 +163,15 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       setpaneltitleface<-"plain"
     }
   }
+  
+  if(is.null(shading)){
+    if(showsimpleslopesplot==TRUE){
+      shading<-FALSE
+    }
+    if(showsimpleslopesplot==FALSE){
+      shading<-TRUE
+    }
+  }
 
   if(!is.null(groupvariable)){
     iv2<-groupvariable
@@ -162,7 +180,22 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   if(!is.null(groupingvariable)){
     iv2<-groupingvariable
   }
-
+  if(is.null(jitterwidth)){
+    if(showsimpleslopesplot==FALSE){
+      jitterwidth<-.4
+    }
+    if(showsimpleslopesplot==TRUE){
+      jitterwidth<-.2
+    }
+  }
+  if(is.null(jitterheight)){
+    if(showsimpleslopesplot==FALSE){
+      jitterheight<-.4
+    }
+    if(showsimpleslopesplot==TRUE){
+      jitterheight<-.2
+    }
+  }
   if(!is.null(setcustomintercept)&&is.null(setcustomslope)){
     message("To create a custom line, you must also specify a custom slope using setcustomslope =")
   }
@@ -296,26 +329,26 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     setlegendtitlesize<-17.5
   }
 
-  if(!is.null(setaxistextsize)){
-    setyaxissize<-setaxistextsize
-    setxaxissize<-setaxistextsize
+  if(!is.null(setaxissize)){
+    setyaxistextsize<-setaxistextsize
+    setxaxistextsize<-setaxistextsize
   }
 
-  if(is.null(setyaxissize)){
+  if(is.null(setyaxistextsize)){
     if(showanimation==FALSE){
-      setyaxissize<-11
+      setyaxistextsize<-11
     }
     if(showanimation==TRUE){
-      setyaxissize<-13
+      setyaxistextsize<-13
     }
   }
 
-  if(is.null(setxaxissize)){
+  if(is.null(setxaxistextsize)){
     if(showanimation==FALSE){
-      setxaxissize<-11
+      setxaxistextsize<-11
     }
     if(showanimation==TRUE){
-      setxaxissize<-13
+      setxaxistextsize<-13
     }
   }
 
@@ -327,7 +360,10 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       setpaneltitlesize<-16
     }
   }
-
+  
+  if(!is.null(setlegendtextsize)){
+    setlegendlevelsize<-setlegendtextsize
+  }
   if(is.null(setlegendlevelsize)){
     setlegendlevelsize<-11
   }
@@ -419,7 +455,12 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   }
 
   if(is.null(transparency)){
-    transparency<-0.25
+    if(showsimpleslopesplot==FALSE){
+      transparency<-0.25  
+    }
+    if(showsimpleslopesplot==TRUE){
+      transparency<-.4
+    }
   }
 
   dotsize<-as.numeric(dotsize)
@@ -491,6 +532,16 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
 
   if(!is.null(color)&&showanimation==TRUE){
     dotcolor<-color
+  }
+  
+  if(showlargerfonts==TRUE){
+    titlesize<-titlesize+4
+    setytitlesize<-setytitlesize+3
+    setxtitlesize<-setxtitlesize+3
+    setxaxistextsize<-setxaxistextsize+3
+    setyaxistextsize<-setyaxistextsize+3
+    setlegendlevelsize<-setlegendlevelsize+3
+    setlegendtitlesize<-setlegendtitlesize+3
   }
 
   if(showdata==FALSE){
@@ -682,7 +733,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
             geom_point(shape=21,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
             geom_smooth(method=setlinetype, level=setconfidencelevel, linetype="solid", color=c(linecolor), fill=c(linecolor),linewidth=linethickness,fullrange=TRUE)+
-            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
+            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
         }
@@ -693,7 +744,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
             geom_point(shape=21,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize,color=dotcolor)+
             geom_smooth(method=setlinetype, level=setconfidencelevel,  linetype="solid", color=c(linecolor), fill=c(shadingcolor),linewidth=linethickness,fullrange=TRUE)+
-            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
+            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
         }
@@ -703,7 +754,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(shape=21,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize,color=dotcolor)+
           geom_smooth(method=setlinetype, level=setconfidencelevel, se=F, linetype="solid", color=c(linecolor), linewidth=linethickness,fullrange=TRUE)+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
+          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
           ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2])
       }
@@ -711,7 +762,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       if(showline==FALSE){
         graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(shape=21,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize,color=dotcolor)+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
+          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))
 
         if(!is.null(setcustomintercept)&&!is.null(setcustomslope)){
           graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linetype="solid",color=c(linecolor),size=linethickness)
@@ -792,12 +843,11 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       if(!is.null(setxupperbound)){
         graph<-graph+xlim(setxlowerbound,setxupperbound)
       }
-      if(showanimation==TRUE){
-        message("ERROR: You must add a grouping variable to use animations.")
-        stop()
-        }
       if(!is.null(colors)){
         message("ERROR: To set the colors when not using a grouping (legend) variable, use setlinecolor= and setdotcolor=")
+      }
+      if(showanimation==TRUE){
+        message("ERROR: You must add a grouping variable to use animations.")
       }
       if(showrotatedxlabels==TRUE){
         return(graph + theme(axis.text.x = element_text(angle = 90,vjust=0.5)))
@@ -1002,12 +1052,12 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         levels(summarydata$facetvariable)<- c(setpanellevels)
         newlevels<-levels(summarydata$facetvariable)
         message("Levels of paneling variable have been converted:")
-        if(showoutput==TRUE){
+        if(showoutput==TRUE&&showsimpleslopesplot==FALSE){
           print(originallevels)
           print(newlevels)
         }
       }
-      if(showoutput==TRUE){
+      if(showoutput==TRUE&&showsimpleslopesplot==FALSE){
         print(summarydata)
       }
 
@@ -1061,12 +1111,13 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
         message("You have set a custom slope and intercept. To adjust where the x and y-axis start and end, or to adjust the spacing of tickmarks, use setxaxisstart= , setxaxisend=, and setxaxisspacing = (or, for the y-axis, setyaxisstart =, setyaxisend=, etc.)")
       }
-
+        
+        if(showsimpleslopesplot==FALSE){
         graph<-ggplot(data=summarydata,aes(x = xvariable, y = yvariable, color = groupvariable,fill=groupvariable,linetype=groupvariable))+
           geom_point(shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
           theme_bw()+ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2])+
-          theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))
+          theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize))
 
         if(showline==TRUE&&showanimation==FALSE&&is.null(setcustomintercept)&&is.null(setcustomslope)){ #If you're showing standard regression lines
           if(showdashedlines==TRUE){ #If they are dashed (color-blind friendly)
@@ -1122,13 +1173,116 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
             }
           }
         }
+        }
+      
+      #### INTERACTION PLOTS ####
+      if(showsimpleslopesplot==TRUE){
+        if(setystandardize==TRUE||setxstandardize==TRUE){
+          message("ERROR: Data are automatically standardized when using simple-slope interaction plots.")
+          stop()
+        }
+        if(!is.null(setlegendlevels)){
+          message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+          stop()
+        }
+        if(!is.null(setreverseorderlegend)){
+          message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+          stop()
+        }
+        # if(!is.null(setreversecodegroup)){
+        #   message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+        #   stop()
+        # }
+        
+        #Duplicate the summarydata dataframe
+        summarydata2<-summarydata
+        
+        #Scale the variables
+        summarydata2$outcome_scale <- scale(summarydata2$yvariable)
+        summarydata2$predictor_scale <- scale(summarydata2$xvariable)
+        summarydata2$groupvariable<-as.numeric(summarydata2$groupvariable)
+        summarydata2$factor_scale <- scale(summarydata2$groupvariable)
+        
+        #Separate unscaled values into low, medium, and high groups
+        mod_mean <- mean(summarydata2$groupvariable, na.rm=T)
+        mod_sd <- sd(summarydata2$groupvariable, na.rm=T)
+      
+        #Cutoff by k sd
+        k <- 1 #when k=1, one sd
+        mod_cutoffs <- c(mod_mean-k*mod_sd, mod_mean+k*mod_sd)
+        
+        #Create group variable
+        groupeddata<-summarydata2
+        groupeddata$factor_group <- ifelse(groupeddata$groupvariable > mod_cutoffs[1] & groupeddata$groupvariable < mod_cutoffs[2], "Mean", "Other")
+        
+        #Set other groups
+        groupeddata$factor_group[groupeddata$groupvariable < mod_cutoffs[1]] <- "1 SD Below"
+        groupeddata$factor_group[groupeddata$groupvariable > mod_cutoffs[2]] <- "1 SD Above"
+        groupeddata$factor_group <- as.factor(groupeddata$factor_group)
+        group_vals <- unique(groupeddata$factor_group)[!is.na(unique(groupeddata$factor_group))]
+        
+        # Model Creation #
+        interact_mod <- lm(outcome_scale ~ predictor_scale * factor_scale, data = summarydata2)
+        y_intercept <- interact_mod$coefficients[1]
+        pred_slope <- interact_mod$coefficients[2]
+        factor_slope <- interact_mod$coefficients[3]
+        interaction_slope <- interact_mod$coefficients[4]
+        
+        if(length(levels(groupeddata$factor_group))<3){
+          message("ERROR: You cannot show an interaction plot unless subjects are represented across all three groups (at mean, 1 SD below, and 1 SD above). See the dataframe above for details.")
+          stop()
+        }
+        
+        groupeddata$factor_group<-factor(groupeddata$factor_group,levels=c("1 SD Above","Mean","1 SD Below"))
+        
+        #Set default colors
+        if(is.null(colors)){
+          interactioncolors<-c("red","blue","green")
+        }
+        #For custom colors
+        if(!is.null(colors)){
+          interactioncolors<-colors
+        }
+        
+        graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale,fill=factor_group)) + geom_point(shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),size=dotsize,alpha=transparency) +
+          geom_abline(colour = interactioncolors[[1]], intercept = y_intercept + 1 * factor_slope, slope = pred_slope + 1 * interaction_slope,size=setlinethickness)+
+          geom_abline(colour = interactioncolors[[2]], intercept = y_intercept, slope = pred_slope,size=setlinethickness) + 
+          geom_abline(colour = interactioncolors[[3]], intercept = y_intercept - 1 * factor_slope, slope = pred_slope - 1 * interaction_slope,size=setlinethickness) +
+          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize))
+        
+        graph<-graph+scale_fill_manual(values=c(interactioncolors))
+        
+        if (is.null(setxaxistitle)) {
+          graph <- graph + xlab(colnames(graphvariables[2]))
+        }
+        
+        if (is.null(setyaxistitle)) {
+          graph <- graph + ylab(colnames(graphvariables[1]))
+        }
+        
+        if(showoutput==TRUE){
+          print(groupeddata)  
+        }
+        
+        if(shading==TRUE){
+          message("NOTE: You cannot show error shading when plotting simple-slopes interaction plots.")
+        }
+      }
       if(showanimation==TRUE){ #If you're creating an animated graph (animated lines not currently supported)
+        if(showsimpleslopesplot==TRUE){
+          message("You cannot create animated simple-slope interaction plots at this time.")
+          stop()
+        }
         if(!is.null(setcustomintercept)||!is.null(setcustomslope)){
           message("Regression lines cannot be used with animations in the present version.")
         }
+        if(showsimpleslopesplot==TRUE){
+          message("ERROR: You cannot combine animations with simple-slope interaction plots.")
+          stop()
+        }
         graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(aes(group=idvariablespecifiedbyuser),shape=21,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=.5,size=dotsize,color=dotcolor)+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxissize),axis.text.y=element_text(size=setyaxissize))+
+          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize))+
           ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2])
       }
@@ -1166,17 +1320,13 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         graph <- graph + ylab(setyaxistitle)
       }
 
-        if(is.null(setlegendlevels)){
-        if(!is.null(colors)){
+      if(is.null(setlegendlevels)){
+        if(!is.null(colors)&&showsimpleslopesplot==FALSE){
           graph<-graph+scale_color_manual(values=c(colors))+scale_fill_manual(values=c(colors))
-          }
         }
-        
-        if(!is.null(setlegendlevels)){
-        if(color1!=-1){
-          message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
-        }
-
+      }
+      
+      if(!is.null(setlegendlevels)&&showsimpleslopesplot==FALSE){
         if(!is.null(colors)){
           graph<-graph+scale_color_manual(values=c(colors),labels=c(setlegendlevels))+scale_fill_manual(values=c(colors),labels=c(setlegendlevels))
         }
@@ -1187,7 +1337,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       }
 
       if(!is.null(color)){
-        message("To color bar graphs with multiple independent variables, use the commands color1 =, color2 =, and so on, or colors=c()")
+        message("To color scatterplots with multiple independent variables, use the commands color1 =, color2 =, and so on, or colors=c()")
       }
 
       if(!is.null(setpositionhorizontalline)){
@@ -1217,7 +1367,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
 
       if(showanimation==TRUE){
         require(gganimate)
-        graph<-graph+transition_states(groupvariable,transition_length=1.5,state_length=2)+labs(subtitle="{closest_state}")+theme(plot.title=element_text(size=titlesize),axis.text.x = element_text(size=setxaxissize),axis.text.y = element_text(size=setyaxissize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),plot.subtitle = element_text(size=setanimationtitlesize,hjust=0.5))+exit_fade()+enter_fade()
+        graph<-graph+transition_states(groupvariable,transition_length=1.5,state_length=2)+labs(subtitle="{closest_state}")+theme(plot.title=element_text(size=titlesize),axis.text.x = element_text(size=setxaxistextsize),axis.text.y = element_text(size=setyaxistextsize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),plot.subtitle = element_text(size=setanimationtitlesize,hjust=0.5))+exit_fade()+enter_fade()
         if(is.null(setanimationid)&&showdata==TRUE){
           message("NOTE: Although an ID variable may sometimes be correctly inferred, no explicit ID variable is set by default. If you are using a repeated-measures animation variable and want each datapoint to refer to the same subject across frames, it is best to add setanimationid= and specify an ID variable in your dataset.")
         }
@@ -1278,6 +1428,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           message("NOTE: You are bolding your axis titles. To also bold the legend title, use showboldedlegendtitle = TRUE")
         }
       }
+    }
+    if(showsimpleslopesplot==TRUE){
+      message("WARNING: Simple slopes plots are currently in beta and may be prone to errors.")
     }
       return(graph)
   }
