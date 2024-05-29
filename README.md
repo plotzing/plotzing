@@ -3,7 +3,7 @@
 ## **Introduction**
 *NOTE: Plotzing is still in beta.*
 
-Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated in one line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for memorization. Second, Plotzing plots  are maximally informative by default; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, and more in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
+Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated in one line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for memorization. Second, Plotzing plots  are maximally informative by default; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, create dichotomized dummy variables, and perform other data cleaning tasks in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
 ## **Installing and Updating the Plotzing Package**
 
@@ -124,7 +124,7 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"), setxaxistitle="Rival 
 #The code above will change the dataset from wide-to-long and graph jealousy as a function of rival type.
 ```
 
-*Median Splits*
+*Median Splits (Dichotomized Dummy Variables)*
 
 Other cleaning options are also available. For instance, we can add income as a color variable and perform a median split on this variable, dividing subjects into those with high and low incomes: 
 ```{r, echo=TRUE, eval=FALSE}
