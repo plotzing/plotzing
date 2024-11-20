@@ -1332,6 +1332,13 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
       }
     }
   }
+  if(max(as.numeric(summarydata$yvariable))<3){
+    if(jitterheight>.1){
+      if(showdata==TRUE){
+        message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
+      }
+    }
+  }
   if(showrotatedxlabels==TRUE){
     if(internalfunctionautorotation==TRUE){
       message("NOTE: X-axis labels have been rotated by default to avoid overlapping labels. To override this, add showrotatedxlabels=FALSE")

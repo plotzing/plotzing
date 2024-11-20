@@ -1101,6 +1101,14 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     if(!is.null(setyupperbound)){
       graph<-graph+ylim(setylowerbound,setyupperbound)
     }
+    
+    if(max(as.numeric(summarydata$yvariable))<3){
+      if(jitterheight>.1){
+        if(showdata==TRUE){
+          message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
+        }
+      }
+    }
 
     #If the user is rotating the x-axis labels to make them fit
     if(showrotatedxlabels==TRUE){
@@ -1682,6 +1690,13 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       message("WARNING: To adjust the color of your lines when setting a grouping (legend) variable, use the command setcolors=c()")
     }
 
+  if(max(as.numeric(summarydata$yvariable))<3){
+    if(jitterheight>.1){
+      if(showdata==TRUE){
+        message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
+      }
+    }
+  }
     #If they're rotating the x-axis labels
     if(showrotatedxlabels==TRUE){
     if(internalfunctionautorotation==TRUE){

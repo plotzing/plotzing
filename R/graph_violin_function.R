@@ -549,7 +549,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
         frequencytable<-table(summarydata$xvariable)
         frequencytable<-as.data.frame(frequencytable)
         frequencytable<-subset(frequencytable,frequencytable$Freq>0)
-        if(min(frequencytable$Freq)<4){
+        if(min(frequencytable$Freq)<4&&showviolin==TRUE){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable))
           }
@@ -562,7 +562,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
         frequencytable<-table(summarydata$xvariable,summarydata$facetvariable)
         frequencytable<-as.data.frame(frequencytable)
         frequencytable<-subset(frequencytable,frequencytable$Freq>0)
-        if(min(frequencytable$Freq)<4){
+        if(min(frequencytable$Freq)<4&&showviolin==TRUE){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$facetvariable))
           }
@@ -901,7 +901,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
         frequencytable<-table(summarydata$xvariable,summarydata$groupvariable)
         frequencytable<-as.data.frame(frequencytable)
         frequencytable<-subset(frequencytable,frequencytable$Freq>0)
-        if(min(frequencytable$Freq)<4){
+        if(min(frequencytable$Freq)<4&&showviolin==TRUE){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$groupvariable))
           }
@@ -914,7 +914,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
         frequencytable<-table(summarydata$xvariable,summarydata$groupvariable,summarydata$facetvariable)
         frequencytable<-as.data.frame(frequencytable)
         frequencytable<-subset(frequencytable,frequencytable$Freq>0)
-        if(min(frequencytable$Freq)<4){
+        if(min(frequencytable$Freq)<4&&showviolin==TRUE){
           if(showoutput==TRUE){
             print(table(summarydata$xvariable,summarydata$groupvariable,summarydata$facetvariable))
           }
@@ -1223,6 +1223,13 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(showboldedaxistitles==TRUE){
       if(is.null(showboldedlegendtitle)||showboldedlegendtitle==FALSE){
         message("NOTE: You are bolding your axis titles. To also bold the legend title, use showboldedlegendtitle = TRUE")
+      }
+    }
+  }
+  if(max(as.numeric(summarydata$yvariable))<3){
+    if(jitterheight>.1){
+      if(showdata==TRUE){
+        message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
       }
     }
   }
