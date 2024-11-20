@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software in published work, you may use the citation below."
+authors:
+  - family-names: Gelbart
+    given-names: Benjamin
+title: "Plotzing"
+version: 0.1.81
+date-released: 2024-01-20
