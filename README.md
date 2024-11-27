@@ -5,7 +5,7 @@
 
 Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated in one line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for memorization. Second, Plotzing plots  are maximally informative by default; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, create dichotomized dummy variables, and perform other data cleaning tasks in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
-## **Installing and Updating the Plotzing Package**
+## **Installing the Plotzing Package**
 
 At present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R. The following code installs devtools and installs and loads Plotzing:
 
@@ -26,12 +26,14 @@ library(plotzing) #Note the lowercase "p"
 
 When prompted to update other packages during the installation, press the enter key to skip this. Note that Plotzing only needs to be installed once, but it must be reloaded when reopening R using the command **`library(plotzing)`**. Keep in mind that, despite my capitalization of "Plotzing" throughout this document, loading plotzing into R requires a lowercase "p" (i.e., "plotzing"), as seen in the code above.
 
+## **Updating the Plotzing Package**
+
 To update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
 
 ```{r, echo=TRUE, eval=FALSE}
-#If Plotizng is currently loaded, unload it:
+#If Plotzing is currently loaded, unload it:
 detach("package:plotzing", unload = TRUE) #Note the lowercase "p"
-#Code from before
+
 library(devtools) #Load devtools
 install_github("plotzing/plotzing") #Install the package
 library(plotzing) #Reload the package
