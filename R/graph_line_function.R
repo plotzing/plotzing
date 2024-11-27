@@ -1,5 +1,5 @@
 #### LINE PLOT ####
-graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,color1=-1,color2=-2,color3=-1,color4=-1,color5=-1,color6=-1,color7=-1,color8=-1,color9=-1,color10=-1,level1=NULL,level2=NULL,level3=NULL,level4=NULL,level5=NULL,level6=NULL,level7=NULL,level8=NULL,level9=NULL,level10=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxaxistitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setlegendtitlesize=NULL,setlegendtextsize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,..){
+graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxaxistitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setlegendtitlesize=NULL,setlegendtextsize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setcolorblindlinecapshapes=NULL,..){
 
   require(Rmisc)
   require(ggplot2)
@@ -959,13 +959,22 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
 
         #If specifying a single color for the datapoints
         if(length(setdotcolor)==1){
-          graph<-graph+geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,fill=c(setdotcolor),color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+          graph<-graph+geom_point(data=summarydata,shape=setdotshape,stroke=setdotoutlinethickness,fill=c(setdotcolor),color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          }else{
+          graph<-graph+geom_point(data=summarydata,shape=setdotshape,color=c(setdotcolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          }
         }
 
         #If specifying multiple colors
         if(length(setdotcolor)>1){
-          graph<-graph+geom_point(data=summarydata,aes(fill=xvariable),shape=21,stroke=setdotoutlinethickness,color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+          graph<-graph+geom_point(data=summarydata,aes(fill=xvariable),shape=setdotshape,stroke=setdotoutlinethickness,color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
           graph<-graph+scale_fill_manual(values=c(setdotcolor))
+          }else{
+          graph<-graph+geom_point(data=summarydata,aes(color=xvariable),shape=setdotshape,size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))  
+          graph<-graph+scale_color_manual(values=c(setdotcolor))
+          }
         }
       }
       message("Datapoints are shown in the front by default. To move them to the back, add showdatainback=TRUE")
@@ -975,11 +984,20 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     if(showdatainback==TRUE){
       if(showdata==TRUE){
         if(length(setdotcolor)==1){
-          graph<-graph+geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,fill=c(setdotcolor),color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+          graph<-graph+geom_point(data=summarydata,shape=setdotshape,stroke=setdotoutlinethickness,fill=c(setdotcolor),color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          }else{
+          graph<-graph+geom_point(data=summarydata,shape=setdotshape,color=c(setdotcolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))  
+          }
         }
         if(length(setdotcolor)>1){
-          graph<-graph+geom_point(data=summarydata,aes(fill=xvariable),shape=21,stroke=setdotoutlinethickness,color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+          graph<-graph+geom_point(data=summarydata,aes(fill=xvariable),shape=setdotshape,stroke=setdotoutlinethickness,color=c(setdotoutlinecolor),size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
           graph<-graph+scale_fill_manual(values=c(setdotcolor))
+          }else{
+          graph<-graph+geom_point(data=summarydata,aes(color=xvariable),shape=setdotshape,size=dotsize,alpha=transparency,position=position_jitter(height=jitterheight,width=jitterwidth))
+          graph<-graph+scale_fill_manual(values=c(setdotcolor))
+          }
         }
       }
       if(showcolorederrorbars==TRUE){
@@ -1117,7 +1135,15 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       }
       return(graph + theme(axis.text.x = element_text(angle = 90,vjust=0.5)))
     }
-
+    
+    if(showcolorblindgraph==TRUE&&is.null(setcolorblindlinecapshapes)){
+      message("You can adjust the shapes of the line-caps on your color-blind graph using setcolorblindlinecapshapes=c() (e.g., setcolorblindlinecapshapes=c('triangle','circle','square','diamond')")
+    }
+    
+    if(setdotshape!=21&&setdotshape!=22&&setdotshape!=23&&setdotshape!=24&&setdotshape!=25&&setdotshape!="circle filled"&&setdotshape!="diamond filled"&&setdotshape!="square filled"&&setdotshape!="triangle down filled"&&setdotshape!="triangle filled"&&setdotoutlinethickness!=0&&!is.na(setdotoutlinethickness)){
+      message("NOTE: Dot outlines have been removed based on the shape you specified. To restore these, use a shape with fill (e.g., setdotshape = 'triangle filled', setdotshape = 'square filled', etc.)")
+    }
+    
     if(showrotatedxlabels==FALSE){
       return(graph)
     }
@@ -1504,7 +1530,10 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
         #different shapes
         if(showcolorblindgraph==TRUE){
           graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, colour=groupvariable,group=groupvariable,shape=groupvariable),position=position_dodge(0.1), size=c(setlinecapsize))
+        if(!is.null(setcolorblindlinecapshapes)){
+          graph<-graph+scale_shape_manual(values=c(setcolorblindlinecapshapes))
         }
+          }
         }
         #If they're setting linecap colors that don't match the line color
         if(setlinecapcolor[[1]]!=setlinecolor[[1]]){
@@ -1513,19 +1542,30 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
           }
           if(showcolorblindgraph==TRUE){
             graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, group=groupvariable,shape=groupvariable),position=position_dodge(0.1), color=c(setlinecapcolor),size=c(setlinecapsize))
+            if(!is.null(setcolorblindlinecapshapes)){
+            graph<-graph+scale_shape_manual(values=c(setcolorblindlinecapshapes))
+            }
           }
         }
       }
 
       #If they're showing the individual datapoints
       if(showdata==TRUE){
-        graph<-graph+geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))
+        if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))
+        }else{
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))  
+        }
       }
     }
 
     if(showdatainback==TRUE){
       if(showdata==TRUE){
-        graph<-graph+geom_point(data=summarydata,shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))
+        if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))
+        }else{
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,size=dotsize,alpha=transparency,position=position_jitter(width=jitterwidth,height=jitterheight))  
+        }
       }
       if(showcolorederrorbars==TRUE){
         graph<-graph+geom_errorbar(data=summary,aes(ymin=yvariable-errors, ymax=yvariable+errors,color=groupvariable), linetype="solid",width=seterrorbarwidth, linewidth=seterrorbarthickness,alpha=seterrorbartransparency,position=position_dodge(0.1))
@@ -1548,6 +1588,9 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
           }
           if(showcolorblindgraph==TRUE){
             graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, colour=groupvariable,group=groupvariable,shape=groupvariable),position=position_dodge(0.1), size=c(setlinecapsize))
+            if(!is.null(setcolorblindlinecapshapes)){
+              graph<-graph+scale_shape_manual(values=c(setcolorblindlinecapshapes))
+            }
           }
         }
         if(setlinecapcolor[[1]]!=setlinecolor[[1]]){
@@ -1598,10 +1641,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   }
 
   if(!is.null(setlegendlevels)){
-    if(color1!=-1){
-      message("To set levels and colors at the same time, use colors = c('color1','color2', etc.) and setlegendlevels =c('level1','level2', etc.), rather than color1=, color2=, level1=, level2=, etc.")
-    }
-
     if(!is.null(colors[1])){
       graph<-graph+scale_color_manual(values=c(colors),labels=c(setlegendlevels))+scale_fill_manual(values=c(colors))
       graph<-graph+guides(fill="none")
@@ -1703,6 +1742,12 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       message("NOTE: X-axis labels have been rotated by default to avoid overlapping labels. To override this, add showrotatedxlabels=FALSE")
     }
     return(graph + theme(axis.text.x = element_text(angle = 90,vjust=0.5)))
+    }
+  if(showcolorblindgraph==TRUE&&is.null(setcolorblindlinecapshapes)){
+    message("You can adjust the shapes of the line-caps on your color-blind graph using setcolorblindlinecapshapes=c() (e.g., setcolorblindlinecapshapes=c('triangle','circle','square','diamond')")
+  }
+  if(setdotshape!=21&&setdotshape!=22&&setdotshape!=23&&setdotshape!=24&&setdotshape!=25&&setdotshape!="circle filled"&&setdotshape!="diamond filled"&&setdotshape!="square filled"&&setdotshape!="triangle down filled"&&setdotshape!="triangle filled"&&setdotoutlinethickness!=0&&!is.na(setdotoutlinethickness)){
+    message("NOTE: Dot outlines have been removed based on the shape you specified. To restore these, use a shape with fill (e.g., setdotshape = 'triangle filled', setdotshape = 'square filled', etc.)")
   }
   if(showrotatedxlabels==FALSE){
     return(graph)
