@@ -1,5 +1,5 @@
 #### LINE PLOT ####
-graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=0.2,jitterwidth=0.2,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxaxistitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setxaxissize=NULL,setyaxissize=NULL,setlegendtitlesize=NULL,setlegendtextsize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setcolorblindlinecapshapes=NULL,..){
+graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,setystandardize=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,dotsize=.8,dottransparency=NULL,transparency=NULL,errorbars="default",setidvariable=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,bold=FALSE,setlinecapcolor=NULL,setlinecapsize=4.5,showlinecaps=TRUE,showmeans=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,linecolor=NULL,dotcolor=NULL,setlinecolor="#1D4E5D",setdotcolor="#3BA0BF",data=df,setdata=NULL,setgrouplevels=NULL,setlegendlevels=NULL,colors=NULL,highlightabove=-1,titlesize=NULL,settitlesize=NULL,setxaxistitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setxtitlesize=NULL,setytitlesize=NULL,setlegendtitlesize=NULL,setlegendtextsize=NULL,setlegendlevelsize=NULL,setpaneltitlesize=NULL,showcolorederrorbars=NULL,colorful=FALSE,seterrorbarcolor=NULL,seterrorbarwidth=.1,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showerrorbars=TRUE,seterrorbars=NULL,setdotsize=NULL,setdottransparency=NULL,linethickness=NULL,setlinethickness=1.15,seterrorbarthickness=NULL,setlegendtitle=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,internalfunctionautorotation=FALSE,overrideerrorbarcolor=FALSE,showcolorblindgraph=FALSE,color=NULL,setcolor=NULL,setconfidencelevel=0.95,showintervalplot=FALSE,showline=TRUE,setmeancolor=NULL,setlinecapoutlinethickness=NA,setlinecapoutlinecolor=NULL,setmeanoutlinecolor=NULL,setmeanoutlinethickness=NULL,showdatainback=FALSE,showdotsinback=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setcolorblindlinecapshapes=NULL,setlinetransparency=NULL,setlinecaptransparency=NULL,...){
 
   require(Rmisc)
   require(ggplot2)
@@ -7,7 +7,16 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   #Creating the "Not in" function
   '%!in%' <- function(x,y)!('%in%'(x,y))
 
+  #Extract other arguments not explicitly listed but specified by the user
+  custom_args <- list(...) #Will use this later
+  
   #### Setting up parameters ####
+  if(is.null(setlinetransparency)){
+    setlinetransparency<-1
+  }
+  if(is.null(setlinecaptransparency)){
+    setlinecaptransparency<-1
+  }
   if(!is.null(setsubtitle)){
     subtitle<-setsubtitle
   }
@@ -41,12 +50,7 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   if(!is.null(setxaxislevels)){
     setxlevels<-setxaxislevels
   }
-  if(!is.null(setxaxistitlesize)){
-    setxaxissize<-setxaxistitlesize
-  }
-  if(!is.null(setyaxistitlesize)){
-    setyaxissize<-setyaxistitlesize
-  }
+  
   if(!is.null(setyupperbound)||!is.null(setylowerbound)){
     if(is.null(setylowerbound)){
       message("ERROR: To adjust the bounds of your y-axis, you must also specify a lower bound using setylowerbound=")
@@ -225,7 +229,9 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   }
 
   if(!is.null(setlinecapoutlinecolor)){
-    setlinecapoutlinethickness<-2
+    if(is.na(setlinecapoutlinethickness)){
+      setlinecapoutlinethickness<-2  
+    }
   }
   if(is.null(setlinecapoutlinecolor)){
     if(showdarkgraph==FALSE){
@@ -332,6 +338,60 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
   if(is.null(setlegendtitlesize)){
     setlegendtitlesize<-15.5
   }
+  
+  if(!is.null(setaxistextsize)){
+    setyaxistextsize<-setaxistextsize
+    setxaxistextsize<-setaxistextsize
+  }
+  
+  if(!is.null(settitlesize)){
+    titlesize<-settitlesize
+  }
+  
+  if(is.null(titlesize)){
+    titlesize<-20
+  }
+  
+  if(!is.null(setaxistitlesize)){
+    setxtitlesize<-setaxistitlesize
+    setytitlesize<-setaxistitlesize
+  }
+  
+  if(is.null(setxtitlesize)){
+    setxtitlesize<-17.5
+  }
+  
+  if(is.null(setytitlesize)){
+    setytitlesize<-17.5
+  }
+  
+  if(is.null(setlegendtitlesize)){
+    setlegendtitlesize<-17.5
+  }
+  
+  if(is.null(setyaxistextsize)){
+    setyaxistextsize<-11
+  }
+  
+  if(is.null(setxaxistextsize)){
+    setxaxistextsize<-11
+  }
+  
+  if(is.null(setpaneltitlesize)){
+    setpaneltitlesize<-11
+  }
+  
+  if(!is.null(setlegendtextsize)){
+    setlegendlevelsize<-setlegendtextsize
+  }
+  
+  if(is.null(setlegendlevelsize)){
+    setlegendlevelsize<-11
+  }
+  
+  if(!is.null(settitle)){
+    title<-settitle
+  }
 
   if(showlargerfonts==TRUE){
     titlesize<-titlesize+4
@@ -383,60 +443,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
 
   if(!is.null(setdodgewidth)){
     dodgewidth<-setdodgewidth
-  }
-
-  if(!is.null(settitlesize)){
-    titlesize<-settitlesize
-  }
-
-  if(is.null(titlesize)){
-    titlesize<-20
-  }
-
-  if(!is.null(setaxistitlesize)){
-    setxtitlesize<-setaxistitlesize
-    setytitlesize<-setaxistitlesize
-  }
-
-  if(is.null(setxtitlesize)){
-    setxtitlesize<-17.5
-  }
-
-  if(is.null(setytitlesize)){
-    setytitlesize<-17.5
-  }
-
-  if(is.null(setlegendtitlesize)){
-    setlegendtitlesize<-17.5
-  }
-
-  if(!is.null(setaxistextsize)){
-    setyaxissize<-setaxistextsize
-    setxaxissize<-setaxistextsize
-  }
-
-  if(is.null(setyaxissize)){
-    setyaxistextsize<-11
-  }
-
-  if(is.null(setxaxissize)){
-    setxaxistextsize<-11
-  }
-
-  if(is.null(setpaneltitlesize)){
-    setpaneltitlesize<-11
-  }
-
-  if(!is.null(setlegendtextsize)){
-    setlegendlevelsize<-setlegendtextsize
-  }
-
-  if(is.null(setlegendlevelsize)){
-    setlegendlevelsize<-11
-  }
-
-  if(!is.null(settitle)){
-    title<-settitle
   }
 
   if(setlinecolor[[1]]=="Alisa"){
@@ -922,6 +928,26 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     #     showrotatedxlabels<-FALSE
     #   }
     # }
+    
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.2
+      if(showdata==TRUE){
+      if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+        jitterheight<-.095
+        message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+      }
+      if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+        jitterheight<-.05
+      }
+      if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+      jitterheight<-.01
+      }
+    }
+  }
+    if(is.null(jitterwidth)){
+      jitterwidth<-.2
+    }
 
     #### Core graph when no color variable is specified ####
     graph<-ggplot(data=summary, aes(x=xvariable, y=yvariable,group=1)) +
@@ -946,12 +972,12 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       #If showline is set to FALSE or showintervalplot set to TRUE (hiding
       #the line)
       if(showintervalplot==FALSE){
-        graph<-graph+geom_line(data=summary,linewidth=setlinethickness,color=setlinecolor)
+        graph<-graph+geom_line(data=summary,linewidth=setlinethickness,color=setlinecolor,alpha=setlinetransparency)
       }
 
       #If showing line caps for means
       if(showlinecaps==TRUE){
-        graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable,group=1),shape=21,stroke=c(setlinecapoutlinethickness),fill=c(setlinecapcolor),color=c(setlinecapoutlinecolor),position=position_dodge(0.1), size=c(setlinecapsize))
+        graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable,group=1),shape=21,stroke=c(setlinecapoutlinethickness),fill=c(setlinecapcolor),color=c(setlinecapoutlinecolor),position=position_dodge(0.1), size=c(setlinecapsize),alpha=setlinecaptransparency)
       }
 
       #If showing datapoints
@@ -1120,14 +1146,22 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       graph<-graph+ylim(setylowerbound,setyupperbound)
     }
     
-    if(max(as.numeric(summarydata$yvariable))<3){
+    if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
       if(jitterheight>.1){
         if(showdata==TRUE){
           message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
         }
       }
     }
-
+    if("setxaxissize" %in% names(custom_args)){
+      message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+    }
+    if("setyaxissize" %in% names(custom_args)){
+      message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
+    }
+    if(length(levels(as.factor(summarydata$xvariable)))>20){
+      message("\nNOTE: You seem to have more than 20 levels of your x-axis variable. If your x-axis variable is continuous, you may produce a scatterplot instead using the graph_scatterplot() function.")
+    }
     #If the user is rotating the x-axis labels to make them fit
     if(showrotatedxlabels==TRUE){
       if(internalfunctionautorotation==TRUE){
@@ -1143,7 +1177,6 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     if(setdotshape!=21&&setdotshape!=22&&setdotshape!=23&&setdotshape!=24&&setdotshape!=25&&setdotshape!="circle filled"&&setdotshape!="diamond filled"&&setdotshape!="square filled"&&setdotshape!="triangle down filled"&&setdotshape!="triangle filled"&&setdotoutlinethickness!=0&&!is.na(setdotoutlinethickness)){
       message("NOTE: Dot outlines have been removed based on the shape you specified. To restore these, use a shape with fill (e.g., setdotshape = 'triangle filled', setdotshape = 'square filled', etc.)")
     }
-    
     if(showrotatedxlabels==FALSE){
       return(graph)
     }
@@ -1493,6 +1526,26 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     #   }
     # }
 
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.2
+      if(showdata==TRUE){
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+          jitterheight<-.095
+          message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+          jitterheight<-.05
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+          jitterheight<-.01
+        }
+      }
+    }  
+    if(is.null(jitterwidth)){
+      jitterwidth<-.2
+    }
+    
     #Core graph
     graph<-ggplot(data=NULL, aes(x=xvariable, y=yvariable, colour=groupvariable,fill=groupvariable,group=groupvariable)) +
       ylab(colnames(graphvariables)[1]) +
@@ -1512,24 +1565,24 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
       #If you're showing the lines (and not just an interval plot)
       if(showintervalplot==FALSE){
         if(showcolorblindgraph==FALSE){
-          graph<-graph+geom_line(data=summary,position=position_dodge(0.1),linewidth=setlinethickness)
+          graph<-graph+geom_line(data=summary,position=position_dodge(0.1),linewidth=setlinethickness,alpha=setlinetransparency)
         }
         #If you're showing a colorblind graph set the lines to be dashed,
         #solid, etc.
         if(showcolorblindgraph==TRUE){
-          graph<-graph+geom_line(data=summary,aes(linetype=groupvariable),position=position_dodge(0.1),linewidth=setlinethickness)
+          graph<-graph+geom_line(data=summary,aes(linetype=groupvariable),position=position_dodge(0.1),linewidth=setlinethickness,alpha=setlinetransparency)
         }
       }
       #If you're showing linecaps
       if(showlinecaps==TRUE){
         if(setlinecapcolor[[1]]==setlinecolor[[1]]){
           if(showcolorblindgraph==FALSE){
-          graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, fill=groupvariable,group=groupvariable),shape=21,stroke=c(setlinecapoutlinethickness),color=c(setlinecapoutlinecolor),position=position_dodge(0.1), size=c(setlinecapsize))
+          graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, fill=groupvariable,group=groupvariable),shape=21,stroke=c(setlinecapoutlinethickness),color=c(setlinecapoutlinecolor),position=position_dodge(0.1), size=c(setlinecapsize),alpha=setlinecaptransparency)
         }
         #If you're showing a colorblind graph, set the line caps to be
         #different shapes
         if(showcolorblindgraph==TRUE){
-          graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, colour=groupvariable,group=groupvariable,shape=groupvariable),position=position_dodge(0.1), size=c(setlinecapsize))
+          graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, colour=groupvariable,group=groupvariable,shape=groupvariable),position=position_dodge(0.1), size=c(setlinecapsize),alpha=setlinecaptransparency)
         if(!is.null(setcolorblindlinecapshapes)){
           graph<-graph+scale_shape_manual(values=c(setcolorblindlinecapshapes))
         }
@@ -1538,10 +1591,10 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
         #If they're setting linecap colors that don't match the line color
         if(setlinecapcolor[[1]]!=setlinecolor[[1]]){
           if(showcolorblindgraph==FALSE){
-            graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, group=groupvariable),shape=21,stroke=c(setlinecapoutlinethickness),color=c(setlinecapoutlinecolor),fill=c(setlinecapcolor),position=position_dodge(0.1), size=c(setlinecapsize))
+            graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, group=groupvariable),shape=21,stroke=c(setlinecapoutlinethickness),color=c(setlinecapoutlinecolor),fill=c(setlinecapcolor),position=position_dodge(0.1), size=c(setlinecapsize),alpha=setlinecaptransparency)
           }
           if(showcolorblindgraph==TRUE){
-            graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, group=groupvariable,shape=groupvariable),position=position_dodge(0.1), color=c(setlinecapcolor),size=c(setlinecapsize))
+            graph<-graph+geom_point(data=summary,aes(x=xvariable, y=yvariable, group=groupvariable,shape=groupvariable),position=position_dodge(0.1), color=c(setlinecapcolor),size=c(setlinecapsize),alpha=setlinecaptransparency)
             if(!is.null(setcolorblindlinecapshapes)){
             graph<-graph+scale_shape_manual(values=c(setcolorblindlinecapshapes))
             }
@@ -1720,21 +1773,27 @@ graph_line<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,showdata=TRUE,
     }
 
     if(length(levels(as.factor(summarydata$xvariable)))>20){
-      message("NOTE: You seem to have more than 20 levels of your x-axis variable. If your x-axis variable is continuous, you may produce a scatterplot instead using the graph_scatterplot() function.")
+      message("\nNOTE: You seem to have more than 20 levels of your x-axis variable. If your x-axis variable is continuous, you may produce a scatterplot instead using the graph_scatterplot() function.")
     }
     if(!is.null(setyupperbound)){
     graph<-graph+ylim(setylowerbound,setyupperbound)
     }
     if(setlinecolor!="#1D4E5D"){
-      message("WARNING: To adjust the color of your lines when setting a grouping (legend) variable, use the command setcolors=c()")
+      message("NOTE: To adjust the color of your lines when setting a grouping (legend) variable, use the command setcolors=c()")
     }
 
-  if(max(as.numeric(summarydata$yvariable))<3){
+  if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
     if(jitterheight>.1){
       if(showdata==TRUE){
         message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
       }
     }
+  }
+  if("setxaxissize" %in% names(custom_args)){
+    message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+  }
+  if("setyaxissize" %in% names(custom_args)){
+    message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
   }
     #If they're rotating the x-axis labels
     if(showrotatedxlabels==TRUE){

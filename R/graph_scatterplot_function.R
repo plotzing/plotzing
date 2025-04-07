@@ -1,9 +1,16 @@
 #### SCATTERPLOT ####
-graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=NULL,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,showsimpleslopesplot=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxissize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,shading=NULL,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,setreversecodelegend=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,...){
+graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=NULL,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,showsimpleslopesplot=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,shading=NULL,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setanimationlevels=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,setreversecodelegend=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,seterrorshadingtransparency=NULL,setlinetransparency=1,setanimationheight=500,setanimationwidth=790,...){
 
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
+  
+  #Extract other arguments not explicitly listed but specified by the user
+  custom_args <- list(...) #Will use this later
+  
+  if(is.null(seterrorshadingtransparency)){
+    seterrorshadingtransparency<-.395
+  }
   if(!is.null(setsubtitle)){
     subtitle<-setsubtitle
   }
@@ -120,12 +127,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   if(!is.null(reverseorderpanel)){
     setreverseorderpanel<-reverseorderpanel
   }
-  if(!is.null(setxaxissize)){
-    setxaxistextsize<-setxaxissize
-  }
-  if(!is.null(setyaxissize)){
-    setyaxistextsize<-setyaxissize
-  }
   if(!is.null(showboldedtitle)){
     if(showboldedtitle==TRUE){
       settitleface<-"bold"
@@ -188,22 +189,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
 
   if(!is.null(groupingvariable)){
     iv2<-groupingvariable
-  }
-  if(is.null(jitterwidth)){
-    if(showsimpleslopesplot==FALSE){
-      jitterwidth<-.4
-    }
-    if(showsimpleslopesplot==TRUE){
-      jitterwidth<-.2
-    }
-  }
-  if(is.null(jitterheight)){
-    if(showsimpleslopesplot==FALSE){
-      jitterheight<-.4
-    }
-    if(showsimpleslopesplot==TRUE){
-      jitterheight<-.2
-    }
   }
   if(!is.null(setcustomintercept)&&is.null(setcustomslope)){
     message("To create a custom line, you must also specify a custom slope using setcustomslope =")
@@ -283,6 +268,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   if(!is.null(setjitterheight)){
     jitterheight<-setjitterheight
   }
+  if(!is.null(setjitterwidth)){
+    jitterwidth<-setjitterwidth
+  }
 
   if(!is.null(setjitter)){
     if(setjitter==FALSE){
@@ -292,10 +280,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       jitterheight<-setjitter
       jitterwidth<-setjitter
     }
-  }
-
-  if(!is.null(setjitterwidth)){
-    jitterwidth<-setjitterwidth
   }
 
   if(!is.null(settitlesize)){
@@ -338,11 +322,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     setlegendtitlesize<-17.5
   }
 
-  if(!is.null(setaxissize)){
-    setyaxistextsize<-setaxistextsize
-    setxaxistextsize<-setaxistextsize
-  }
-
   if(is.null(setyaxistextsize)){
     if(showanimation==FALSE){
       setyaxistextsize<-11
@@ -352,6 +331,10 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     }
   }
 
+  if(!is.null(setaxistextsize)){
+    setyaxistextsize<-setaxistextsize
+    setxaxistextsize<-setaxistextsize
+  }
   if(is.null(setxaxistextsize)){
     if(showanimation==FALSE){
       setxaxistextsize<-11
@@ -736,20 +719,51 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
         message("You have set a custom slope and intercept. To adjust where the x and y-axis start and end, or to adjust the spacing of tickmarks, use setxaxisstart= , setxaxisend=, and setxaxisspacing = (or, for the y-axis, setyaxisstart =, setyaxisend=, etc.)")
       }
-
+      
+      #Adjusting the default jitter
+      if(is.null(jitterheight)){
+        jitterheight<-.4
+        if(showdata==TRUE){
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+            jitterheight<-.095
+            message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+          }
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+            jitterheight<-.05
+          }
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+            jitterheight<-.01
+          }
+        }
+      }  
+      if(is.null(jitterwidth)){
+        jitterwidth<-.4
+        if(showdata==TRUE){
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<3){
+            jitterwidth<-.095
+            message("\nNOTE: Given the narrow range of values on the x-axis, the default jitter width has been changed. You may adjust the jitter width using setjitterwidth= or adjust the jitter height using setjitterheight= .")  
+          }
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<2){
+            jitterwidth<-.05
+          }
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<1){
+            jitterwidth<-.01
+          }
+        }
+      }
       if(showcoloredshading==TRUE){
         if(showline==TRUE&&shading==TRUE){
           if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
             graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
             geom_point(shape=setdotshape,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-            geom_smooth(method=setlinetype, level=setconfidencelevel, linetype="solid", color=c(linecolor), fill=c(linecolor),linewidth=linethickness,fullrange=TRUE)+
+            geom_smooth(method=setlinetype, level=setconfidencelevel, linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), fill=c(linecolor),linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)+
             theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
           }else{
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(shape=setdotshape,color=dotcolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-          geom_smooth(method=setlinetype, level=setconfidencelevel, linetype="solid", color=c(linecolor), fill=c(linecolor),linewidth=linethickness,fullrange=TRUE)+
+          geom_smooth(method=setlinetype, level=setconfidencelevel, linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), fill=c(linecolor),linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)+
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2])
@@ -762,14 +776,14 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
             geom_point(shape=setdotshape,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-            geom_smooth(method=setlinetype, level=setconfidencelevel,  linetype="solid", color=c(linecolor), fill=c(shadingcolor),linewidth=linethickness,fullrange=TRUE)+
+            geom_smooth(method=setlinetype, level=setconfidencelevel,  linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), fill=c(shadingcolor),linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)+
             theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
           }else{
             graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
             geom_point(shape=setdotshape,color=dotcolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-            geom_smooth(method=setlinetype, level=setconfidencelevel,  linetype="solid", color=c(linecolor), fill=c(shadingcolor),linewidth=linethickness,fullrange=TRUE)+
+            geom_smooth(method=setlinetype, level=setconfidencelevel,  linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), fill=c(shadingcolor),linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)+
             theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
@@ -781,14 +795,14 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
         graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(shape=setdotshape,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-          geom_smooth(method=setlinetype, level=setconfidencelevel, se=F, linetype="solid", color=c(linecolor), linewidth=linethickness,fullrange=TRUE)+
+          geom_smooth(method=setlinetype, level=setconfidencelevel, se=F, linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), linewidth=linethickness,fullrange=TRUE)+
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2])
         }else{
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
           geom_point(shape=setdotshape,color=dotcolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
-          geom_smooth(method=setlinetype, level=setconfidencelevel, se=F, linetype="solid", color=c(linecolor), linewidth=linethickness,fullrange=TRUE)+
+          geom_smooth(method=setlinetype, level=setconfidencelevel, se=F, linetype="solid", color=scales::alpha(c(linecolor),setlinetransparency), linewidth=linethickness,fullrange=TRUE)+
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+
           xlab(colnames(graphvariables)[2]) 
@@ -806,7 +820,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))  
         }
         if(!is.null(setcustomintercept)&&!is.null(setcustomslope)){
-          graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linetype="solid",color=c(linecolor),size=linethickness)
+          graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linetype="solid",color=c(linecolor),size=linethickness,alpha=seterrorshadingtransparency)
           if(linethickness==1.2){
             message("Because you specified a custom line, the default line thickness has changed. To adjust this, use setlinethickness=")
           }
@@ -895,24 +909,33 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         message("ERROR: You must add a grouping variable to use animations.")
       }
       
-      if(max(as.numeric(summarydata$xvariable))<3){
+      if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<3){
         if(jitterwidth>.1){
           if(showdata==TRUE){
             message("WARNING: Because you have a relatively narrow range of values in your x-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
           }
         }
       }
-      if(max(as.numeric(summarydata$yvariable))<3){
+      if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
         if(jitterheight>.1){
           if(showdata==TRUE){
             message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
           }
         }
       }
-      
+      if("setxaxissize" %in% names(custom_args)){
+        message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+      }
+      if("setyaxissize" %in% names(custom_args)){
+        message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
+      }
+      if("setaxissize" %in% names(custom_args)){
+        message("The command setaxissize is no longer available. Use the command setaxistextsize instead.")
+      }
       if(showrotatedxlabels==TRUE){
         return(graph + theme(axis.text.x = element_text(angle = 90,vjust=0.5)))
       }
+      
       if(showrotatedxlabels==FALSE){
         return(graph)
       }
@@ -1172,8 +1195,53 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
         message("You have set a custom slope and intercept. To adjust where the x and y-axis start and end, or to adjust the spacing of tickmarks, use setxaxisstart= , setxaxisend=, and setxaxisspacing = (or, for the y-axis, setyaxisstart =, setyaxisend=, etc.)")
       }
+      
+      #Adjusting the default jitter
+      if(is.null(jitterheight)){
+        if(showsimpleslopesplot==FALSE){
+          jitterheight<-.4  
+        }
+        if(showsimpleslopesplot==TRUE){
+        jiterheight<-.9
+        }
+        if(showdata==TRUE){
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+            jitterheight<-.095
+            message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+          }
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+            jitterheight<-.05
+          }
+          if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+            jitterheight<-.01
+          }
+        }
+      }  
+      if(is.null(jitterwidth)){
+        if(showsimpleslopesplot==FALSE){
+          jitterwidth<-.4  
+        }
+        if(showsimpleslopesplot==TRUE){
+          jiterwidth<-.9
+        }
+        if(showdata==TRUE){
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<3){
+            jitterwidth<-.095
+            message("\nNOTE: Given the narrow range of values on the x-axis, the default jitter width has been changed. You may adjust the jitter width using setjitterwidth= or adjust the jitter height using setjitterheight= .")  
+          }
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<2){
+            jitterwidth<-.05
+          }
+          if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<1){
+            jitterwidth<-.01
+          }
+        }
+      }
 
         if(showsimpleslopesplot==FALSE){
+        if(setlinetransparency!=1){
+          message("WARNING: In the current version of Plotzing, line transparency can only be adjusted when using only two variables or when generating a simple-slopes plot. However, you can adjust the thickness of lines using setlinethickness=")
+        }
           if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
           graph<-ggplot(data=summarydata,aes(x = xvariable, y = yvariable, color = groupvariable,fill=groupvariable,linetype=groupvariable))+
           geom_point(shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
@@ -1192,37 +1260,37 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
             message("Color blind-friendly (dashed) lines are shown. To remove these, add showdashedlines=FALSE or showcolorblindgraph=FALSE")
             if(showcoloredshading==TRUE){ #If shading is colored based on group
               graph<-graph+
-                geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,linewidth=linethickness,fullrange=TRUE)
+                geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)
             }
 
             if(showcoloredshading==FALSE){
               if(shading==TRUE){ #If you are showing error shading but it is not colored by group
                 graph<-graph+
-                  geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,linewidth=linethickness,fill=shadingcolor,fullrange=TRUE)
+                  geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,linewidth=linethickness,fill=shadingcolor,fullrange=TRUE,alpha=seterrorshadingtransparency)
               }
             }
 
             if(shading==FALSE){ #If you are not showing error shading at all
               graph<-graph+
-                geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,fullrange=TRUE)
+                geom_smooth(aes(linetype=groupvariable),method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,fullrange=TRUE,alpha=seterrorshadingtransparency)
             }
           }
           if(showdashedlines==FALSE){ #If you're not showing dashed (color-blind friendly) lines
             if(showcoloredshading==TRUE){ #If you're showing colored error shading based on group
               graph<-graph+
-                geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fullrange=TRUE)
+                geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
             }
 
             if(showcoloredshading==FALSE){ #If you're not showing colored error shading based on group
               if(shading==TRUE){ #If you're showing gray shading
                 graph<-graph+
-                  geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fill=shadingcolor,fullrange=TRUE)
+                  geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fill=shadingcolor,fullrange=TRUE,alpha=seterrorshadingtransparency)
               }
             }
 
             if(shading==FALSE){ #If you're not showing shading at all
               graph<-graph+
-                geom_smooth(method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,linetype="solid",fullrange=TRUE)
+                geom_smooth(method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
             }
           }
         }
@@ -1231,10 +1299,10 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           if(!is.null(setcustomintercept)&&!is.null(setcustomslope)){ #If you're instead adding a line with a custom intercept/slope and want
             #error shading
             if(showdashedlines==FALSE){ #If you're not using dashed (color-blind friendly) lines
-              graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linetype="solid",linewidth=linethickness,color=c(linecolor))
+              graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linetype="solid",linewidth=linethickness,color=c(linecolor),alpha=seterrorshadingtransparency)
             }
             if(showdashedlines==TRUE){ #If you are
-              graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linewidth=linethickness,color=c(linecolor))
+              graph<-graph+geom_abline(intercept=c(setcustomintercept),slope=c(setcustomslope),linewidth=linethickness,color=c(linecolor),alpha=seterrorshadingtransparency)
             }
             if(linethickness==1.2){
               message("Because you specified a custom line, the default line thickness has changed. To adjust this, use setlinethickness=")
@@ -1261,48 +1329,48 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         #   message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
         #   stop()
         # }
-
+        
         #Duplicate the summarydata dataframe
         summarydata2<-summarydata
-
+        
         #Scale the variables
         summarydata2$outcome_scale <- scale(summarydata2$yvariable)
         summarydata2$predictor_scale <- scale(summarydata2$xvariable)
         summarydata2$groupvariable<-as.numeric(summarydata2$groupvariable)
         summarydata2$factor_scale <- scale(summarydata2$groupvariable)
-
+        
         #Separate unscaled values into low, medium, and high groups
         mod_mean <- mean(summarydata2$groupvariable, na.rm=T)
         mod_sd <- sd(summarydata2$groupvariable, na.rm=T)
-
+        
         #Cutoff by k sd
         k <- 1 #when k=1, one sd
         mod_cutoffs <- c(mod_mean-k*mod_sd, mod_mean+k*mod_sd)
-
+        
         #Create group variable
         groupeddata<-summarydata2
         groupeddata$factor_group <- ifelse(groupeddata$groupvariable > mod_cutoffs[1] & groupeddata$groupvariable < mod_cutoffs[2], "Mean", "Other")
-
+        
         #Set other groups
         groupeddata$factor_group[groupeddata$groupvariable < mod_cutoffs[1]] <- "1 SD Below"
         groupeddata$factor_group[groupeddata$groupvariable > mod_cutoffs[2]] <- "1 SD Above"
         groupeddata$factor_group <- as.factor(groupeddata$factor_group)
         group_vals <- unique(groupeddata$factor_group)[!is.na(unique(groupeddata$factor_group))]
-
+        
         # Model Creation #
         interact_mod <- lm(outcome_scale ~ predictor_scale * factor_scale, data = summarydata2)
         y_intercept <- interact_mod$coefficients[1]
         pred_slope <- interact_mod$coefficients[2]
         factor_slope <- interact_mod$coefficients[3]
         interaction_slope <- interact_mod$coefficients[4]
-
+        
         if(length(levels(groupeddata$factor_group))<3){
           message("ERROR: You cannot show an interaction plot unless subjects are represented across all three groups (at mean, 1 SD below, and 1 SD above). See the dataframe above for details.")
           stop()
         }
-
+        
         groupeddata$factor_group<-factor(groupeddata$factor_group,levels=c("1 SD Above","Mean","1 SD Below"))
-
+        
         #Set default colors
         if(is.null(colors)){
           interactioncolors<-c("red","blue","green")
@@ -1311,34 +1379,37 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         if(!is.null(colors)){
           interactioncolors<-colors
         }
-
+        
         graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale,fill=factor_group)) + geom_point(shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),size=dotsize,alpha=transparency) +
-          geom_abline(colour = interactioncolors[[1]], intercept = y_intercept + 1 * factor_slope, slope = pred_slope + 1 * interaction_slope,size=setlinethickness)+
-          geom_abline(colour = interactioncolors[[2]], intercept = y_intercept, slope = pred_slope,size=setlinethickness) +
-          geom_abline(colour = interactioncolors[[3]], intercept = y_intercept - 1 * factor_slope, slope = pred_slope - 1 * interaction_slope,size=setlinethickness) +
+          geom_abline(colour = interactioncolors[[1]], intercept = y_intercept + 1 * factor_slope, slope = pred_slope + 1 * interaction_slope,size=setlinethickness,alpha=setlinetransparency)+
+          geom_abline(colour = interactioncolors[[2]], intercept = y_intercept, slope = pred_slope,size=setlinethickness,alpha=setlinetransparency) +
+          geom_abline(colour = interactioncolors[[3]], intercept = y_intercept - 1 * factor_slope, slope = pred_slope - 1 * interaction_slope,size=setlinethickness,alpha=setlinetransparency) +
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
-
+        
         graph<-graph+scale_fill_manual(values=c(interactioncolors))
-
+        
         if (is.null(setxaxistitle)) {
           graph <- graph + xlab(colnames(graphvariables[2]))
         }
-
+        
         if (is.null(setyaxistitle)) {
           graph <- graph + ylab(colnames(graphvariables[1]))
         }
-
+        
         if(showoutput==TRUE){
           print(groupeddata)
         }
-
+        
         if(shading==TRUE){
           message("NOTE: You cannot show error shading when plotting simple-slopes interaction plots.")
         }
       }
       if(showanimation==TRUE){ #If you're creating an animated graph (animated lines not currently supported)
+        require(gganimate)
+        require(magick)
+        
         if(showsimpleslopesplot==TRUE){
-          message("You cannot create animated simple-slope interaction plots at this time.")
+          message("ERROR: You cannot create animated simple-slope interaction plots at this time.")
           stop()
         }
         if(!is.null(setcustomintercept)||!is.null(setcustomslope)){
@@ -1439,6 +1510,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
 
       if(showanimation==TRUE){
         require(gganimate)
+        require(magick)
         graph<-graph+transition_states(groupvariable,transition_length=1.5,state_length=2)+labs(subtitle="{closest_state}")+theme(plot.title=element_text(size=titlesize),axis.text.x = element_text(size=setxaxistextsize),axis.text.y = element_text(size=setyaxistextsize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),plot.subtitle = element_text(size=setanimationtitlesize,hjust=0.5))+exit_fade()+enter_fade()
         if(is.null(setanimationid)&&showdata==TRUE){
           message("NOTE: Although an ID variable may sometimes be correctly inferred, no explicit ID variable is set by default. If you are using a repeated-measures animation variable and want each datapoint to refer to the same subject across frames, it is best to add setanimationid= and specify an ID variable in your dataset.")
@@ -1446,6 +1518,13 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         if(!is.null(colors)){
           message("To set the color of an animated scatterplot, use setcolor= or setdotcolor=")
         }
+        if(setanimationheight<150||setanimationwidth<150){
+          if("animationoverride" %!in% names(custom_args)){
+            message("\nERROR: Your animation is too small. Height and width are set in pixels. The default commands are setanimationheight=500 and setanimationwidth=790. If you wish to generate an extremely small animation and override this message, use the command animationoverride=TRUE")
+            stop()  
+          }
+        }
+        return(animate(graph,renderer=magick_renderer(),height=setanimationheight,width=setanimationwidth,units="px"))
       }
 
       if(!is.null(panelvariable)){
@@ -1501,22 +1580,31 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
       }
     }
-    if(showsimpleslopesplot==TRUE){
-      message("WARNING: Simple slopes plots are currently in beta and may be prone to errors.")
-    }
-    if(max(as.numeric(summarydata$xvariable))<3){
+    if(max(as.numeric(summarydata$xvariable))-min(as.numeric(summarydata$xvariable))<3){
       if(jitterwidth>.1){
         if(showdata==TRUE){
           message("WARNING: Because you have a relatively narrow range of values in your x-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
         }
       }
     }
-    if(max(as.numeric(summarydata$yvariable))<3){
+    if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
       if(jitterheight>.1){
         if(showdata==TRUE){
           message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
         }
       }
+    }
+    if(showsimpleslopesplot==TRUE){
+      message("WARNING: Simple slopes plots are currently in beta and may be prone to errors.")
+    }
+    if("setxaxissize" %in% names(custom_args)){
+      message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+    }
+    if("setyaxissize" %in% names(custom_args)){
+      message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
+    }
+    if("setaxissize" %in% names(custom_args)){
+      message("The command setaxissize is no longer available. Use the command setaxistextsize instead.")
     }
       return(graph)
   }

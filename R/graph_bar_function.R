@@ -1,10 +1,14 @@
 #### BAR GRAPH ####
-graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=.4,jitterwidth=.3,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,...){
+graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,...){
 
   require(Rmisc)
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
+  
+  #Extract other arguments not explicitly listed but specified by the user
+  custom_args <- list(...) #Will use this later
+  
   if(!is.null(setsubtitle)){
     subtitle<-setsubtitle
   }
@@ -66,12 +70,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
   if(!is.null(reverseorderlegend)){
       setreverseordergroup<-reverseorderlegend
   }
-  if(!is.null(setxaxissize)){
-    setxaxistextsize<-setxaxissize
-  }
-  if(!is.null(setyaxissize)){
-    setyaxistextsize<-setyaxissize
-  }
+  
   if(!is.null(showboldedtitle)){
     if(showboldedtitle==TRUE){
       settitleface<-"bold"
@@ -306,15 +305,6 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
 
   if(is.null(setlegendlevelsize)){
     setlegendlevelsize<-11
-  }
-
-  if(is.null(setbaroutlinethickness)){
-    if(!is.null(iv2)){
-      setbaroutlinethickness<-1
-    }
-    if(is.null(iv2)){
-      setbaroutlinethickness<-.3
-    }
   }
 
   if(!is.null(settitle)){
@@ -709,6 +699,37 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
     #     showrotatedxlabels<-FALSE
     #   }
     # }
+    
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.4
+      if(showdata==TRUE){
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+          jitterheight<-.095
+          message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+          jitterheight<-.05
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+          jitterheight<-.01
+        }
+      }
+    }
+    if(is.null(jitterwidth)){
+      jitterwidth<-.3
+    }
+    
+    #Adjusting the default outline thickness based on the number of levels
+    if(is.null(setbaroutlinethickness)){
+      if(length(levels(as.factor(summarydata$xvariable)))<=25){
+        setbaroutlinethickness<-.3
+      }
+      if(length(levels(as.factor(summarydata$xvariable)))>25){
+        setbaroutlinethickness<-0
+        message("NOTE: Bar outlines have been removed by default given the number of bars in your graph. To adjust this, use the command setbaroutlinethickness= and specify the preferred bar outline thickness.")
+        }
+    }
 
     if(showcolorederrorbars==FALSE){
       if(showdata==TRUE){
@@ -1135,6 +1156,37 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
     #     showrotatedxlabels<-FALSE
     #   }
     # }
+    
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.4
+      if(showdata==TRUE){
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+          jitterheight<-.095
+          message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+          jitterheight<-.05
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+          jitterheight<-.01
+        }
+      }
+    }
+    if(is.null(jitterwidth)){
+      jitterwidth<-.3
+    }
+    
+    #Adjusting the default outline thickness based on the number of levels
+    if(is.null(setbaroutlinethickness)){
+      if(length(levels(as.factor(summarydata$groupvariable)))*length(levels(as.factor(summarydata$xvariable)))<=25){
+        setbaroutlinethickness<-1
+        }
+      if(length(levels(as.factor(summarydata$groupvariable)))*length(levels(as.factor(summarydata$xvariable)))>25){
+        setbaroutlinethickness<-0
+        message("NOTE: Bar outlines have been removed by default given the number of bars in your graph. To adjust this, use the command setbaroutlinethickness= and specify the preferred bar outline thickness.")
+        }
+    }
 
     if(showcolorederrorbars==FALSE){
       if(showdata==TRUE){
@@ -1356,6 +1408,13 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
         message("WARNING: Because you have a relatively narrow range of values in your y-axis variable, jitter may make your datapoints appear to be in a different location than is likely to be appropriate. We recommend adjusting your jitter using the setjitterheight and setjitterwidth commands (or use the setjitter command to set both height and width simultaneously--for example, setjitter=.01).")  
       }
     }
+  }
+  
+  if("setxaxissize" %in% names(custom_args)){
+    message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+  }
+  if("setyaxissize" %in% names(custom_args)){
+    message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
   }
   if(showrotatedxlabels==TRUE){
     if(internalfunctionautorotation==TRUE){

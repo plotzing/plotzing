@@ -1,9 +1,13 @@
 #### VIOLIN PLOT ####
-graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,jitterheight=.4,jitterwidth=.4,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxistextsize=NULL,setyaxistextsize=NULL,setxaxissize=NULL,setyaxissize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,setviolinoutlinecolor=NULL,showtransparentviolin=FALSE,showviolinoutline=TRUE,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,...){
+graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,setboxplotcolor="default",splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,errorbars="ci",internalfunctionautorotation=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,data=df,setdata=NULL,setviolintransparency=.4,dottransparency=NULL,setdottransparency=.65,setdotsize=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxistitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationtitlesize=16,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,split1=FALSE,split2=FALSE,split3=FALSE,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setystandardize=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setlegendtitle=NULL,showblankplot=FALSE,showviolin=TRUE,setboxplotwidth="default",setboxplottransparency="default",setwhiskerthickness=NULL,setboxplotthickness=0.5,setviolinthickness=1,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showdots=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setpaneltitlesize=NULL,setanimationlevels=NULL,showboxplotoutliers=FALSE,showoutliers=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegend=TRUE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setboxplotoutlinecolor="black",setwhiskercolor="black",showcoloredwhiskers=NULL,showcoloredboxplotoutline=FALSE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,setviolinoutlinecolor=NULL,showtransparentviolin=FALSE,showviolinoutline=TRUE,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setanimationheight=500,setanimationwidth=790,...){
 
   require(ggplot2)
 
   '%!in%' <- function(x,y)!('%in%'(x,y))
+  
+  #Extract other arguments not explicitly listed but specified by the user
+  custom_args <- list(...) #Will use this later
+  
   if(!is.null(setsubtitle)){
     subtitle<-setsubtitle
   }
@@ -236,14 +240,6 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     if(showanimation==TRUE){
       titlesize<-25
     }
-  }
-
-  if(!is.null(setxaxissize)){
-    setxaxistextsize<-setxaxissize
-  }
-
-  if(!is.null(setyaxissize)){
-    setyaxistextsize<-setyaxissize
   }
 
   if(!is.null(setaxistitlesize)){
@@ -602,28 +598,45 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     #     showrotatedxlabels<-FALSE
     #   }
     # }
+    
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.4
+      if(showdata==TRUE){
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+          jitterheight<-.095
+          message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+          jitterheight<-.05
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+          jitterheight<-.01
+        }
+      }
+    }
+    if(is.null(jitterwidth)){
+      jitterwidth<-.4
+    }
 
     if(showviolin==TRUE){
       if(is.null(setviolinoutlinecolor)){
         graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
           geom_violin(aes(color=xvariable,fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
-          theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+          theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
       }
 
       if(!is.null(setviolinoutlinecolor)){
         graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
           geom_violin(aes(fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency,color=c(setviolinoutlinecolor))+
-          theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+          theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
       }
     }
     if(showviolin==FALSE){
       graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
-        theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-        theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+        theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
         ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
     }
     if(showboxplot==TRUE){
@@ -958,29 +971,46 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
     #     showrotatedxlabels<-FALSE
     #   }
     # }
+    
+    #Adjusting the default jitter
+    if(is.null(jitterheight)){
+      jitterheight<-.4
+      if(showdata==TRUE){
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<3){
+          jitterheight<-.095
+          message("\nNOTE: Given the narrow range of values on the y-axis, the default jitter height has been changed. You may adjust the jitter height using setjitterheight= or adjust the jitter width using setjitterwidth= .")  
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<2){
+          jitterheight<-.05
+        }
+        if(max(as.numeric(summarydata$yvariable))-min(as.numeric(summarydata$yvariable))<1){
+          jitterheight<-.01
+        }
+      }
+    }
+    if(is.null(jitterwidth)){
+      jitterwidth<-.4
+    }
 
     if(showanimation==TRUE){
       if(showviolin==TRUE){
         if(is.null(setviolinoutlinecolor)){
           graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
             geom_violin(aes(color=xvariable,fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency)+
-            theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+            theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
         }
         if(!is.null(setviolinoutlinecolor)){
           graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
             geom_violin(aes(fill=xvariable),trim=TRUE,linewidth=setviolinthickness,alpha=setviolintransparency,color=setviolinoutlinecolor)+
-            theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+            theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
         }
       }
 
       if(showviolin==FALSE){
         graph<-ggplot(summarydata, aes(x=xvariable,y=yvariable,color=xvariable,fill=xvariable))+
-          theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize))+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+          theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])
       }
       if(showboxplot==TRUE){
@@ -1036,7 +1066,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
         if(!is.null(setviolinoutlinecolor)){
           graph<-ggplot(data=summarydata, aes(x=xvariable,y=yvariable,fill=groupvariable,color=groupvariable))+
             geom_violin(aes(group=interaction(xvariable,groupvariable)),trim=TRUE,linewidth=setviolinthickness,alpha=.5,color=setviolinoutlinecolor)+
-            theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+            theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             guides(color="none")+ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])+
             scale_fill_discrete(name = colnames(graphvariables)[3])
         }
@@ -1044,7 +1074,7 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
 
       if(showviolin==FALSE){
         graph<-ggplot(data=summarydata, aes(x=xvariable,y=yvariable,fill=groupvariable,color=groupvariable))+
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendtextsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
+          theme_bw()+theme(axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           guides(color="none")+ylab(colnames(graphvariables)[1])+xlab(colnames(graphvariables)[2])+
           scale_fill_discrete(name = colnames(graphvariables)[3])
       }
@@ -1165,10 +1195,18 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
 
   if(showanimation==TRUE){
     require(gganimate)
+    require(magick)
     graph<-graph+transition_states(groupvariable,transition_length=1.5,state_length=2)+labs(subtitle="{closest_state}")+theme(plot.title=element_text(size=titlesize),axis.text.x = element_text(size=setxaxistextsize),axis.text.y = element_text(size=setyaxistextsize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),plot.subtitle = element_text(size=setanimationtitlesize,hjust=0.5))+exit_fade()+enter_fade()
     if(is.null(setanimationid)&&showdata==TRUE){
       message("NOTE: Although an ID variable may sometimes be correctly inferred, no explicit ID variable is set by default. If you are using a repeated-measures animation variable and want each datapoint to refer to the same subject across frames, it is best to add setanimationid= and specify an ID variable in your dataset.")
     }
+    if(setanimationheight<150||setanimationwidth<150){
+      if("animationoverride" %!in% names(custom_args)){
+        message("\nERROR: Your animation is too small. Height and width are set in pixels. The default commands are setanimationheight=500 and setanimationwidth=790. If you wish to generate an extremely small animation and override this message, use the command animationoverride=TRUE")
+        stop()  
+      }
+    }
+    return(animate(graph,renderer=magick_renderer(),height=setanimationheight,width=setanimationwidth,units="px"))
   }
   if(ytickspecs>0&&ytickspecs<3){
     message("To adjust your y-axis, use setyaxisstart=, setyaxisend=, and setyaxisspacing=. All three parameters must be specified to adjust the y-axis.")
@@ -1235,9 +1273,18 @@ graph_violin<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,showboxplot=TRUE,
       }
     }
   }
+  if("setxaxissize" %in% names(custom_args)){
+    message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
+  }
+  if("setyaxissize" %in% names(custom_args)){
+    message("The command setyaxissize is no longer available. Use the command setyaxistextsize instead.")
+  }
   if(setboxplotoutlinecolor[[1]]!="black"){
     message("NOTE: If you would like the outline color and whiskers of your boxplots to match the color of your violins, use showcoloredwhiskers=TRUE or showcoloredboxplotoutlines=TRUE")
   }
-    return(graph)
+  if(showanimation==FALSE){
+  
+    return(graph)  
+  } 
 }
 
