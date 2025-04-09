@@ -142,8 +142,6 @@ We can also reverse-code our x-variable, y-variable, and so on using the command
 
 Because Plotzing may modify the specified dataframe (e.g., through reshaping), the updated dataframe is printed by default. This may cause problems when using Plotzing with Quarto or RMarkdown. To hide all output other than the graph itself, add the code **`showoutput=FALSE`**.
 
-
-
 ## **Generating Animated Plots (NOTE: In Early Beta; Not Available for Line Plots)**
  
 To generate animated plots that can be saved as gifs, the gganimate and magick packages are also required. Begin by installing these using install.packages:
@@ -162,7 +160,7 @@ graph_violin("jealousy_attractive","gender","relationship_status",showanimation=
  ```
 ![violinplotplotzingexample](https://github.com/user-attachments/assets/a18952e3-8a02-48ba-9d7a-6993a8fc5b36)
 
-You can adjust the font size of the heading (showing "Single" or "Partnered" in this example) using **`setanimationheadingsize=`**. You can adjust the transition time between graphs using **`setanimationtransitionlength=`** or adjust the length of time that each graph is shown using **`setanimationlength=.`** (For example, **`setanimationlength=4`** would cause each graph to be shown for approximately four seconds.) Note that you may choose to set different speeds for each graph or each transition using **`c()`**. For instance, in an animation with two graphs, one could show the first graph only briefly and the second graph for 4.5 seconds by typing **`setanimationlength=c(0,4.5)`**. 
+You can adjust the font size of the heading (showing "Single" or "Partnered" in this example) using **`setanimationheadingsize=`**. You can adjust the transition time between graphs using **`setanimationtransitionlength=`** or adjust the length of time that each graph is shown using **`setanimationlength=.`** (For example, **`setanimationlength=4`** would cause each graph to be shown for approximately 4 seconds.) Note that you may choose to set different speeds for each graph or each transition using **`c()`**. For instance, in an animation with 2 graphs, one could show the first graph only briefly and the second graph for 4.5 seconds by typing **`setanimationlength=c(0,4.5)`**. 
 
 For repeated-measures data, you may also set an ID variable using the the command **`setanimationid=`** and specify the name of the ID variable in your dataframe (not currently available for bar plots). Setting an ID variable ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. You can adjust the size of your animation in pixels using the commands **`setanimationheight=`** and **`setanimationwidth`**= . 
 
