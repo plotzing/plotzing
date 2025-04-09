@@ -142,21 +142,9 @@ We can also reverse-code our x-variable, y-variable, and so on using the command
 
 Because Plotzing may modify the specified dataframe (e.g., through reshaping), the updated dataframe is printed by default. This may cause problems when using Plotzing with Quarto or RMarkdown. To hide all output other than the graph itself, add the code **`showoutput=FALSE`**.
 
-## **Generating Multiple Graphs Simultaneously**
 
-For more advanced users, the *graph_master()* function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
 
-```{r, echo=TRUE, eval=FALSE}
-graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
-```
-
-In the example above, the **`list()`** command is used to generate graphs with different dependent variables. However, the **`list()`** command may be used to generate multiple independent variables instead by specifying the IVs in a list instead (e.g., **`graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))`**). Alternatively, when omitting the **`list`** argument, users may plot the same variables across multiple graph types, as in the example below:
-
-```{r, echo=TRUE, eval=FALSE}
-graph_master("jealousy_attractive","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
-```
-
-## **Generating Animated Plots (NOTE: Violin Plots and Scatterplots Only)**
+## **Generating Animated Plots (NOTE: In Early Beta; Not Available for Line Plots)**
  
 To generate animated plots that can be saved as gifs, the gganimate and magick packages are also required. Begin by installing these using install.packages:
 
@@ -172,8 +160,27 @@ Once you have these packages installed, simply add the argument **`showanimation
 graph_violin("jealousy_attractive","gender","relationship_status",showanimation=TRUE,setyaxistitle="Jealousy",setxaxistitle="Gender") 
 #Generate a violin plot which shows an animated transition between the two relationship_status levels (single and partnered)
  ```
+![violinplotplotzingexample](https://github.com/user-attachments/assets/a18952e3-8a02-48ba-9d7a-6993a8fc5b36)
 
-For repeated-measures data, you may also set an ID variable using the the command **`setanimationid=`** and specify the name of the ID variable in your dataframe. This ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. You can adjust the size of your animation in pixels using the commands **`setanimationheight=`** and **`setanimationwidth`**= . Note, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, and animations are not yet available for bar plots or line plots. To save an animation, see the instructions below. 
+You can adjust the font size of the heading (showing "Single" or "Partnered" in this example) using **`setanimationheadingsize=`**. You can adjust the transition time between graphs using **`setanimationtransitionlength=`** or adjust the length of time that each graph is shown using **`setanimationlength=.`** (For example, **`setanimationlength=4`** would cause each graph to be shown for approximately four seconds.) Note that you may choose to set different speeds for each graph or each transition using **`c()`**. For instance, in an animation with two graphs, one could show the first graph only briefly and the second graph for 4.5 seconds by typing **`setanimationlength=c(0,4.5)`**. 
+
+For repeated-measures data, you may also set an ID variable using the the command **`setanimationid=`** and specify the name of the ID variable in your dataframe (not currently available for bar plots). Setting an ID variable ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. You can adjust the size of your animation in pixels using the commands **`setanimationheight=`** and **`setanimationwidth`**= . 
+
+**_Keep in mind, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, animated bar plots cannot yet show individual datapoints or use setanimationid, and line plots cannot be animated. To save an animation, see the heading entitled "Saving Graphs and Animations" below._**
+
+## **Generating Multiple Graphs Simultaneously**
+
+For more advanced users, the *graph_master()* function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
+
+```{r, echo=TRUE, eval=FALSE}
+graph_master(list("jealousy_attractive", "jealousy_wealthy"),"income",splitx=TRUE, graphtype=c("bar","violin"))
+```
+
+In the example above, the **`list()`** command is used to generate graphs with different dependent variables. However, the **`list()`** command may be used to generate multiple independent variables instead by specifying the IVs in a list instead (e.g., **`graph_master("jealousy_attractive",list("income","gender"),graphtype=c("scatterplot","line"))`**). Alternatively, when omitting the **`list`** argument, users may plot the same variables across multiple graph types, as in the example below:
+
+```{r, echo=TRUE, eval=FALSE}
+graph_master("jealousy_attractive","gender", "relationship_status",graphtype=c("bar","violin")) #Generate the same graph in the form of a bar plot and in the form of a violin plot
+```
  
  ## **Saving Graphs and Animations**
 
