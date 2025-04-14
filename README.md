@@ -28,7 +28,7 @@ When prompted to update other packages during the installation, press the enter 
 
 ## **Updating the Plotzing Package**
 
-To update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload Plotzing using the following code:
+To update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload it:
 
 ```{r, echo=TRUE, eval=FALSE}
 #If Plotzing is currently loaded, unload it:
