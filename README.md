@@ -144,7 +144,7 @@ Because Plotzing may modify the specified dataframe (e.g., through reshaping), t
 
 ## **Generating Animated Plots (NOTE: In Early Beta; Not Available for Line Plots)**
  
-To generate animated plots that can be saved as gifs, the gganimate and magick packages are also required. Begin by installing these using install.packages:
+To generate animated plots that can be saved as gifs, the gganimate and magick packages are also required. Begin by installing these:
 
  ```{r, echo=TRUE, eval=FALSE}
 install.packages("gganimate") #For generating animations
