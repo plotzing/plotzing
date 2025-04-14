@@ -7,8 +7,7 @@ Plotzing is an R package for generating publication-quality plots in a single li
 
 ## **Installing the Plotzing Package**
 
-At present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R. The following code installs devtools and installs and loads Plotzing:
-
+At present, Plotzing is only available on Github. Because of this, users must first install the devtools package, which allows Github packages to be installed in R, and then install Plotzing:
 ```{r, echo=TRUE, eval=FALSE}
 # Install devtools if not already installed
 if (!requireNamespace("devtools", quietly = TRUE))
