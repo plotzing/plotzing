@@ -136,7 +136,7 @@ graph_violin(c("jealousy_attractive", "jealousy_wealthy"),"income", setxaxistitl
 
 *Reverse-coding variables*
 
-We can also reverse-code our x-variable, y-variable, and so on using the commands **`setreversecodex=TRUE`**, **`setreversecodey=TRUE`**, etc.
+We can reverse-code our x-variable, y-variable, and so on using the commands **`setreversecodex=TRUE`**, **`setreversecodey=TRUE`**, etc.
 
 ## **Using Plotzing in Quarto and RMarkdown**
 
@@ -164,7 +164,7 @@ You can adjust the font size of the heading (showing "Single" or "Partnered" in 
 
 For repeated-measures data, you may also set an ID variable using the the command **`setanimationid=`** and specify the name of the ID variable in your dataframe (not currently available for bar plots). Setting an ID variable ensures that the movement of each individual datapoint correctly reflects the changes associated with each individual subject. You can adjust the size of your animation in pixels using the commands **`setanimationheight=`** and **`setanimationwidth`**= . 
 
-**_Keep in mind, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, animated bar plots cannot yet show individual datapoints or use setanimationid, and line plots cannot be animated. To save an animation, see the heading entitled "Saving Graphs and Animations" below._**
+**_Keep in mind, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, animated bar plots cannot yet show individual datapoints or use setanimationid, and line plots cannot be animated. To save animations, see the "Saving Graphs and Animations" heading below._**
 
 ## **Generating Multiple Graphs Simultaneously**
 
