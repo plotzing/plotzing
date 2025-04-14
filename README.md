@@ -41,7 +41,7 @@ library(plotzing) #Reload the package
 
 To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify **`data=`** when generating your graph, as Plotzing uses the dataframe df by default when no alternative dataframe is specified. 
 
-After loading your data, you can use the functions *graph_line*, *graph_bar*, *graph_violin*, or *graph_scatterplot* to graph, as in the example below:
+After loading your data, you can use the functions *graph_line*, *graph_bar*, *graph_violin*, or *graph_scatterplot*, as in the example below:
 
 ```{r, echo=TRUE, eval=FALSE}
 #Load Plotzing
