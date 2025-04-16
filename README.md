@@ -165,6 +165,14 @@ For repeated-measures data, you may also set an ID variable using the the comman
 
 **_Keep in mind, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, animated bar plots cannot yet show individual datapoints or use setanimationid, and line plots cannot be animated. To save animations, see the "Saving Graphs and Animations" heading below._**
 
+## **Generating Simple-Slopes Plots**
+
+Simple-slopes plots, commonly used to depict interactions involving continuous variables, allow you to visualize the effects of one continuous independent variable on a dependent variable at, above, or below the mean on another continuous variable (e.g., the relationship between self-esteem and motivation among those at, above, or below the mean on self-efficacy). Simple slopes can be generated in Plotzing when using the **`graph_scatterplot()`** function using the commands **`showsimpleslopes=TRUE`** or **`showsimpleslopesplots=TRUE`**, as in the following example:
+
+```{r, echo=TRUE, eval=FALSE}
+graph_scatterplot("jealousy_attractive", "jealousy_wealthy","income",showsimpleslopes=TRUE)
+```
+
 ## **Generating Multiple Graphs Simultaneously**
 
 For more advanced users, the *graph_master()* function may be used to generate multiple graphs simultaneously. For instance, the code below generates a bar graph with jealousy_wealthy on the y-axis and income (high or low) on the x-axis, and a violin plot with jealousy_attractive on the y-axis and income (high or low) again on the x-axis:
@@ -205,4 +213,4 @@ Note that to adjust the height and width using **`setanimationheight`** and **`s
 
 ## **Contact Me**
 
-Plotzing was developed by Benjamin Gelbart, a PhD candidate at the University of California, Santa Barbara. If you're having trouble, notice a glitch, or want to offer feedback, feel free to email me at bgelbart[at]ucsb.edu. I would love to hear from you!
+Plotzing was developed by Benjamin Gelbart, a PhD candidate at the University of California, Santa Barbara. The code for generating simple-slopes plots was written by my collaborator, Blythe King. If you're having trouble, notice a glitch, or want to offer feedback, feel free to email me at bgelbart[at]ucsb.edu. I would love to hear from you!
