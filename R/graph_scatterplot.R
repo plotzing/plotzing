@@ -1,5 +1,5 @@
 #### SCATTERPLOT ####
-graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=NULL,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,showsimpleslopesplot=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationheadingsize=30,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,shading=NULL,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,setreversecodelegend=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,seterrorshadingtransparency=NULL,setlinetransparency=1,setanimationheight=500,setanimationwidth=790,setanimationtransitionlength=1.5,setanimationlength=2,...){
+graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setdata=NULL,showline=TRUE,splitgroup=FALSE,splitlegend=NULL,jitterheight=NULL,jitterwidth=NULL,setjitter=NULL,setjitterheight=NULL,setjitterwidth=NULL,setlinetype="lm",showloessline=FALSE,showsimpleslopesplot=FALSE,dotsize=NULL,textsize=NULL,linethickness=NULL,dottransparency=NULL,transparency=NULL,dotcolor=NULL,linecolor=NULL,colors=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,legendtitle=NULL,setgrouplevels=NULL,setlegendlevels=NULL,showdata=TRUE,showblankplot=FALSE,color=NULL,setexclusionabove=NULL,setexclusionright=NULL,splitx=FALSE,splitpanel=FALSE,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationheadingsize=30,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,shading=NULL,showcoloredshading=NULL,shadingcolor="gray",colorful=FALSE,setpanellevels=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setxstandardize=FALSE,setystandardize=FALSE,split1=FALSE,split2=FALSE,setxaxisspacing=NULL,setyaxisspacing=NULL,setxaxisstart=NULL,setxaxisend=NULL,setyaxisstart=NULL,setyaxisend=NULL,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,setcolors=NULL,setcolor=NULL,showdots=NULL,setdotoutlinethickness=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,showshading=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showdashedlines=FALSE,internalfunctionautorotation=FALSE,showcolorblindgraph=FALSE,setconfidencelevel=0.95,errorbars=NULL,seterrorshading="ci",showanimation=FALSE,setanimationid=NULL,setdotcolor=NULL,setlinecolor=NULL,setshadingcolor=NULL,setcustomintercept=NULL,setcustomslope=NULL,setlinethickness=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,setshadingtransparency=0.41,showlegend=TRUE,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setxlowerbound=NULL,setxupperbound=NULL,setylowerbound=NULL,setyupperbound=NULL,setreversecodelegend=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,seterrorshadingtransparency=NULL,setlinetransparency=1,setanimationheight=500,setanimationwidth=790,setanimationtransitionlength=1.5,setanimationlength=2,showsimpleslopes=NULL,...){
   
   require(ggplot2)
   
@@ -7,6 +7,12 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   
   #Extract other arguments not explicitly listed but specified by the user
   custom_args <- list(...) #Will use this later
+  
+  if(!is.null(showsimpleslopes)){
+    if(showsimpleslopes==TRUE){
+      showsimpleslopesplot<-TRUE  
+    }
+  }
   
   if(is.null(seterrorshadingtransparency)){
     seterrorshadingtransparency<-.395
@@ -175,12 +181,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   }
   
   if(is.null(shading)){
-    if(showsimpleslopesplot==TRUE){
-      shading<-FALSE
-    }
-    if(showsimpleslopesplot==FALSE){
       shading<-TRUE
-    }
   }
   
   if(!is.null(groupvariable)){
@@ -1330,10 +1331,10 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         summarydata2<-summarydata
         
         #Scale the variables
-        summarydata2$outcome_scale <- scale(summarydata2$yvariable)
-        summarydata2$predictor_scale <- scale(summarydata2$xvariable)
-        summarydata2$groupvariable<-as.numeric(summarydata2$groupvariable)
-        summarydata2$factor_scale <- scale(summarydata2$groupvariable)
+        summarydata2$outcome_scale <- as.vector(scale(summarydata2$yvariable))
+        summarydata2$predictor_scale <- as.vector(scale(summarydata2$xvariable))
+        summarydata2$groupvariable<- as.numeric(summarydata2$groupvariable)
+        summarydata2$factor_scale <- as.vector(scale(summarydata2$groupvariable))
         
         #Separate unscaled values into low, medium, and high groups
         mod_mean <- mean(summarydata2$groupvariable, na.rm=T)
@@ -1354,18 +1355,57 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         group_vals <- unique(groupeddata$factor_group)[!is.na(unique(groupeddata$factor_group))]
         
         # Model Creation #
-        interact_mod <- lm(outcome_scale ~ predictor_scale * factor_scale, data = summarydata2)
-        y_intercept <- interact_mod$coefficients[1]
-        pred_slope <- interact_mod$coefficients[2]
-        factor_slope <- interact_mod$coefficients[3]
-        interaction_slope <- interact_mod$coefficients[4]
+        interact_mod <- lm(outcome_scale ~ predictor_scale * factor_scale, data = groupeddata)
+       
+        # Prediction for Confidence Intervals ####
+        pred_range <- range(groupeddata$predictor_scale, na.rm = TRUE)
+        factor_labels <- c("1 SD Below", "Mean", "1 SD Above")
+        scale_mean <- mean(groupeddata$factor_scale)
+        scale_sd <- sd(groupeddata$factor_scale)
+        factor_values <- c(scale_mean-k*scale_sd, scale_mean, scale_mean + scale_sd)
+        
+        #Create a grid of predictor values - 100 to match interaction package
+        pred_seq <- seq(from = pred_range[1], to = pred_range[2], length.out = 100)
+        
+        #Build the prediction grid
+        pred_grid <- expand.grid(
+          predictor_scale = pred_seq,
+          factor_scale = factor_values
+        )
+        
+        #Predict confidence intervals w/ standard error
+        predictions <- predict(interact_mod, 
+                               newdata = pred_grid,
+                               se.fit = TRUE)
+        
+        #Create data frame with predictions and factor labels
+        pred_data <- data.frame(
+          predictor_scale = pred_grid$predictor_scale,
+          factor_scale = pred_grid$factor_scale,
+          outcome_scale = predictions$fit,
+          fit = predictions$fit,
+          se = predictions$se.fit
+        ) %>%
+          mutate(factor_group = factor(rep(factor_labels, each = length(pred_seq))),
+                 # Calculate upper and lower bounds (approximately 95% CI)
+                 lwr = fit - 1.96 * se,
+                 upr = fit + 1.96 * se,
+          )  %>%
+          arrange(factor_group)
+        
+        #Get pred_data summarizations
+        pred_data_summarize <- pred_data %>% dplyr::group_by(factor_group) %>% 
+          dplyr::summarize(xend = max(predictor_scale),
+                    xstart = min(predictor_scale),
+                    yend = max(fit),
+                    ystart = min(fit)) %>%
+          mutate(factor_group = factor(factor_group)) %>%
+          arrange(factor_group)
         
         if(length(levels(groupeddata$factor_group))<3){
           message("ERROR: You cannot show an interaction plot unless subjects are represented across all three groups (at mean, 1 SD below, and 1 SD above). See the dataframe above for details.")
           stop()
         }
-        
-        groupeddata$factor_group<-factor(groupeddata$factor_group,levels=c("1 SD Above","Mean","1 SD Below"))
         
         #Set default colors
         if(is.null(colors)){
@@ -1376,13 +1416,38 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           interactioncolors<-colors
         }
         
-        graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale,fill=factor_group)) + geom_point(shape=21,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),size=dotsize,alpha=transparency) +
-          geom_abline(colour = interactioncolors[[1]], intercept = y_intercept + 1 * factor_slope, slope = pred_slope + 1 * interaction_slope,size=setlinethickness,alpha=setlinetransparency)+
-          geom_abline(colour = interactioncolors[[2]], intercept = y_intercept, slope = pred_slope,size=setlinethickness,alpha=setlinetransparency) +
-          geom_abline(colour = interactioncolors[[3]], intercept = y_intercept - 1 * factor_slope, slope = pred_slope - 1 * interaction_slope,size=setlinethickness,alpha=setlinetransparency) +
-          theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
+        xrange <- c(min(groupeddata$predictor_scale), max(groupeddata$predictor_scale))
+        yrange <- c(min(groupeddata$outcome_scale), max(groupeddata$outcome_scale))
+        group.colors <- c(`1 SD Below` = interactioncolors[1], `Mean`=interactioncolors[2], `1 SD Above` = interactioncolors[3])
         
-        graph<-graph+scale_fill_manual(values=c(interactioncolors))
+        if(shading==TRUE){
+        graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale)) + geom_point(aes(fill=factor_group),shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize) +
+          xlim(xrange[1], xrange[2]) +
+          ylim(yrange[1], yrange[2]) +
+          scale_color_manual(values = group.colors) +
+          scale_fill_manual(values = group.colors) +
+          geom_segment(data=pred_data_summarize,
+                       aes(x=xstart, y=ystart, xend=xend, yend=yend, color=factor_group),
+                       inherit.aes = TRUE,
+                       size = linethickness) +
+          geom_ribbon(data=pred_data, aes(x=predictor_scale, ymax=upr, ymin=lwr, fill=factor_group),
+                      alpha=0.2, color=NA, show.legend = FALSE) 
+        }
+        if(shading==FALSE){
+          graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale)) + geom_point(aes(fill=factor_group),shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize) +
+            xlim(xrange[1], xrange[2]) +
+            ylim(yrange[1], yrange[2]) +
+            scale_color_manual(values = group.colors) +
+            scale_fill_manual(values = group.colors) +
+            geom_segment(data=pred_data_summarize,
+                         aes(x=xstart, y=ystart, xend=xend, yend=yend, color=factor_group),
+                         inherit.aes = TRUE,
+                         size = linethickness) 
+        }
+        
+        graph<-graph+theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
+        
+        #graph<-graph+scale_fill_manual(values=c(interactioncolors))
         
         if (is.null(setxaxistitle)) {
           graph <- graph + xlab(colnames(graphvariables[2]))
@@ -1396,9 +1461,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           print(groupeddata)
         }
         
-        if(shading==TRUE){
-          message("NOTE: You cannot show error shading when plotting simple-slopes interaction plots.")
-        }
       }
       if(showanimation==TRUE){ #If you're creating an animated graph (animated lines not currently supported)
         if(showsimpleslopesplot==TRUE){
@@ -1414,7 +1476,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         }
         if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){
           graph<-ggplot(data=summarydata, aes(x=xvariable, y=yvariable)) +
-            geom_point(aes(group=idvariablespecifiedbyuser),shape=setdotshape,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=.5,size=dotsize)+
+            geom_point(aes(group=idvariablespecifiedbyuser),shape=setdotshape,stroke=setdotoutlinethickness,fill=dotcolor,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize)+
             theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
             ylab(colnames(graphvariables)[1])+
             xlab(colnames(graphvariables)[2])
@@ -1591,7 +1653,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       }
     }
     if(showsimpleslopesplot==TRUE){
-      message("WARNING: Simple slopes plots are currently in beta and may be prone to errors.")
+      message("WARNING: Simple slopes plots are currently in beta.")
     }
     if("setxaxissize" %in% names(custom_args)){
       message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
