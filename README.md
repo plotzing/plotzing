@@ -62,7 +62,7 @@ graph_bar("jealousy","condition","gender") #Again, remember to keep quotation ma
 
 *Specifying Custom Dataframes*
 
-As mentioned previously, Plotzing will look for a datraframe called df in your global environment by default when no other dataframe is specified. However, if you wish to use another dataframe, you may specify this using **`data =`**.
+As mentioned previously, Plotzing will look for a datraframe called df in your global environment by default when no other dataframe is specified. To use a different dataframe, just specify this using **`data =`**.
 
 ## **Customizing Plots**
 
@@ -139,7 +139,7 @@ We can reverse-code our x-variable, y-variable, and so on using the commands **`
 
 ## **Using Plotzing in Quarto and RMarkdown**
 
-Because Plotzing may modify the specified dataframe (e.g., through reshaping), the updated dataframe is printed by default. This may cause problems when using Plotzing with Quarto or RMarkdown. To hide all output other than the graph itself, add the code **`showoutput=FALSE`**.
+Because some Plotzing commands allow you to modify your dataframe (e.g., through reshaping), the updated dataframe is printed by default. This may cause problems when using Quarto or RMarkdown. To hide this output, simply add **`showoutput=FALSE`**.
 
 ## **Generating Animated Plots (NOTE: In Early Beta; Not Available for Line Plots)**
  
@@ -167,10 +167,10 @@ For repeated-measures data, you may also set an ID variable using the the comman
 
 ## **Generating Simple-Slopes Plots**
 
-Simple-slopes plots, commonly used to depict interactions involving continuous variables, allow you to visualize the effects of one continuous independent variable on a dependent variable at, above, or below the mean on another continuous variable (e.g., the relationship between self-esteem and motivation among those at, above, or below the mean on self-efficacy). Simple slopes can be generated in Plotzing when using the **`graph_scatterplot()`** function using the commands **`showsimpleslopes=TRUE`** or **`showsimpleslopesplots=TRUE`**, as in the following example:
+Simple-slopes plots, commonly used to depict interactions involving continuous variables, allow you to visualize the effects of one continuous independent variable among those at, above, or below the mean on a second continuous variable (e.g., the relationship between self-esteem and motivation among those at, above, or below the mean on self-efficacy). Simple slopes can be generated in Plotzing when using the **`graph_scatterplot()`** function using the commands **`showsimpleslopes=TRUE`** or **`showsimpleslopesplots=TRUE`**, as in the following example:
 
 ```{r, echo=TRUE, eval=FALSE}
-graph_scatterplot("jealousy_attractive", "jealousy_wealthy","income",showsimpleslopes=TRUE)
+graph_scatterplot("jealousy_attractive", "jealousy_wealthy","income",showsimpleslopes=TRUE) #Shows the relationship between jealousy_attractive and jealousy_wealthy across different income levels
 ```
 
 ## **Generating Multiple Graphs Simultaneously**
