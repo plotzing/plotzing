@@ -3,6 +3,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   
   require(ggplot2)
   
+  #Create the "NOT IN" function
   '%!in%' <- function(x,y)!('%in%'(x,y))
   
   #Extract other arguments not explicitly listed but specified by the user
