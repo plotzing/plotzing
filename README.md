@@ -30,9 +30,12 @@ When prompted to update other packages during the installation, press the enter 
 To update Plotzing, simply unload the package if it's already loaded, reinstall the package, and reload it:
 
 ```{r, echo=TRUE, eval=FALSE}
-#If Plotzing is currently loaded, unload it:
-detach("package:plotzing", unload = TRUE) #Note the lowercase "p"
+#If plotzing has already been loaded using library(plotzing), unload it
+if ("package:plotzing" %in% search()) {
+  detach("package:plotzing", unload = TRUE) #Note the lower-case "p"
+}
 
+#Reinstall plotzing and reload it
 library(devtools) #Load devtools
 install_github("plotzing/plotzing") #Install the package
 library(plotzing) #Reload the package
