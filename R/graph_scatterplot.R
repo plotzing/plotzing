@@ -1340,15 +1340,19 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       #### INTERACTION PLOTS ####
       if(showsimpleslopesplot==TRUE){
         if(setystandardize==TRUE||setxstandardize==TRUE){
-          message("ERROR: Data are automatically standardized when using simple-slope interaction plots.")
+          message("\nERROR: Data are automatically standardized when using simple-slope interaction plots.")
           stop()
         }
         if(!is.null(setlegendlevels)){
-          message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+          message("\nERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
           stop()
         }
         if(!is.null(setreverseorderlegend)){
-          message("ERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+          message("\nERROR: You cannot manually adjust the legend levels in a simple-slopes interaction plot in the present version.")
+          stop()
+        }
+        if(!is.null(panelvariable)){
+          message("\nERROR: You cannot use a panel (facet) variable when generating simple-slopes plots.")
           stop()
         }
         # if(!is.null(setreversecodegroup)){
