@@ -1419,12 +1419,12 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           fit = predictions$fit,
           se = predictions$se.fit
         ) %>%
-          mutate(factor_group = factor(rep(factor_labels, each = length(pred_seq))),
+          dplyr::mutate(factor_group = factor(rep(factor_labels, each = length(pred_seq))),
                  # Calculate upper and lower bounds (approximately 95% CI)
                  lwr = fit - 1.96 * se,
                  upr = fit + 1.96 * se,
           )  %>%
-          arrange(factor_group)
+          dplyr::arrange(factor_group)
         
         #Get pred_data summarizations
         pred_data_summarize <- pred_data %>% dplyr::group_by(factor_group) %>% 
@@ -1432,8 +1432,8 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
                            xstart = min(predictor_scale),
                            yend = max(fit),
                            ystart = min(fit)) %>%
-          mutate(factor_group = factor(factor_group)) %>%
-          arrange(factor_group)
+          dplyr::mutate(factor_group = factor(factor_group)) %>%
+          dplyr::arrange(factor_group)
         
         if(length(levels(groupeddata$factor_group))<3){
           message("ERROR: You cannot show an interaction plot unless subjects are represented across all three groups (at mean, 1 SD below, and 1 SD above). See the dataframe above for details.")
