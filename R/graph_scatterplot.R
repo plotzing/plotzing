@@ -3,7 +3,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   
   require(ggplot2)
   
-  #Create the "NOT IN" function
   '%!in%' <- function(x,y)!('%in%'(x,y))
   
   #Extract other arguments not explicitly listed but specified by the user
@@ -17,7 +16,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   
   if(is.null(seterrorshadingtransparency)){
     if(showsimpleslopesplot==FALSE){
-    seterrorshadingtransparency<-.395
+      seterrorshadingtransparency<-.395
     }
     if(showsimpleslopesplot==TRUE){
       seterrorshadingtransparency<-.2
@@ -187,7 +186,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
   }
   
   if(is.null(shading)){
-      shading<-TRUE
+    shading<-TRUE
   }
   
   if(!is.null(groupvariable)){
@@ -1283,8 +1282,8 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
             if(showcoloredshading==TRUE){ #If you're showing colored error shading based on group
               if(shading==TRUE){
                 if(setlinetransparency==1){
-              graph<-graph+
-                geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
+                  graph<-graph+
+                    geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
                 }
                 
                 if(setlinetransparency!=1){
@@ -1297,9 +1296,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
             
             if(showcoloredshading==FALSE){ #If you're not showing colored error shading based on group
               if(shading==TRUE){ #If you're showing gray shading
-              if(setlinetransparency==1){
-                graph<-graph+
-                  geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fill=shadingcolor,fullrange=TRUE,alpha=seterrorshadingtransparency)
+                if(setlinetransparency==1){
+                  graph<-graph+
+                    geom_smooth(method=setlinetype, level=setconfidencelevel,linewidth=linethickness,linetype="solid",fill=shadingcolor,fullrange=TRUE,alpha=seterrorshadingtransparency)
                 }
                 
                 if(setlinetransparency!=1){
@@ -1311,10 +1310,10 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
             }
             
             if(shading==FALSE){ #If you're not showing shading at all
-             if(setlinetransparency==1){
-               graph<-graph+
-                geom_smooth(method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
-             }
+              if(setlinetransparency==1){
+                graph<-graph+
+                  geom_smooth(method=setlinetype, level=setconfidencelevel,se=FALSE,linewidth=linethickness,linetype="solid",fullrange=TRUE,alpha=seterrorshadingtransparency)
+              }
               if(setlinetransparency!=1){
                 graph<-graph+stat_smooth(geom="line",linetype="solid",method=setlinetype, linewidth=linethickness,fullrange=TRUE,alpha=setlinetransparency)
               }
@@ -1386,7 +1385,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         
         # Model Creation #
         interact_mod <- lm(outcome_scale ~ predictor_scale * factor_scale, data = groupeddata)
-       
+        
         # Prediction for Confidence Intervals ####
         pred_range <- range(groupeddata$predictor_scale, na.rm = TRUE)
         factor_labels <- c("1 SD Below", "Mean", "1 SD Above")
@@ -1426,9 +1425,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         #Get pred_data summarizations
         pred_data_summarize <- pred_data %>% dplyr::group_by(factor_group) %>% 
           dplyr::summarize(xend = max(predictor_scale),
-                    xstart = min(predictor_scale),
-                    yend = max(fit),
-                    ystart = min(fit)) %>%
+                           xstart = min(predictor_scale),
+                           yend = max(fit),
+                           ystart = min(fit)) %>%
           mutate(factor_group = factor(factor_group)) %>%
           arrange(factor_group)
         
@@ -1451,28 +1450,26 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         group.colors <- c(`1 SD Below` = interactioncolors[1], `Mean`=interactioncolors[2], `1 SD Above` = interactioncolors[3])
         
         if(shading==TRUE){
-        graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale)) + geom_point(aes(fill=factor_group),shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize) +
-          xlim(xrange[1], xrange[2]) +
-          ylim(yrange[1], yrange[2]) +
-          scale_color_manual(values = group.colors) +
-          scale_fill_manual(values = group.colors) +
-          geom_segment(data=pred_data_summarize,
-                       aes(x=xstart, y=ystart, xend=xend, yend=yend, color=factor_group),
-                       inherit.aes = TRUE,
-                       size = linethickness,alpha=setlinetransparency) +
-          geom_ribbon(data=pred_data, aes(x=predictor_scale, ymax=upr, ymin=lwr, fill=factor_group),
-                      color=NA, show.legend = FALSE,alpha=seterrorshadingtransparency) 
-        }
-        if(shading==FALSE){
           graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale)) + geom_point(aes(fill=factor_group),shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize) +
-            xlim(xrange[1], xrange[2]) +
-            ylim(yrange[1], yrange[2]) +
+            coord_cartesian(xlim = xrange) +
             scale_color_manual(values = group.colors) +
             scale_fill_manual(values = group.colors) +
             geom_segment(data=pred_data_summarize,
                          aes(x=xstart, y=ystart, xend=xend, yend=yend, color=factor_group),
                          inherit.aes = TRUE,
-                         size = linethickness,alpha=setlinetransparency) 
+                         linewidth = linethickness,alpha=setlinetransparency) +
+            geom_ribbon(data=pred_data, aes(x=predictor_scale, ymax=upr, ymin=lwr, fill=factor_group),
+                        color=NA, show.legend = FALSE,alpha=seterrorshadingtransparency)
+        }
+        if(shading==FALSE){
+          graph<-ggplot(data=groupeddata,aes(x = predictor_scale, y = outcome_scale)) + geom_point(aes(fill=factor_group),shape=setdotshape,stroke=setdotoutlinethickness,color=setdotoutlinecolor,position=position_jitter(width=jitterwidth,height=jitterheight),alpha=transparency,size=dotsize) +
+            coord_cartesian(xlim = xrange) +
+            scale_color_manual(values = group.colors) +
+            scale_fill_manual(values = group.colors) +
+            geom_segment(data=pred_data_summarize,
+                         aes(x=xstart, y=ystart, xend=xend, yend=yend, color=factor_group),
+                         inherit.aes = TRUE,
+                         linewidth = linethickness,alpha=setlinetransparency) 
         }
         
         graph<-graph+theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
@@ -1597,9 +1594,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         require(gganimate)
         require(magick)
         graph<-graph+transition_states(groupvariable,transition_length=c(setanimationtransitionlength),state_length=c(setanimationlength))+
-        labs(subtitle="{closest_state}",title=title)+theme(plot.title=element_text(size=titlesize,face=settitleface),
-        axis.text.x = element_text(size=setxaxistextsize),axis.text.y = element_text(size=setyaxistextsize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),
-        plot.subtitle = element_text(size=setanimationheadingsize,hjust=0.5))+exit_fade()+enter_fade()
+          labs(subtitle="{closest_state}",title=title)+theme(plot.title=element_text(size=titlesize,face=settitleface),
+                                                             axis.text.x = element_text(size=setxaxistextsize),axis.text.y = element_text(size=setyaxistextsize), axis.title.x = element_text(size=setxtitlesize), axis.title.y = element_text(size=setytitlesize),
+                                                             plot.subtitle = element_text(size=setanimationheadingsize,hjust=0.5))+exit_fade()+enter_fade()
         if(is.null(setanimationid)&&showdata==TRUE){
           message("NOTE: Although an ID variable may sometimes be correctly inferred, no explicit ID variable is set by default. If you are using a repeated-measures animation variable and want each datapoint to refer to the same subject across frames, it is best to add setanimationid= and specify an ID variable in your dataset.")
         }
@@ -1684,7 +1681,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
     }
     if(setlinetransparency!=1){
       if(showsimpleslopesplot==FALSE){
-      message("\n WARNING: Adjusting the line transparency to a value other than 1 with a color (legend) variable is stil in beta. Check to make sure that the error shading aligns with your line and that you do not have any duplicate lines. \n")
+        message("\n WARNING: Adjusting the line transparency to a value other than 1 with a color (legend) variable is stil in beta. Check to make sure that the error shading aligns with your line and that you do not have any duplicate lines. \n")
       }
     }
     if(showsimpleslopesplot==TRUE){
