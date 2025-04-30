@@ -1,5 +1,5 @@
 #### BAR GRAPH ####
-graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationheadingsize=30,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor="#7F7F7F",groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setanimationtransitionlength=1.5,setanimationlength=2,setanimationheight=500,setanimationwidth=790,...){
+graph_bar2<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlinecolor="gray",setbarshorizontal=FALSE,jitterheight=NULL,jitterwidth=NULL,setjitterheight=NULL,setjitterwidth=NULL,setjitter=NULL,internalfunctionautorotation=FALSE,errorbars="default",seterrorbarthickness=NULL,splitx=FALSE,splitgroup=FALSE,splitlegend=NULL,splitpanel=FALSE,showdata=TRUE,bold=FALSE,data=df,setdata=NULL,transparency=NULL,dottransparency=NULL,dotsize=NULL,title=NULL,settitle=NULL,setxaxislabel=NULL,setyaxislabel=NULL,setxaxistitle=NULL,setyaxistitle=NULL,colors=NULL,color=NULL,setcolor=NULL,setgrouplevels=NULL,setlegendlevels=NULL,legendtitle=NULL,titlesize=NULL,settitlesize=NULL,setxtitlesize=NULL,setxaxistitlesize=NULL,setytitlesize=NULL,setyaxistitlesize=NULL,setxaxistextsize=NULL,setyaxistextsize=NULL,setaxistextsize=NULL,setaxistitlesize=NULL,setlegendtitlesize=NULL,setanimationheadingsize=30,setlegendlevelsize=NULL,setlegendtextsize=NULL,setpaneltitlesize=NULL,settitleface="bold",setlegendtitleface="plain",setxaxistitleface=NULL,setyaxistitleface=NULL,setpaneltitleface=NULL,seterrorbarwidth=.2,seterrorbartransparency=NULL,showrotatedxlabels=FALSE,rotatexaxislabels=FALSE,setpanellevels=NULL,setxlevels=NULL,setxaxislevels=NULL,setystandardize=FALSE,split1=FALSE,split2=FALSE,split3=FALSE,setsplitx=NULL,setsplitgroup=NULL,setsplitlegend=NULL,setsplitpanel=NULL,seterrorbars=NULL,setcolors=NULL,showerrorbars=TRUE,setlegendtitle=NULL,setdotsize=NULL,setdottransparency=NULL,setbaroutlinethickness=NULL,showcolorederrorbars=FALSE,showspacebelowzero=TRUE,setbartransparency=0.9,dodgewidth=0.9,setdodgewidth=NULL,setdotoutlinethickness=0.5,showdots=NULL,setdotoutlinecolor=NULL,showdotoutline=TRUE,customdata=FALSE,means=NULL,datapoints=NULL,setpositionhorizontalline=NULL,setpositiondottedhorizontalline=NULL,sethorizontallinecolor="black",sethorizontallinethickness=1,showanimation=FALSE,setanimationid=NULL,setconfidencelevel=0.95,seterrorbarcolor=NULL,groupvariable=NULL,groupingvariable=NULL,showblackandwhitegraph=FALSE,showdarkgraph=NULL,setreversecodex=FALSE,setreversecodey=FALSE,setreversecodegroup=FALSE,setreversecodepanel=FALSE,setreverseorderx=FALSE,setreverseordergroup=FALSE,setreverseorderlegend=NULL,setreverseorderpanel=FALSE,reverseorderx=NULL,reverseordergroup=NULL,reverseorderlegend=NULL,reverseorderpanel=NULL,reversecodex=NULL,reversecodey=NULL,reversecodegroup=NULL,reversecodepanel=NULL,setxlevelorder=NULL,setgrouplevelorder=NULL,setlegendlevelorder=NULL,setpanellevelorder=NULL,setyaxisspacing=NULL,setyaxisend=NULL,setyaxisstart=NULL,showoutput=NULL,showgridlines=TRUE,setlegendpositionleft=FALSE,setlegendpositionbelow=FALSE,setlegendpositionabove=FALSE,showlegendleft=FALSE,showlegendbelow=FALSE,showlegendabove=FALSE,showlegend=TRUE,showboldedtitle=NULL,showboldedlegendtitle=NULL,showboldedxaxistitle=NULL,showboldedyaxistitle=NULL,showboldedpaneltitle=NULL,showboldedaxistitles=NULL,setylowerbound=NULL,setyupperbound=NULL,showlargerfonts=FALSE,setsubtitle=NULL,subtitle=NULL,setsubtitlesize=NULL,setsubtitleface=NULL,setdotshape=21,setanimationtransitionlength=1.5,setanimationlength=2,setanimationheight=500,setanimationwidth=790,...){
   
   require(Rmisc)
   require(ggplot2)
@@ -168,6 +168,10 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
   
   if(!is.null(seterrorbarcolor)){
     showcolorederrorbars<-FALSE
+  }
+  
+  if(is.null(seterrorbarcolor)){
+    seterrorbarcolor<-"#7F7F7F"
   }
   
   if(!is.null(setanimationid)){
@@ -781,7 +785,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
         
         if(length(levels(as.factor(summarydata$xvariable)))<=9){
-          graph<-graph+scale_fill_brewer(palette=1)+theme(legend.position="none")
+          graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
         }
         
         if(length(levels(as.factor(summarydata$xvariable)))>9){
@@ -796,7 +800,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           geom_bar(position=position_dodge(), stat="identity",
                    colour=c(setbaroutlinecolor),
                    linewidth=c(setbaroutlinethickness),alpha=c(setbartransparency)) +
-          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors,color=xvariable),
+          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors),
                         linewidth=seterrorbarthickness,
                         width=seterrorbarwidth,alpha=seterrorbartransparency,
                         position=position_dodge(.9))+
@@ -826,7 +830,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           geom_bar(position=position_dodge(), stat="identity",
                    colour=c(setbaroutlinecolor),
                    linewidth=c(setbaroutlinethickness),alpha=c(setbartransparency)) +
-          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors,color=xvariable),
+          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors),
                         linewidth=seterrorbarthickness,
                         width=seterrorbarwidth,alpha=seterrorbartransparency,
                         position=position_dodge(.9))+
@@ -837,7 +841,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))
         
         if(length(levels(as.factor(summarydata$xvariable)))<=9){
-          graph<-graph+scale_fill_brewer(palette=1)+theme(legend.position="none")
+          graph<-graph+scale_fill_brewer(palette=1)+scale_color_brewer(palette=1)+theme(legend.position="none")
         }
         
         if(length(levels(as.factor(summarydata$xvariable)))>9){
@@ -1207,13 +1211,13 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           scale_fill_discrete(name = colnames(graphvariables)[3])+guides(color = "none")
-      }
       
       if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){    
         graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(fill=groupvariable),stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidth,dodge.width=dodgewidth))
       }else{
         graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(color=groupvariable),size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidth,dodge.width=dodgewidth))  
       }
+    }
       if(showdata==FALSE){
         
         graph<-ggplot(summary, aes(x=xvariable, y=yvariable, fill=groupvariable)) +
@@ -1229,18 +1233,18 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
-          scale_fill_discrete(name = colnames(graphvariables)[3])
+          scale_fill_discrete(name = colnames(graphvariables)[3])+guides(color="none")
       }
     }
     
     if(showcolorederrorbars==TRUE){
       if(showdata==TRUE){
         
-        graph<-ggplot(summary, aes(x=xvariable, y=yvariable, fill=groupvariable)) +
+        graph<-ggplot(summary, aes(x=xvariable, y=yvariable, fill=groupvariable,color=groupvariable)) +
           geom_bar(position=position_dodge(), stat="identity",
                    colour=c(setbaroutlinecolor),
                    linewidth=c(setbaroutlinethickness),alpha=c(setbartransparency)) +
-          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors,color=groupvariable),
+          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors),
                         linewidth=seterrorbarthickness,
                         width=seterrorbarwidth,alpha=seterrorbartransparency,
                         position=position_dodge(.9))+
@@ -1249,21 +1253,21 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
           scale_fill_discrete(name = colnames(graphvariables)[3])+guides(color = "none")
-      }
       
       if(setdotshape==21||setdotshape==22||setdotshape==23||setdotshape==24||setdotshape==25||setdotshape=="circle filled"||setdotshape=="diamond filled"||setdotshape=="square filled"||setdotshape=="triangle down filled"||setdotshape=="triangle filled"){     
-        graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(fill=groupvariable),stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidthdodge,dodge.width=dodgewidth))
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(fill=groupvariable),stroke=setdotoutlinethickness,color=setdotoutlinecolor,size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidth,dodge.width=dodgewidth))
       }else{
-        graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(color=groupvariable),size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidthdodge,dodge.width=dodgewidth))
+        graph<-graph+geom_point(data=summarydata,shape=setdotshape,aes(color=groupvariable),size=dotsize,alpha=transparency,position=position_jitterdodge(jitter.height=jitterheight,jitter.width=jitterwidth,dodge.width=dodgewidth))
       }
+    }
       
       if(showdata==FALSE){
         
-        graph<-ggplot(summary, aes(x=xvariable, y=yvariable, fill=groupvariable)) +
+        graph<-ggplot(summary, aes(x=xvariable, y=yvariable, fill=groupvariable,color=groupvariable)) +
           geom_bar(position=position_dodge(), stat="identity",
                    colour=c(setbaroutlinecolor),
                    linewidth=c(setbaroutlinethickness),alpha=c(setbartransparency)) +
-          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors,color=groupvariable),
+          geom_errorbar(aes(ymin=yvariable-errors, ymax=yvariable+errors),
                         linewidth=seterrorbarthickness,
                         width=seterrorbarwidth,alpha=seterrorbartransparency,
                         position=position_dodge(.9))+
@@ -1272,7 +1276,7 @@ graph_bar<-function(dv=NULL,iv1=NULL,iv2=NULL,panelvariable=NULL,setbaroutlineco
           expand_limits(y=0) +
           theme_bw()+
           theme(plot.title=element_text(hjust=0.5,size=titlesize,face=settitleface),axis.title.y=element_text(size=setytitlesize),axis.title.x=element_text(size=setxtitlesize),axis.text.x=element_text(size=setxaxistextsize),axis.text.y=element_text(size=setyaxistextsize),legend.text=element_text(size=setlegendlevelsize),legend.title=element_text(size=setlegendtitlesize),plot.subtitle=element_text(hjust=0.5,size=setsubtitlesize,face=setsubtitleface))+
-          scale_fill_discrete(name = colnames(graphvariables)[3])
+          scale_fill_discrete(name = colnames(graphvariables)[3])+guides(color="none")
       }
     }
     
