@@ -37,12 +37,12 @@ if ("package:plotzing" %in% search()) {
 
 #Reinstall plotzing and reload it:
 library(devtools) #Load devtools
-install_github("plotzing/plotzing") #Re-install Plotzing using devtools
+install_github("plotzing/plotzing") #Re-install plotzing using devtools
 library(plotzing) #Reload Plotzing
 ```
 ## **Basic Plots**
 
-To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify **`data=`** when generating your graph, as Plotzing uses the dataframe df by default when no alternative dataframe is specified. 
+To start graphing with Plotzing, begin by loading your dataframe into R. If you call your dataframe df, you do not need to specify **`data=`** when generating your graph, as Plotzing uses the dataframe **df** by default when no alternative is specified. 
 
 After loading your data, you can use the functions *graph_line*, *graph_bar*, *graph_violin*, or *graph_scatterplot*, as in the example below:
 
