@@ -37,8 +37,8 @@ if ("package:plotzing" %in% search()) {
 
 #Reinstall plotzing and reload it:
 library(devtools) #Load devtools
-install_github("plotzing/plotzing") #Install the package
-library(plotzing) #Reload the package
+install_github("plotzing/plotzing") #Re-install Plotzing using devtools
+library(plotzing) #Reload Plotzing
 ```
 ## **Basic Plots**
 
