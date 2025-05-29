@@ -1418,21 +1418,21 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           outcome_scale = predictions$fit,
           fit = predictions$fit,
           se = predictions$se.fit
-        ) %>%
+        ) dplyr::`%>%`
           dplyr::mutate(factor_group = factor(rep(factor_labels, each = length(pred_seq))),
                  # Calculate upper and lower bounds (approximately 95% CI)
                  lwr = fit - 1.96 * se,
                  upr = fit + 1.96 * se,
-          )  %>%
+          )  dplyr::`%>%`
           dplyr::arrange(factor_group)
         
         #Get pred_data summarizations
-        pred_data_summarize <- pred_data %>% dplyr::group_by(factor_group) %>% 
+        pred_data_summarize <- pred_data dplyr::`%>%` dplyr::group_by(factor_group) dplyr::`%>%` 
           dplyr::summarize(xend = max(predictor_scale),
                            xstart = min(predictor_scale),
                            yend = max(fit),
-                           ystart = min(fit)) %>%
-          dplyr::mutate(factor_group = factor(factor_group)) %>%
+                           ystart = min(fit)) dplyr::`%>%`
+          dplyr::mutate(factor_group = factor(factor_group)) dplyr::`%>%`
           dplyr::arrange(factor_group)
         
         if(length(levels(groupeddata$factor_group))<3){
