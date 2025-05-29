@@ -1436,11 +1436,6 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           dplyr::mutate(factor_group = factor(factor_group)) %>%
           dplyr::arrange(factor_group)
         
-        if(length(levels(groupeddata$factor_group))<3){
-          message("ERROR: You cannot show an interaction plot unless subjects are represented across all three groups (at mean, 1 SD below, and 1 SD above). See the dataframe above for details.")
-          stop()
-        }
-        
         #Set default colors
         if(is.null(colors)){
           interactioncolors<-c("red","blue","green")
