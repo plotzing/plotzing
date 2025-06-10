@@ -1690,7 +1690,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       }
     }
     if(showsimpleslopesplot==TRUE){
-      message("You are generating a simple-slopes plot. This feature is still being developed and may sometimes render plots incorrectly. To show a normal graph, remove the command showsimpleslopesplot=TRUE or set this command to FALSE.")
+      message("You are generating a simple-slopes plot. This feature is still in beta. To show a normal graph, remove the command showsimpleslopesplot=TRUE or set this command to FALSE.")
     }
     if("setxaxissize" %in% names(custom_args)){
       message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
