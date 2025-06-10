@@ -1421,9 +1421,9 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
           se = predictions$se.fit
         ) %>%
           dplyr::mutate(factor_group = factor(rep(factor_labels, each = length(pred_seq))),
-                 # Calculate upper and lower bounds (approximately 95% CI)
-                 lwr = fit - 1.96 * se,
-                 upr = fit + 1.96 * se,
+                        # Calculate upper and lower bounds (approximately 95% CI)
+                        lwr = fit - 1.96 * se,
+                        upr = fit + 1.96 * se,
           )  %>%
           dplyr::arrange(factor_group)
         
@@ -1431,8 +1431,8 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
         pred_data_summarize <- pred_data %>% dplyr::group_by(factor_group) %>% 
           dplyr::summarize(xend = max(predictor_scale),
                            xstart = min(predictor_scale),
-                           yend = max(fit),
-                           ystart = min(fit)) %>%
+                           yend = dplyr::last(fit),
+                           ystart = dplyr::first(fit)) %>%
           dplyr::mutate(factor_group = factor(factor_group)) %>%
           dplyr::arrange(factor_group)
         
@@ -1690,7 +1690,7 @@ graph_scatterplot<-function(dv,iv1=NULL,iv2=NULL,panelvariable=NULL,data=df,setd
       }
     }
     if(showsimpleslopesplot==TRUE){
-    message("You are generating a simple-slopes plot. To show a normal graph, remove the command showsimpleslopesplot=TRUE or set this command to FALSE.")
+      message("You are generating a simple-slopes plot. To show a normal graph, remove the command showsimpleslopesplot=TRUE or set this command to FALSE.")
     }
     if("setxaxissize" %in% names(custom_args)){
       message("The command setxaxissize is no longer available. Use the command setxaxistextsize instead.")
