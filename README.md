@@ -1,7 +1,7 @@
 # **Plotzing: Customizable, Publication-Quality Plots in a Single Line of Code**
 
 ## **Introduction**
-*NOTE: Plotzing is still in beta.*
+*NOTE: Plotzing is still in beta. A simple-slopes plot bug was identified on 06/09/2026 and patched in the latest version. Please update Plotzing if you haven't already done so.*
 
 Plotzing is an R package for generating publication-quality plots in a single line of code. Plotzing takes a different approach than other plotting packages by applying three guiding principles. First, the syntax required is simple; plots can be generated in one line of code, and nearly all commands use a common set of verbs (*set* and *show*), allowing users to type these verbs and see available commands without the need for memorization. Second, Plotzing plots  are maximally informative by default; for instance, barplots include bars, error bars, and individual datapoints by default (though these can be removed through additional commands). Finally, Plotzing integrates data cleaning directly into the data visualization process; for example, users can reshape their data, reverse-code variables, create dichotomized dummy variables, and perform other data cleaning tasks in the same line of code used for producing their graph. In this way, Plotzing dramatically reduces the barriers between acquiring data and viewing those data in a visual form. 
 
@@ -169,6 +169,7 @@ For repeated-measures data, you may also set an ID variable using the the comman
 **_Keep in mind, however, that animated graphs are still in the very early beta stages, and customization options are somewhat limited. Regression lines in scatterplots are not currently supported, animated bar plots cannot yet show individual datapoints or use setanimationid, and line plots cannot be animated. Also, keep in mind that some axis label bugs have been documented when using the animation feature on Linux operating systems. To save animations, see the "Saving Graphs and Animations" heading below._**
 
 ## **Generating Simple-Slopes Plots**
+*NOTE: A simple-slopes plot bug was identified on 06/09/2026 and patched in the latest version. Please update Plotzing if you haven't already done so.*
 
 Simple-slopes plots, commonly used to depict interactions involving continuous variables, allow you to visualize the effects of one continuous independent variable among those at, above, or below the mean on a second continuous variable (e.g., the relationship between self-esteem and motivation among those at, above, or below the mean on self-efficacy). Simple slopes can be generated in Plotzing when using the **`graph_scatterplot()`** function using the commands **`showsimpleslopes=TRUE`** or **`showsimpleslopesplots=TRUE`**, as in the following example:
 
