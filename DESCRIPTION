@@ -1,9 +1,9 @@
 Package: plotzing
 Type: Package
 Title: Scientific Plots that will Make you Plotz
-Version: 0.2.6
+Version: 0.2.7
 Author: Benjamin Gelbart
-Description: An R package for more easily making publishable scientific plots that will make you (and reviewers) plotz!
+Description: An R package for easily making publishable scientific plots that will make you (and reviewers) plotz!
 License: 
 Encoding: UTF-8
 LazyData: true
